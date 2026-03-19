@@ -51,7 +51,7 @@ export default function StatsSection() {
           {SUMMARY_STATS.map((s) => (
             <div
               key={s.label}
-              className="rounded-xl p-5 flex flex-col items-center justify-center gap-1 text-center"
+              className="rounded-sm p-5 flex flex-col items-center justify-center gap-1 text-center"
               style={{
                 background: "#ffffff",
                 boxShadow: "6px 6px 12px rgba(0,0,0,0.08)",
@@ -77,35 +77,59 @@ export default function StatsSection() {
           </h3>
           {/* 오행 밸런스 */}
           <div
-            className="rounded-xl p-5 flex flex-col gap-4"
+            className="rounded-sm p-5 flex flex-col gap-4"
             style={{
               background: "#ffffff",
               boxShadow: "4px 4px 16px rgba(0,0,0,0.08)",
             }}
           >
             {DEDUCTION_BALANCE.map((item) => (
-              <div key={item.label} className="flex items-center gap-4">
-                <span
-                  className="text-sm font-bold w-16 shrink-0"
-                  style={{ color: item.color }}
-                >
-                  {item.label}
-                </span>
-                <div
-                  className="flex-1 h-2.5 rounded-full"
-                  style={{ background: "#f3f4f6" }}
-                >
-                  <div
-                    className="h-2.5 rounded-full transition-all duration-700"
-                    style={{
-                      width: `${item.value}%`,
-                      background: item.color,
-                    }}
-                  />
+              <div
+                key={item.label}
+                className="flex flex-col md:flex-row gap-2 md:gap-4"
+              >
+                {/* 상단: label + value (모바일) */}
+                <div className="flex justify-between md:hidden">
+                  <span
+                    className="text-base font-bold"
+                    style={{ color: item.color }}
+                  >
+                    {item.label}
+                  </span>
+                  <span className="text-lg text-[#999999] font-medium">
+                    {item.value}%
+                  </span>
                 </div>
-                <span className="text-xs text-gray-400 w-12 text-right shrink-0">
-                  {item.value}%
-                </span>
+
+                {/* 바 + PC용 */}
+                <div className="flex items-center gap-3 w-full">
+                  {/* PC label */}
+                  <span
+                    className="hidden md:block text-lg font-bold w-16 shrink-0"
+                    style={{ color: item.color }}
+                  >
+                    {item.label}
+                  </span>
+
+                  {/* bar */}
+                  <div
+                    className="flex-1 h-3 md:h-2.5 rounded-full"
+                    style={{ background: "#f3f4f6" }}
+                  >
+                    <div
+                      className="h-3 md:h-2.5 rounded-full transition-all duration-700"
+                      style={{
+                        width: `${item.value}%`,
+                        background: item.color,
+                      }}
+                    />
+                  </div>
+
+                  {/* PC value */}
+                  <span className="hidden md:block text-lg text-[#999999] w-12 text-right shrink-0">
+                    {item.value}%
+                  </span>
+                </div>
               </div>
             ))}
           </div>

@@ -207,7 +207,7 @@ export default function AnalysisSection() {
 
           {/* Bottom stat row */}
           <div
-            className="grid grid-cols-3 rounded-lg overflow-hidden mt-6"
+            className="flex flex-col md:flex-row w-full text-sm rounded-lg overflow-hidden relative mt-6"
             style={{
               background: "#333333",
               border: "1px solid rgba(255,255,255,0.08)",
@@ -220,21 +220,39 @@ export default function AnalysisSection() {
             ].map((item, i, arr) => (
               <div
                 key={item.label}
-                className="p-4 flex flex-col gap-1"
-                style={{
-                  borderRight:
-                    i < arr.length - 1
-                      ? "1px solid rgba(255,255,255,0.12)"
-                      : undefined,
-                }}
+                className="relative px-5 md:px-10 py-6 flex-1"
               >
-                <p
-                  className="text-[10px]"
-                  style={{ color: "rgba(255,255,255,0.5)" }}
-                >
-                  {item.label}
-                </p>
-                <p className="text-sm font-bold text-white">{item.value}</p>
+                {/* 모바일용 */}
+                <div className="flex justify-between items-center gap-3 md:hidden w-full">
+                  <p className="text-[#FFD594] text-[13px] font-medium tracking-widest uppercase shrink-0">
+                    {item.label}
+                  </p>
+
+                  <p className="text-white text-[18px] font-bold leading-snug text-right min-w-0 break-keep">
+                    {item.value}
+                  </p>
+                </div>
+
+                {/* PC용 */}
+                <div className="hidden md:block">
+                  <p className="text-[#FFD594] text-[14px] font-medium tracking-widest uppercase mb-1">
+                    {item.label}
+                  </p>
+                  <p className="text-white text-[20px] font-bold leading-snug">
+                    {item.value}
+                  </p>
+                </div>
+
+                {/* 구분선 */}
+                {i < arr.length - 1 && (
+                  <>
+                    {/* 모바일 (더 긴 가로선) */}
+                    <div className="md:hidden absolute bottom-0 left-1/2 -translate-x-1/2 w-[90%] h-px bg-[#FFD594]/70" />
+
+                    {/* 데스크탑 (세로선) */}
+                    <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 h-[30%] w-px bg-[#FFD594]/70" />
+                  </>
+                )}
               </div>
             ))}
           </div>

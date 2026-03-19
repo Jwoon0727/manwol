@@ -164,7 +164,7 @@ function MonthItem({
 
   return (
     <div
-      className="group rounded-xl overflow-hidden transition-colors duration-200 border border-white hover:border-[#FFD061]"
+      className="group rounded-sm overflow-hidden transition-colors duration-200 border border-white hover:border-[#FFD061]"
       style={{
         background: "rgba(255,255,255,0.03)",
       }}
@@ -185,11 +185,13 @@ function MonthItem({
         >
           {item.ganzhi}
         </span>
-        <span className="flex-1 text-white text-sm font-semibold leading-snug transition-colors duration-200 group-hover:text-[#FFD061]">
-          {item.title}
-        </span>
-        <span className="text-white text-[11px] shrink-0 hidden sm:inline transition-colors duration-200 group-hover:text-[#FFD061]">
-          {item.ganzhiLabel}
+        <span className="flex-1 flex items-baseline gap-2 min-w-0">
+          <span className="hidden md:inline text-white text-base md:text-lg font-semibold leading-snug transition-colors duration-200 group-hover:text-[#FFD061]">
+            {item.title}
+          </span>
+          <span className="text-white/50 text-[11px] shrink-0 transition-colors duration-200 group-hover:text-[#FFD061]">
+            {item.ganzhiLabel}
+          </span>
         </span>
         {open ? (
           <ChevronUp className="w-4 h-4 text-white shrink-0 transition-colors duration-200 group-hover:text-[#FFD061]" />
@@ -200,6 +202,9 @@ function MonthItem({
 
       {open && (
         <div style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}>
+          <p className="md:hidden px-5 pt-4 pb-1 text-white text-lg font-semibold">
+            {item.title}
+          </p>
           <div className="px-5 pt-4 pb-2 text-sm text-white leading-relaxed whitespace-pre-line">
             {item.body}
           </div>
@@ -258,7 +263,7 @@ export default function MonthlyAccordion({
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
           {/* 상승월 */}
           <div
-            className="rounded-2xl px-6 py-6"
+            className="rounded-sm px-6 py-6"
             style={{
               border: "1px solid rgba(59,130,246,0.6)",
               background: "rgba(255,255,255,0.07)",
@@ -274,7 +279,7 @@ export default function MonthlyAccordion({
 
           {/* 주의월 */}
           <div
-            className="rounded-2xl px-6 py-6"
+            className="rounded-sm px-6 py-6"
             style={{
               border: "1px solid rgba(239,68,68,0.6)",
               background: "rgba(255,255,255,0.07)",
@@ -290,7 +295,7 @@ export default function MonthlyAccordion({
 
           {/* 연간 효과 */}
           <div
-            className="rounded-2xl px-6 py-6"
+            className="rounded-sm px-6 py-6"
             style={{
               border: "1px solid rgba(201,168,76,0.6)",
               background: "rgba(255,255,255,0.07)",

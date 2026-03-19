@@ -12,26 +12,29 @@ export default function HeroSection() {
       <Navbar headerClassName="fixed top-0 left-0 right-0 z-50 bg-white border-[oklch(0.88_0.005_75)]" />
 
       {/* Upper half */}
-      <div className="max-w-6xl mx-auto px-8 pt-[90px] md:pt-[110px] pb-10">
+      <div className="max-w-6xl mx-auto px-8 pt-[90px] md:pt-[110px] pb-4 md:pb-10">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-0 justify-between">
           {/* LEFT COLUMN */}
-          <div className="flex-1 min-w-0">
-            {/* Badge row — 글래스 모피즘 */}
-            <div className="flex items-center gap-2 mb-7 pt-8">
+          <div className="flex-1 min-w-0 flex flex-col items-center md:items-start text-center md:text-left">
+            <div className="flex items-center gap-2 mb-3 pt-8">
               <span
                 className="
-                bg-white/10
-                backdrop-blur-xl
-                rounded-full
-                px-3.5 py-1
-                text-white
-                shadow-[inset_0_1px_2px_rgba(255,255,255,0.4),inset_0_-2px_6px_rgba(255,255,255,0.1),0_10px_30px_rgba(0,0,0,0.4)]
-              "
+  bg-white/10
+  backdrop-blur-xl
+  rounded-full
+  px-4.5 py-2
+  text-sm md:text-base
+  text-white
+  flex items-center justify-center
+  leading-none
+  shadow-[inset_0_1px_2px_rgba(255,255,255,0.4),inset_0_-2px_6px_rgba(255,255,255,0.1),0_10px_30px_rgba(0,0,0,0.4)]
+"
               >
                 2026 ANNUAL BRIEF
               </span>
+
               <span
-                className="px-3.5 py-1.5 text-[14px] font-bold tracking-wider rounded-full backdrop-blur-md"
+                className=" px-4.5 py-2 text-sm md:text-base font-bold tracking-wider rounded-full backdrop-blur-md flex items-center justify-center leading-none"
                 style={{
                   background: "rgba(255, 217, 0, 0.1)",
                   color: "#FFC800",
@@ -48,7 +51,7 @@ export default function HeroSection() {
               <h1
                 className="font-medium leading-none text-white"
                 style={{
-                  fontSize: "clamp(2.5rem, 6.5vw, 4.5rem)",
+                  fontSize: "clamp(2.5rem, 16vw, 4.5rem)",
                   letterSpacing: "-0.02em",
                 }}
               >
@@ -57,7 +60,7 @@ export default function HeroSection() {
               <h2
                 className="font-medium leading-none bg-gradient-to-r from-[#FFD594] to-[#FFB748] bg-clip-text text-transparent"
                 style={{
-                  fontSize: "clamp(5.5rem, 9.5vw, 7.5rem)",
+                  fontSize: "clamp(5.5rem, 22vw, 7.5rem)",
                   letterSpacing: "-0.02em",
                   textShadow: "0 2px 30px rgba(201,168,76,0.25)",
                 }}
@@ -65,16 +68,17 @@ export default function HeroSection() {
                 신년운세
               </h2>
               <p
-                className="mt-0.5 text-white text-lg font-medium mb-8"
+                className="mt-0.5 text-white text-base md:text-lg font-medium mb-8"
                 style={{ fontFamily: "JejuMyeongjo, serif" }}
               >
                 <span style={{ color: "#FFD594" }}>권준석님</span>의 2026 병오년
-                마스터 로드맵
+                마스터 로드맥
               </p>
             </div>
 
             {/* Profile row */}
-            <div className="flex items-start gap-3 mt-6 mb-7">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-3 mt-6 mb-7">
+              {/* 이미지 */}
               <div className="w-23 h-23 rounded-full overflow-hidden flex-shrink-0 border border-[#FFCD37]">
                 <img
                   src="/main/saju-result/profile01.png"
@@ -82,8 +86,10 @@ export default function HeroSection() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div>
-                <div className="ml-2 flex items-center gap-2 mb-3">
+
+              {/* 텍스트 */}
+              <div className="text-center md:text-left">
+                <div className="flex flex-col md:flex-row items-center md:items-center justify-center md:justify-start gap-1 md:gap-2 mb-3">
                   <span className="text-white font-bold text-lg">도연선생</span>
                   <span className="text-white/40 text-sm">
                     사주·운세 전문 상담
@@ -97,10 +103,9 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Info bar: 양력 / 음력 / 지역 */}
-            <div className="w-fit">
+            <div className="w-full">
               <div
-                className="inline-flex text-sm rounded-lg overflow-hidden relative mb-8"
+                className="flex flex-col md:inline-flex md:flex-row text-sm rounded-sm overflow-hidden relative mb-4 md:mb-8"
                 style={{
                   border: "1px solid rgba(153, 153, 153, 1)",
                   background: "rgba(255, 255, 255, 0.1)",
@@ -123,9 +128,15 @@ export default function HeroSection() {
                       {item.value}
                     </p>
 
-                    {/* 가운데 bar */}
+                    {/* 구분선 */}
                     {i < arr.length - 1 && (
-                      <div className="absolute right-0 top-1/2 -translate-y-1/2 h-[30%] w-px bg-[#FFD594]/70" />
+                      <>
+                        {/* 모바일 (가로선) */}
+                        <div className="md:hidden absolute bottom-0 left-1/2 -translate-x-1/2 w-[60%] h-px bg-[#FFD594]/70" />
+
+                        {/* 데스크탑 (세로선) */}
+                        <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 h-[30%] w-px bg-[#FFD594]/70" />
+                      </>
                     )}
                   </div>
                 ))}
@@ -133,8 +144,8 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* RIGHT COLUMN */}
-          <div className="mr-20 flex flex-col items-center lg:items-end justify-start gap-10 lg:pl-12 flex-shrink-0 pt-10">
+          {/* RIGHT COLUMN — 모바일에서 숨김 */}
+          <div className="hidden lg:flex mr-20 flex-col items-center lg:items-end justify-start gap-10 lg:pl-12 flex-shrink-0 pt-10">
             {/* Concentric circle diagram */}
             <div
               className="relative flex items-center justify-center"
@@ -248,14 +259,14 @@ export default function HeroSection() {
       </div>
 
       {/* Lower half — 세 가지 축 */}
-      <div className="max-w-6xl mx-auto px-8 py-10">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+      <div className="max-w-6xl mx-auto px-8 pt-4 pb-10 md:py-10">
+        <div className="flex flex-col  lg:flex-row gap-8 lg:gap-2 items-start">
           {/* Left slogan */}
-          <div className="flex-shrink-0 lg:w-48 mt-6 lg:mt-8">
-            <p className="text-white text-2xl leading-snug font-medium">
+          <div className="hidden lg:flex mr-20 flex-shrink-0 lg:w-48 mt-6 lg:mt-8 flex-col">
+            <p className="text-white text-[28px] leading-snug font-medium mb-0">
               당신의 2026,
             </p>
-            <p className="text-[#FFD594] text-2xl leading-snug font-semibold tracking-tight">
+            <p className="text-[#FFD594] text-[28px] leading-snug font-semibold tracking-tight -mt-1">
               세 가지 축으로
               <br />
               읽습니다.
@@ -263,7 +274,7 @@ export default function HeroSection() {
           </div>
 
           {/* 3 cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 flex-1 mb-25">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 flex-1 mb-25">
             {[
               {
                 type: "OPPORTUNITY",
@@ -289,7 +300,7 @@ export default function HeroSection() {
             ].map((card) => (
               <div
                 key={card.type}
-                className="rounded-xl p-5"
+                className="rounded-sm md:rounded-3xl p-8"
                 style={{
                   background: "rgba(255,255,255,0.04)",
                   border: `1px solid ${card.borderColor}`,

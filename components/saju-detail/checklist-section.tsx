@@ -48,7 +48,7 @@ export default function ChecklistSection({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* 해야 할 것 (DO) */}
           <div
-            className="rounded-2xl p-6 md:p-8 bg-white"
+            className="rounded-sm p-6 md:p-8 bg-white"
             style={{
               border: "1px solid #3355FF",
               boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
@@ -90,16 +90,17 @@ export default function ChecklistSection({
 
           {/* 피해야 할 것 (AVOID) */}
           <div
-            className={`rounded-2xl p-6 md:p-8 bg-white relative overflow-hidden ${
+            className={`rounded-sm p-6 md:p-8 bg-white relative overflow-hidden ${
               previewMode ? "select-none" : ""
             }`}
             style={{
               boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
+              border: "1px solid #FF2C30",
             }}
           >
             {previewMode && (
               <div
-                className="absolute inset-0 z-10 flex flex-col items-center justify-center rounded-2xl"
+                className="absolute inset-0 z-10 flex flex-col items-center justify-center rounded-sm"
                 style={{
                   background:
                     "linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.5) 30%, rgba(255,255,255,0.95) 100%)",
