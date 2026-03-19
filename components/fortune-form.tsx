@@ -65,7 +65,7 @@ export default function FortuneForm({
     name.trim() !== "" && birthDate.length >= 10 && gender !== null;
 
   return (
-    <div className="h-screen bg-[#f0ece4] relative overflow-hidden flex flex-col ">
+    <div className="h-screen h-[100dvh] max-h-[100dvh] bg-[#f0ece4] relative overflow-hidden overscroll-none flex flex-col">
       {/* Header */}
       <Navbar headerClassName="sticky top-0 bg-white border-[oklch(0.88_0.005_75)]" />
 
@@ -91,7 +91,7 @@ export default function FortuneForm({
       <main className="flex-1 min-h-0 overflow-hidden flex items-center justify-center px-4 relative z-10 py-4">
         <div
           className="relative w-full max-w-[450px] flex flex-col flex-shrink-0 -mt-4 -mb-4"
-          style={{ height: "calc(100vh - 3.5rem)" }}
+          style={{ height: "calc(100dvh - 3.5rem)" }}
         >
           <div className="relative flex flex-1 min-h-0 flex-col overflow-hidden shadow-2xl rounded-2xl">
             {/* 1. character = 바탕이미지 (background) + character2 */}

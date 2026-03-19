@@ -144,56 +144,56 @@ const CONTENT: Record<
       {
         icon: Heart,
         color: "#e45c5c",
-        label: "운명의 인연 핵심 요약",
-        sub: "당신의 연애 기운과 올해 인연 흐름을 정리합니다.",
+        label: " 핵심 요약",
+        sub: "정리합니다.",
       },
       {
         icon: Star,
         color: "#e8a245",
-        label: "연애 적성 & 이상형 분석",
-        sub: "사주로 본 나의 연애 스타일과 이상형을 알아봅니다.",
+        label: "분석",
+        sub: "알아봅니다.",
       },
       {
         icon: CalendarDays,
         color: "#6ab0e8",
-        label: "월별 연애 운세 리뷰",
-        sub: "1월부터 12월까지 사랑의 흐름을 월별로 봅니다.",
+        label: "운세 리뷰",
+        sub: "1월",
       },
       {
         icon: Shuffle,
         color: "#c9a96e",
-        label: "인연을 만나는 시기",
-        sub: "운명의 상대를 만날 가능성이 높은 시기를 짚어드립니다.",
+        label: "시기",
+        sub: "운명",
       },
       {
         icon: BookOpen,
         color: "#8fbc6e",
-        label: "현재 관계 심층 분석",
-        sub: "현재 연애 중이라면 두 사람의 궁합을 살펴봅니다.",
+        label: "현재 ",
+        sub: "현재 ",
       },
       {
         icon: Heart,
         color: "#e45c5c",
-        label: "이별 & 재결합 가능성",
-        sub: "헤어짐이나 재회의 가능성을 사주로 풀어봅니다.",
+        label: "가능성",
+        sub: ".",
       },
       {
         icon: Shuffle,
         color: "#a07cde",
-        label: "연애 운명 카드",
-        sub: "타로 카드로 사랑의 방향을 읽어봅니다.",
+        label: "카드",
+        sub: "카드",
       },
       {
         icon: Star,
         color: "#e8a245",
-        label: "결혼 & 장기 연애 운",
-        sub: "결혼이나 장기 관계의 가능성을 알아봅니다.",
+        label: "운",
+        sub: " 알아봅니다.",
       },
       {
         icon: Home,
         color: "#8fbc6e",
-        label: "평생 인연 대운",
-        sub: "평생 흐르는 사랑의 대운을 정리합니다.",
+        label: "대운",
+        sub: "정리합니다.",
       },
     ],
     midBubble:
@@ -203,12 +203,12 @@ const CONTENT: Record<
     payTitle: "선화소자 연애비책\n프리미엄 풀이",
     paySubtitle: "풀버전 · 연애 심층 분석 포함",
     features: [
-      "운명 인연 시기 예측",
-      "이상형 & 연애 스타일",
-      "월별 연애 흐름 안내",
-      "궁합 & 현재 관계 분석",
-      "이별/재결합 가능성",
-      "맞춤형 연애 조언",
+      "풍부하고 세밀한 사주 풀이",
+      "직관적인 핵심 요약",
+      "월별 운세 상세 안내",
+      "사랑/재물/건강 분야별 분석",
+      "평생 대운 흐름 제공",
+      "맞춤형 조언 포함",
     ],
   },
   "3": {
@@ -226,56 +226,56 @@ const CONTENT: Record<
       {
         icon: Star,
         color: "#e8a245",
-        label: "2026 재물운 핵심 요약",
-        sub: "올해 재물의 흐름과 핵심 기운을 정리합니다.",
+        label: " 핵심 요약",
+        sub: "정리합니다.",
       },
       {
         icon: Briefcase,
         color: "#c9a96e",
-        label: "직업 & 사업 운세",
-        sub: "직장과 사업 방향의 운세를 살펴봅니다.",
+        label: "분석",
+        sub: "살펴봅니다.",
       },
       {
         icon: CalendarDays,
         color: "#6ab0e8",
-        label: "월별 재물 흐름",
-        sub: "1월부터 12월까지 재물의 흐름을 월별로 봅니다.",
+        label: "운세 리뷰",
+        sub: "1월",
       },
       {
         icon: BookOpen,
         color: "#8fbc6e",
-        label: "투자 & 재테크 운",
-        sub: "투자와 재테크에 유리한 시기를 알아봅니다.",
+        label: "시기",
+        sub: "투 ",
       },
       {
         icon: Shuffle,
         color: "#c9a96e",
-        label: "사주 재물 핵심 풀이",
+        label: "현재 ",
         sub: "사주팔자로 본 재물 기운을 풀어드립니다.",
       },
       {
         icon: Home,
         color: "#8fbc6e",
-        label: "부동산 & 이동 운",
-        sub: "부동산과 이사, 이직 운을 살펴봅니다.",
+        label: "운",
+        sub: " 살펴봅니다.",
       },
       {
         icon: Shuffle,
         color: "#a07cde",
-        label: "재물 운명 카드",
-        sub: "타로 카드로 재물의 방향을 읽어봅니다.",
+        label: "카드",
+        sub: "읽어봅니다.",
       },
       {
         icon: Star,
         color: "#e8a245",
-        label: "귀인 & 조력자 운",
-        sub: "재물을 도와줄 귀인이 나타나는 시기를 봅니다.",
+        label: "운",
+        sub: "봅니다.",
       },
       {
         icon: Briefcase,
         color: "#c9a96e",
-        label: "평생 재물 대운",
-        sub: "평생 흐르는 재물 대운을 정리합니다.",
+        label: "대운",
+        sub: "정리합니다.",
       },
     ],
     midBubble:
@@ -285,12 +285,12 @@ const CONTENT: Record<
     payTitle: "명천도령 재물보감\n프리미엄 풀이",
     paySubtitle: "풀버전 · 재물 심층 분석 포함",
     features: [
-      "재물운 핵심 요약",
-      "직업/사업 방향 분석",
-      "월별 재물 흐름",
-      "투자 유리한 시기",
-      "귀인 & 조력자 운",
-      "맞춤형 재물 조언",
+      "풍부하고 세밀한 사주 풀이",
+      "직관적인 핵심 요약",
+      "월별 운세 상세 안내",
+      "사랑/재물/건강 분야별 분석",
+      "평생 대운 흐름 제공",
+      "맞춤형 조언 포함",
     ],
   },
   "4": {
@@ -308,56 +308,56 @@ const CONTENT: Record<
       {
         icon: Star,
         color: "#e8a245",
-        label: "사주 핵심 요약",
-        sub: "당신의 사주팔자 핵심 기운을 정리합니다.",
+        label: " 핵심 요약",
+        sub: "정리합니다.",
       },
       {
         icon: Shuffle,
         color: "#c9a96e",
-        label: "오행 & 용신 분석",
-        sub: "오행의 균형과 용신을 풀어드립니다.",
+        label: "분석",
+        sub: "살펴봅니다.",
       },
       {
         icon: CalendarDays,
         color: "#6ab0e8",
-        label: "대운 & 세운 흐름",
-        sub: "대운과 올해 세운의 흐름을 살펴봅니다.",
+        label: "운세 리뷰",
+        sub: "1월",
       },
       {
         icon: Heart,
         color: "#e45c5c",
-        label: "사랑 & 인연 운",
-        sub: "사주로 본 인연과 결혼 운을 알아봅니다.",
+        label: "시기",
+        sub: "운명",
       },
       {
         icon: Briefcase,
         color: "#c9a96e",
-        label: "직업 & 재물 적성",
-        sub: "적성에 맞는 직업과 재물운을 봅니다.",
+        label: "현재 ",
+        sub: "투 ",
       },
       {
         icon: BookOpen,
         color: "#8fbc6e",
-        label: "건강 & 관리 포인트",
-        sub: "사주로 본 건강 주의 사항을 알려드립니다.",
+        label: "운",
+        sub: " 살펴봅니다.",
       },
       {
         icon: Shuffle,
         color: "#a07cde",
-        label: "운명 카드",
-        sub: "타로 카드로 올해 운명의 방향을 읽습니다.",
+        label: "카드",
+        sub: "읽어봅니다.",
       },
       {
         icon: Star,
         color: "#e8a245",
-        label: "귀인 & 행운의 방향",
-        sub: "귀인이 나타나는 시기와 방향을 봅니다.",
+        label: "운",
+        sub: "봅니다.",
       },
       {
         icon: Home,
         color: "#8fbc6e",
-        label: "평생 대운",
-        sub: "평생 흐르는 대운의 전체 흐름을 정리합니다.",
+        label: "운",
+        sub: "정리합니다.",
       },
     ],
     midBubble: "만월이 직접\n사주를 풀어드립니다.\n결제 후 바로 확인하세요!",
@@ -366,12 +366,12 @@ const CONTENT: Record<
     payTitle: "만월공자 사주풀이\n프리미엄 풀버전",
     paySubtitle: "풀버전 · 사주 심층 분석 포함",
     features: [
-      "오행 & 용신 분석",
-      "대운 & 세운 흐름",
-      "사랑/재물/건강 통합",
-      "직업 적성 분석",
-      "귀인 시기 예측",
-      "평생 대운 제공",
+      "풍부하고 세밀한 사주 풀이",
+      "직관적인 핵심 요약",
+      "월별 운세 상세 안내",
+      "사랑/재물/건강 분야별 분석",
+      "평생 대운 흐름 제공",
+      "맞춤형 조언 포함",
     ],
   },
 };
@@ -458,7 +458,10 @@ export default function FortuneResult({ id, title, name }: FortuneResultProps) {
                   className="w-full h-auto object-contain"
                 />
                 <div className="absolute inset-0 flex items-center justify-center px-10 py-6">
-                  <p className="font-jejumyeongjo text-[16px] mb-2 text-[oklch(0.25_0.02_50)] leading-relaxed whitespace-pre-line text-center">
+                  <p
+                    className="font-jejumyeongjo mb-2 text-[oklch(0.25_0.02_50)] leading-relaxed whitespace-pre-line text-center"
+                    style={{ fontSize: "clamp(12px, 3.5vw, 16px)" }}
+                  >
                     {content.greeting}
                   </p>
                 </div>
@@ -496,21 +499,24 @@ export default function FortuneResult({ id, title, name }: FortuneResultProps) {
         </section>
 
         {/* 3. Mid-character speech bubble scene */}
-        <section className="w-full mt-20 mb-40 max-w-[450px] mt-10 flex flex-col items-center gap-4">
-          <div className="relative w-100 h-156 shrink-0  overflow-hidden shadow-md">
+        <section className="w-full mt-10 md:mt-20 mb-20 md:mb-40 max-w-[450px] mx-auto flex justify-center">
+          <div className="relative w-[70%] sm:w-[60%] md:w-[90%] aspect-[2/3]">
+            {/* 캐릭터 */}
             <Image
               src={situationCharacter}
               alt="만월"
               fill
               className="object-cover object-top"
             />
-          </div>
-          <div className="absolute mt-96 w-full max-w-[450px] mx-auto">
-            <img
-              src="/main/saju-result/textbuble.png" // 이미지 파일 경로
-              alt="말풍선"
-              className="w-full h-auto object-contain"
-            />
+
+            {/* 말풍선 */}
+            <div className="absolute bottom-[-10%] left-1/2 -translate-x-1/2 w-[95%]">
+              <img
+                src="/main/saju-result/textbuble.png"
+                alt="말풍선"
+                className="w-full h-auto object-contain"
+              />
+            </div>
           </div>
         </section>
 
@@ -571,24 +577,24 @@ export default function FortuneResult({ id, title, name }: FortuneResultProps) {
         </section>
 
         {/* 5. Second speech bubble scene */}
-        <section className="w-full max-w-[450px] mt-8 relative flex justify-end">
-          {/* 캐릭터 이미지: 오른쪽 */}
-          <div className="mb-20 relative w-80 h-130 shrink-0 overflow-hidden shadow-md">
+        <section className="w-full max-w-[450px] mt-8 mx-auto flex justify-end">
+          <div className="relative w-[70%] sm:w-[60%] md:w-[85%] aspect-[2/3]">
+            {/* 캐릭터 */}
             <Image
               src={situationCharacter1}
               alt="만월"
               fill
-              className="object-cover object-top"
+              className="object-cover object-top  shadow-md"
             />
-          </div>
 
-          {/* 말풍선 이미지: 캐릭터 위 왼쪽 */}
-          <div className="-ml-25 -mt-15 absolute left-20 top-90 w-90 max-w-[500px]">
-            <img
-              src="/main/saju-result/textbuble02.png"
-              alt="말풍선"
-              className="w-full h-auto object-contain"
-            />
+            {/* 말풍선 */}
+            <div className="absolute top-[65%] left-[-20%] w-[95%]">
+              <img
+                src="/main/saju-result/textbuble02.png"
+                alt="말풍선"
+                className="w-full h-auto object-contain"
+              />
+            </div>
           </div>
         </section>
 
