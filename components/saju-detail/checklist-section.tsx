@@ -1,5 +1,7 @@
 "use client";
 
+import { Lock } from "lucide-react";
+
 const SHOULD_DO = [
   "용신 수(水) 계열의 일정·환경·역할을 우선순위에 두세요.",
   "시주 미래축은 2026년에 직접 자극되므로 분기마다 상태를 점검하세요.",
@@ -12,7 +14,14 @@ const SHOULD_NOT = [
   "배우자궁 안정도 변동 구간에서는 감정 해석보다 사실 확인을 우선하세요.",
 ];
 
-export default function ChecklistSection() {
+interface ChecklistSectionProps {
+  /** true일 때 피해야 할 것 박스를 블러 + 결제 버튼 오버레이 */
+  previewMode?: boolean;
+}
+
+export default function ChecklistSection({
+  previewMode = false,
+}: ChecklistSectionProps) {
   return (
     <section className="w-full bg-white py-14">
       <div className="max-w-6xl mx-auto px-6">
@@ -36,7 +45,7 @@ export default function ChecklistSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* 해야 할 것 (DO) */}
           <div
             className="rounded-2xl p-6 md:p-8 bg-white"
@@ -81,44 +90,70 @@ export default function ChecklistSection() {
 
           {/* 피해야 할 것 (AVOID) */}
           <div
-            className="rounded-2xl p-6 md:p-8 bg-white"
+            className={`rounded-2xl p-6 md:p-8 bg-white relative overflow-hidden ${
+              previewMode ? "select-none" : ""
+            }`}
             style={{
-              border: "1px solid #FF2C30",
               boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
             }}
           >
-            <h3
-              className="text-base font-bold mb-5"
-              style={{ color: "#FF2C30" }}
+            {previewMode && (
+              <div
+                className="absolute inset-0 z-10 flex flex-col items-center justify-center rounded-2xl"
+                style={{
+                  background:
+                    "linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.5) 30%, rgba(255,255,255,0.95) 100%)",
+                }}
+              >
+                <button
+                  type="button"
+                  className="flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm transition-colors hover:opacity-90"
+                  style={{
+                    background: "#1A1A1A",
+                    color: "#FFD061",
+                  }}
+                >
+                  <Lock className="w-4 h-4 shrink-0" />
+                  결제 후 전체 공개
+                </button>
+              </div>
+            )}
+            <div
+              className={previewMode ? "blur-[10px] pointer-events-none" : ""}
             >
-              피해야 할 것 (AVOID)
-            </h3>
-            <ul className="flex flex-col gap-4">
-              {SHOULD_NOT.map((item, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <span
-                    className="w-5 h-5 rounded-full shrink-0 mt-0.5 flex items-center justify-center"
-                    style={{ border: "1px solid ##FF2C30", color: "#FF2C30" }}
-                  >
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+              <h3
+                className="text-base font-bold mb-5"
+                style={{ color: "#FF2C30" }}
+              >
+                피해야 할 것 (AVOID)
+              </h3>
+              <ul className="flex flex-col gap-4">
+                {SHOULD_NOT.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span
+                      className="w-4 h-4 rounded-full shrink-0 mt-0.5 flex items-center justify-center"
+                      style={{ border: "1px solid #FF2C30", color: "#FF2C30" }}
                     >
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                  </span>
-                  <span className="text-sm leading-relaxed text-gray-800">
-                    {item}
-                  </span>
-                </li>
-              ))}
-            </ul>
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </span>
+                    <span className="text-sm leading-relaxed text-gray-800">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>

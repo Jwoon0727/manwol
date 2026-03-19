@@ -93,7 +93,7 @@ export default function FortuneForm({
           className="relative w-full max-w-[450px] flex flex-col flex-shrink-0 -mt-4 -mb-4"
           style={{ height: "calc(100dvh - 3.5rem)" }}
         >
-          <div className="relative flex flex-1 min-h-0 flex-col overflow-hidden shadow-2xl rounded-2xl">
+          <div className="relative flex flex-1 min-h-0 flex-col overflow-hidden shadow-2xl ">
             {/* 1. character = 바탕이미지 (background) + character2 */}
             <div className="absolute inset-0 z-0 rounded-2xl overflow-hidden">
               <Image

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, Lock } from "lucide-react";
 
 type Month = {
   month: number;
@@ -222,7 +222,19 @@ function MonthItem({
   );
 }
 
-export default function MonthlyAccordion() {
+interface MonthlyAccordionProps {
+  /** true일 때 month 2~12를 블러 + 결제 버튼 오버레이 */
+  previewMode?: boolean;
+}
+
+export default function MonthlyAccordion({
+  previewMode = false,
+}: MonthlyAccordionProps) {
+  const visibleMonths = previewMode
+    ? MONTHS.filter((m) => m.month === 1)
+    : MONTHS;
+  const blurredMonths = previewMode ? MONTHS.filter((m) => m.month >= 2) : [];
+
   return (
     <section className="w-full py-16" style={{ background: "#0E0E0E" }}>
       <div className="max-w-4xl mx-auto px-6">
@@ -295,9 +307,127 @@ export default function MonthlyAccordion() {
 
         {/* Accordion list */}
         <div className="flex flex-col gap-2">
-          {MONTHS.map((item, i) => (
+          {visibleMonths.map((item, i) => (
             <MonthItem key={item.month} item={item} defaultOpen={i === 0} />
           ))}
+          {blurredMonths.length > 0 && (
+            <div className="relative flex flex-col gap-2">
+              {blurredMonths.map((item) => (
+                <div
+                  key={item.month}
+                  className="blur-[10px] select-none pointer-events-none"
+                >
+                  <MonthItem item={item} defaultOpen={false} />
+                </div>
+              ))}
+              <div
+                className="absolute inset-0 flex flex-col items-center justify-center rounded-xl z-10"
+                style={{
+                  background:
+                    "linear-gradient(to bottom, transparent 0%, rgba(14,14,14,0.5) 25%, rgba(14,14,14,0.95) 100%)",
+                }}
+              >
+                <button
+                  type="button"
+                  className="flex flex-col items-center gap-4 px-5 py-5 rounded-2xl transition-colors hover:opacity-90 text-center"
+                  style={{
+                    color: "white",
+                  }}
+                >
+                  {/* 자물쇠 박스 */}
+                  <div
+                    className="flex items-center justify-center w-14 h-14 rounded-2xl"
+                    style={{
+                      background: "#FFD0611A",
+                    }}
+                  >
+                    <Lock className="w-6 h-6 text-[#FFD061]" />
+                  </div>
+
+                  {/* 메인 문구 */}
+                  <p className="text-lg font-bold leading-snug">
+                    결제하면 이런 풀이를
+                    <br />더 받아보실 수 있어요!
+                  </p>
+
+                  {/* 리스트 */}
+                  <div className="flex flex-col gap-2 text-sm text-gray-300 text-left w-full">
+                    <div className="flex items-center gap-2 text-white">
+                      <span className="w-5 h-5 rounded-full shrink-0 flex items-center justify-center bg-[#FFD061] text-black">
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                      </span>
+                      2월~12월 월별 상세 분석
+                    </div>
+
+                    <div className="flex items-center gap-2 font-semibold text-white">
+                      <span className="w-5 h-5 rounded-full shrink-0 flex items-center justify-center bg-[#FFD061] text-black">
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                      </span>
+                      매달 반드시 챙겨야 할 액션
+                    </div>
+
+                    <div className="flex items-center gap-2 font-semibold text-white">
+                      <span className="w-5 h-5 rounded-full shrink-0 flex items-center justify-center bg-[#FFD061] text-black">
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                      </span>
+                      피해야 할 상황과 인물 유형
+                    </div>
+
+                    <div className="flex items-center gap-2 font-semibold text-white">
+                      <span className="w-5 h-5 rounded-full shrink-0 flex items-center justify-center bg-[#FFD061] text-black">
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                      </span>
+                      격국에서 배우자궁까지
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>

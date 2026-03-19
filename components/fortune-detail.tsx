@@ -287,7 +287,7 @@ function SituationStep({ data, onBack, onNext }: SituationStepProps) {
     return (
       <PageShell>
         <div
-          className="relative w-full max-w-[450px] flex flex-col flex-shrink-0 -mt-4 -mb-4 rounded-2xl overflow-hidden"
+          className="relative w-full max-w-[450px] flex flex-col flex-shrink-0 -mt-4 -mb-4  overflow-hidden"
           style={{ height: "calc(100dvh - 3.5rem)" }}
         >
           {/* Back button */}
@@ -300,7 +300,7 @@ function SituationStep({ data, onBack, onNext }: SituationStepProps) {
           </button>
 
           {/* Character image — 풀 height 배경 */}
-          <div className="absolute inset-0 z-0 rounded-2xl overflow-hidden">
+          <div className="absolute inset-0 z-0  overflow-hidden">
             <Image
               src={data.situationCharacter}
               alt={data.title}

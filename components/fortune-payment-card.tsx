@@ -33,7 +33,7 @@ export default function PurchasePage() {
           />
 
           {/* Character image — right side */}
-          <div className="absolute right-0 bottom-0 w-60 h-80 z-0">
+          <div className="absolute right-0 bottom-0 w-[55%] sm:w-[45%] md:w-60 aspect-[3/4] z-0">
             <Image
               src="/main/saju-result/payments.png"
               alt="사주 전문가 캐릭터"
@@ -41,14 +41,13 @@ export default function PurchasePage() {
               className="object-cover object-top"
               priority
             />
-            {/* Fade bottom */}
           </div>
 
           {/* Left content */}
-          <div className="relative z-10 px-6 pt-7 pb-8 max-w-[70%]">
+          <div className="relative z-10 px-6 pt-7 pb-8 max-w-[80%]">
             {/* Badge */}
             <div
-              className="inline-flex items-center gap-1.5 text-[14px] font-bold rounded-full px-4 py-1 mb-4 border"
+              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold rounded-full px-4 py-1 mb-4 border"
               style={{
                 background: "rgba(201,168,76,0.12)",
                 borderColor: "rgba(201,168,76,0.35)",

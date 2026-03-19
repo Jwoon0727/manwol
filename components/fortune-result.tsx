@@ -17,6 +17,9 @@ import {
   Home,
   Shuffle,
 } from "lucide-react";
+import FivePillars from "./saju-detail/five-pillars";
+import ChecklistSection from "./saju-detail/checklist-section";
+import MonthlyAccordion from "./saju-detail/monthly-accordion";
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -387,7 +390,7 @@ export default function FortuneResult({ id, title, name }: FortuneResultProps) {
   const payCharacter = content.payCharacter ?? "/images/fortune-pay-char.jpg";
   const situationCharacter1 = content.situationCharacter1;
   return (
-    <div className="min-h-screen bg-[#f0ece4] relative overflow-x-hidden flex flex-col">
+    <div className="min-h-screen bg-white relative overflow-x-hidden flex flex-col">
       {/* ── Header ── (고정, 스크롤 시 움직이지 않음) */}
       <Navbar headerClassName="fixed top-0 left-0 right-0 z-50 bg-white border-[oklch(0.88_0.005_75)]" />
 
@@ -405,7 +408,7 @@ export default function FortuneResult({ id, title, name }: FortuneResultProps) {
       />
 
       {/* ── Page content ── (navbar h-14 = 3.5rem 아래부터) */}
-      <div className="relative z-10 flex flex-col items-center px-4 pt-[3.5rem] pb-20 gap-0">
+      <div className="relative z-10 flex flex-col items-center  pt-[3.5rem] pb-20 gap-0">
         {/* 1. Intro character panel — 뷰포트 높이에 맞게 상하단 꽉 참 */}
         <section className="w-full max-w-[450px] h-[calc(100vh-3.5rem)] min-h-[calc(100vh-3.5rem)]">
           <Link
@@ -499,7 +502,7 @@ export default function FortuneResult({ id, title, name }: FortuneResultProps) {
         </section>
 
         {/* 3. Mid-character speech bubble scene */}
-        <section className="w-full mt-10 md:mt-20 mb-20 md:mb-40 max-w-[450px] mx-auto flex justify-center">
+        <section className="w-full mt-28 mb-50 md:mt-20 mb-20 md:mb-40 max-w-[450px] mx-auto flex justify-center">
           <div className="relative w-[70%] sm:w-[60%] md:w-[90%] aspect-[2/3]">
             {/* 캐릭터 */}
             <Image
@@ -520,64 +523,12 @@ export default function FortuneResult({ id, title, name }: FortuneResultProps) {
           </div>
         </section>
 
-        {/* 4. Blurred preview block */}
-        <section className="w-full max-w-[450px] mt-6 relative rounded-2xl overflow-hidden shadow-inner">
-          {/* Fake content rows — blurred */}
-          <div
-            className="bg-white/60 px-5 py-6 space-y-3 select-none"
-            aria-hidden="true"
-          >
-            {Array.from({ length: 12 }).map((_, i) => (
-              <div key={i} className="space-y-1.5">
-                <div
-                  className="h-3 rounded-full bg-foreground/10"
-                  style={{ width: `${65 + (i % 3) * 12}%` }}
-                />
-                <div
-                  className="h-2.5 rounded-full bg-foreground/7"
-                  style={{ width: `${48 + (i % 4) * 10}%` }}
-                />
-              </div>
-            ))}
-          </div>
-          {/* Blur + lock overlay */}
-          <div className="absolute inset-0 backdrop-blur-[6px] bg-[#f0ece4]/40 flex flex-col items-center justify-center">
-            <div className="w-10 h-10 rounded-full bg-white/80 flex items-center justify-center shadow mb-3">
-              <svg
-                width="18"
-                height="20"
-                viewBox="0 0 18 20"
-                fill="none"
-                aria-hidden="true"
-              >
-                <rect
-                  x="2"
-                  y="9"
-                  width="14"
-                  height="11"
-                  rx="2"
-                  stroke="#c9a96e"
-                  strokeWidth="1.5"
-                />
-                <path
-                  d="M5 9V6a4 4 0 0 1 8 0v3"
-                  stroke="#c9a96e"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </div>
-            <p className="text-[13px] font-semibold text-foreground">
-              사주 풀이에 맞춤 판결 미정
-            </p>
-            <p className="text-[11px] text-muted-foreground mt-1">
-              결제 후 전체 내용을 확인하세요
-            </p>
-          </div>
-        </section>
+        <FivePillars previewMode />
+        <ChecklistSection previewMode />
+        <MonthlyAccordion previewMode />
 
         {/* 5. Second speech bubble scene */}
-        <section className="w-full max-w-[450px] mt-8 mx-auto flex justify-end">
+        <section className="w-full max-w-[450px] mt-38 mb-30 mx-auto flex justify-end">
           <div className="relative w-[70%] sm:w-[60%] md:w-[85%] aspect-[2/3]">
             {/* 캐릭터 */}
             <Image

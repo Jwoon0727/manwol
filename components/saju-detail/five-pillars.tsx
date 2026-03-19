@@ -1,5 +1,7 @@
 "use client";
 
+import { Lock } from "lucide-react";
+
 const PILLARS = [
   {
     imageUrl: "/main/saju-result/icon1.png",
@@ -43,9 +45,44 @@ const PILLARS = [
   },
 ];
 
-export default function FivePillars() {
+interface FivePillarsProps {
+  /** true일 때 처음 2개만 보이고 나머지는 블러 + 결제 버튼 오버레이 */
+  previewMode?: boolean;
+}
+
+function PillarCard({ p }: { p: (typeof PILLARS)[0] }) {
   return (
-    <section className=" w-full py-14" style={{ background: "#0E0E0E" }}>
+    <div
+      className="relative overflow-hidden rounded-lg p-5 flex flex-col gap-3 transition-all duration-200 hover:scale-[1.02]"
+      style={{
+        background: "rgba(255, 255, 255, 0.1)",
+        border: "1px solid rgba(153, 153, 153, 1)",
+      }}
+    >
+      <div className="absolute top-0 right-0 w-24 h-24 flex items-start justify-end pointer-events-none">
+        <img src={p.imageUrl} alt="" className="w-15 h-15 object-contain" />
+      </div>
+      <div>
+        <p
+          className="text-[10px] font-semibold tracking-widest"
+          style={{ color: p.subtitleColor }}
+        >
+          {p.subtitle}
+        </p>
+        <h3 className="text-[15px] font-bold text-white mt-0.5">{p.title}</h3>
+      </div>
+      <p className="text-white text-[13px] leading-relaxed">{p.desc}</p>
+    </div>
+  );
+}
+
+export default function FivePillars({ previewMode = false }: FivePillarsProps) {
+  const visibleCount = previewMode ? 2 : PILLARS.length;
+  const visiblePillars = PILLARS.slice(0, visibleCount);
+  const blurredPillars = previewMode ? PILLARS.slice(visibleCount) : [];
+
+  return (
+    <section className="w-full py-14" style={{ background: "#0E0E0E" }}>
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="mt-10 mb-6">
@@ -75,37 +112,36 @@ export default function FivePillars() {
 
         {/* Pillars grid */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-3 mb-15">
-          {PILLARS.map((p) => (
-            <div
-              key={p.title}
-              className="relative overflow-hidden rounded-lg p-5 flex flex-col gap-3 transition-all duration-200 hover:scale-[1.02]"
-              style={{
-                background: "rgba(255, 255, 255, 0.1)",
-                border: "1px solid rgba(153, 153, 153, 1)",
-              }}
-            >
-              {/* 오른쪽 상단 배경 이미지 */}
-              <div className="absolute top-0 right-0 w-24 h-24 flex items-start justify-end  pointer-events-none">
-                <img
-                  src={p.imageUrl}
-                  alt=""
-                  className="w-15 h-15 object-contain"
-                />
-              </div>
-              <div>
-                <p
-                  className="text-[10px] font-semibold tracking-widest"
-                  style={{ color: p.subtitleColor }}
-                >
-                  {p.subtitle}
-                </p>
-                <h3 className="text-[15px] font-bold text-white mt-0.5">
-                  {p.title}
-                </h3>
-              </div>
-              <p className="text-white text-[13px] leading-relaxed">{p.desc}</p>
+          {visiblePillars.map((p) => (
+            <PillarCard key={p.title} p={p} />
+          ))}
+          {blurredPillars.map((p) => (
+            <div key={p.title} className="blur-[10px] select-none">
+              <PillarCard p={p} />
             </div>
           ))}
+          {/* 블러 영역 그라데이션 + 결제 버튼 오버레이 (카드 3~5 위에만) */}
+          {previewMode && blurredPillars.length > 0 && (
+            <div
+              className="col-start-1 col-end-2 row-start-3 row-end-6 md:col-start-3 md:col-end-6 md:row-start-1 md:row-end-2 flex flex-col items-center justify-center -m-1.5 rounded-lg z-10"
+              style={{
+                background:
+                  "linear-gradient(to bottom, transparent 0%, rgba(14,14,14,0.5) 25%, rgba(14,14,14,0.95) 100%)",
+              }}
+            >
+              <button
+                type="button"
+                className="absolute mt-100 flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-base transition-colors hover:opacity-90"
+                style={{
+                  background: "#1A1A1A",
+                  color: "#FFD061",
+                }}
+              >
+                <Lock className="w-4 h-4 shrink-0" />
+                결제 후 전체 공개
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </section>
