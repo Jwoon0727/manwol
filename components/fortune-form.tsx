@@ -140,11 +140,11 @@ export default function FortuneForm({
             </button>
 
             {/* Form area — 바탕이미지 위에 오버레이 */}
-            <div className="relative z-10 flex min-h-0 flex-1 flex-col overflow-y-auto bg-transparent rounded-b-2xl px-6 pt-[320px]">
-              <div className="min-h-0 flex-1 space-y-7 overflow-y-auto">
+            <div className="relative z-10 flex min-h-0 flex-1 flex-col overflow-y-auto bg-transparent rounded-b-2xl px-4 md:px-6 pt-[240px] md:pt-[320px]">
+              <div className="min-h-0 flex-1 space-y-4 md:space-y-7 overflow-y-auto">
                 {/* 이름 */}
                 <div>
-                  <label className="block  text-[16px] text-white mb-2 font-bold">
+                  <label className="block text-[13px] md:text-[16px] text-white mb-1.5 md:mb-2 font-bold">
                     이름
                   </label>
                   <input
@@ -152,17 +152,17 @@ export default function FortuneForm({
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="이름을 입력해 주세요."
-                    className="w-full pt-4 bg-transparent border border-white rounded-xl px-4 py-3 text-[17px] text-white placeholder:text-white placeholder:text-[16px] focus:outline-none focus:border-white transition-colors"
+                    className="w-full pt-2.5 md:pt-4 bg-transparent border border-white rounded-lg md:rounded-xl px-3 md:px-4 py-2 md:py-3 text-[14px] md:text-[17px] text-white placeholder:text-white placeholder:text-[14px] md:placeholder:text-[16px] focus:outline-none focus:border-white transition-colors"
                   />
                 </div>
 
                 {/* 생년월일 */}
                 <div>
-                  <div className="flex items-center justify-between mb-2">
-                    <label className="text-[16px] text-white font-bold">
+                  <div className="flex items-center justify-between mb-1.5 md:mb-2">
+                    <label className="text-[13px] md:text-[16px] text-white font-bold">
                       나의 생년월일
                     </label>
-                    <div className="flex items-center gap-3 text-[16px]">
+                    <div className="flex items-center gap-2 md:gap-3 text-[13px] md:text-[16px]">
                       {(["양력", "음력"] as const).map((type) => (
                         <button
                           key={type}
@@ -170,14 +170,14 @@ export default function FortuneForm({
                           className="flex items-center gap-1 transition-colors"
                         >
                           <span
-                            className={`w-4 h-4 rounded-full border flex items-center justify-center transition-colors ${
+                            className={`w-3.5 h-3.5 md:w-4 md:h-4 rounded-full border flex items-center justify-center transition-colors shrink-0 ${
                               calendarType === type
                                 ? "border-white bg-white"
                                 : "border-white/60"
                             }`}
                           >
                             {calendarType === type && (
-                              <Check className="w-2.5 h-2.5 text-[oklch(0.15_0_0)]" />
+                              <Check className="w-2 h-2 md:w-2.5 md:h-2.5 text-[oklch(0.15_0_0)]" />
                             )}
                           </span>
                           <span
@@ -199,29 +199,29 @@ export default function FortuneForm({
                     onChange={handleBirthDateChange}
                     placeholder="0000.00.00"
                     maxLength={10}
-                    className="w-full pt-4 bg-transparent border border-white rounded-xl px-4 py-3 text-[17px] text-white placeholder:text-white placeholder:text-[16px] focus:outline-none focus:border-white transition-colors"
+                    className="w-full pt-2.5 md:pt-4 bg-transparent border border-white rounded-lg md:rounded-xl px-3 md:px-4 py-2 md:py-3 text-[14px] md:text-[17px] text-white placeholder:text-white placeholder:text-[14px] md:placeholder:text-[16px] focus:outline-none focus:border-white transition-colors"
                   />
                 </div>
 
                 {/* 태어난 시간 */}
                 <div>
-                  <div className="flex items-center justify-between mb-2">
-                    <label className="text-[16px] text-white font-bold">
+                  <div className="flex items-center justify-between mb-1.5 md:mb-2">
+                    <label className="text-[13px] md:text-[16px] text-white font-bold">
                       나의 태어난 시간
                     </label>
                     <button
                       onClick={() => setUnknownTime(!unknownTime)}
-                      className="flex items-center gap-1.5 text-[16px] transition-colors"
+                      className="flex items-center gap-1 md:gap-1.5 text-[13px] md:text-[16px] transition-colors"
                     >
                       <span
-                        className={`w-4 h-4 rounded-full border flex items-center justify-center transition-colors ${
+                        className={`w-3.5 h-3.5 md:w-4 md:h-4 rounded-full border flex items-center justify-center transition-colors shrink-0 ${
                           unknownTime
                             ? "border-white bg-white"
                             : "border-white/60"
                         }`}
                       >
                         {unknownTime && (
-                          <Check className="w-3 h-3 text-black" />
+                          <Check className="w-2.5 h-2.5 md:w-3 md:h-3 text-black" />
                         )}
                       </span>
                       <span
@@ -235,21 +235,21 @@ export default function FortuneForm({
                     <button
                       onClick={() => !unknownTime && setTimeOpen(!timeOpen)}
                       disabled={unknownTime}
-                      className={`w-full pt-5 border rounded-xl px-4 py-3 text-[13px] text-left flex items-center justify-between transition-colors ${
+                      className={`w-full pt-3 md:pt-5 border rounded-lg md:rounded-xl px-3 md:px-4 py-2 md:py-3 text-[12px] md:text-[13px] text-left flex items-center justify-between transition-colors ${
                         unknownTime
                           ? "border-white/40 text-white/50 cursor-not-allowed bg-transparent"
                           : "border-white text-white hover:border-white bg-transparent"
                       }`}
                     >
                       <span
-                        className={`text-[16px] ${!birthTime && !unknownTime ? "text-white" : ""}`}
+                        className={`text-[14px] md:text-[16px] ${!birthTime && !unknownTime ? "text-white" : ""}`}
                       >
                         {unknownTime
                           ? "시간모름"
                           : birthTime || "태어난 시간을 선택해주세요."}
                       </span>
                       <ChevronDown
-                        className={`w-6 h-6 transition-transform ${timeOpen ? "rotate-180" : ""} ${unknownTime ? "text-white/60" : "text-white"}`}
+                        className={`w-5 h-5 md:w-6 md:h-6 transition-transform ${timeOpen ? "rotate-180" : ""} ${unknownTime ? "text-white/60" : "text-white"}`}
                       />
                     </button>
                     {timeOpen && !unknownTime && (
@@ -273,15 +273,15 @@ export default function FortuneForm({
 
                 {/* 성별 */}
                 <div>
-                  <label className="block text-[16px] text-white font-bold mb-2">
+                  <label className="block text-[13px] md:text-[16px] text-white font-bold mb-1.5 md:mb-2">
                     성별
                   </label>
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-2 gap-2 md:gap-3">
                     {(["남성", "여성"] as const).map((g) => (
                       <button
                         key={g}
                         onClick={() => setGender(g)}
-                        className={`py-3 rounded-lg text-[14px] font-medium border transition-all ${
+                        className={`py-2 md:py-3 rounded-lg text-[13px] md:text-[14px] font-medium border transition-all ${
                           gender === g
                             ? "bg-white text-[oklch(0.15_0_0)] border-white"
                             : "bg-transparent text-white border-white hover:border-white/80"
@@ -297,7 +297,7 @@ export default function FortuneForm({
               {/* Submit */}
               <button
                 onClick={handleSubmit}
-                className="mb-6 z-30 flex-shrink-0 w-full py-3 rounded-lg font-bold text-[19px] transition-opacity hover:opacity-90 active:opacity-80"
+                className="mb-4 md:mb-6 z-30 flex-shrink-0 w-full py-2.5 md:py-3 rounded-lg font-bold text-[15px] md:text-[19px] transition-opacity hover:opacity-90 active:opacity-80"
                 style={{
                   background:
                     "linear-gradient(to right, #FEFFCB 0%, #FFE7A0 100%)",

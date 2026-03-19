@@ -14,7 +14,7 @@ const fortuneData: Record<
   {
     title: string;
     character: string;
-    character2: string;
+    character2?: string;
     character3: string;
     greeting: string;
     inputPlaceholder: string;
@@ -32,7 +32,7 @@ const fortuneData: Record<
     greeting:
       "어서 오세요.\n당신의 신년운세를 봐드릴 만월입니다.\n우선 성함과 생년월일을 말씀해주세요.",
     inputPlaceholder: "내 이름은..",
-    situationCharacter: "/main/sajudetail/fortune-detail-2.png",
+    situationCharacter: "/main/sajudetail/fortune-detail-1-4.png",
     situationCharacter2: "/main/sajudetail/fortune-detail-1-3.png",
     situationGreeting:
       "음.. 좋습니다.\n더 자세한 확인을 위해\n현재 당신의 상황을 알려주시겠어요?",
@@ -40,14 +40,13 @@ const fortuneData: Record<
   },
   "2": {
     title: "선화소자 연애비책",
-    character: "/main/sajudetail/fortune-detail-2.png",
-    character2: "/main/sajudetail/fortune-detail-2-2.png",
-    character3: "/main/sajudetail/fortune-detail-2-3.png",
+    character: "/main/sajudetail/fortune-detail-2-1.png",
+    character3: "/main/sajudetail/fortune-detail-1-3.png",
     greeting:
       "어서 오세요.\n운명의 인연을 찾아드릴 선화입니다.\n우선 성함과 생년월일을 알려주세요.",
     inputPlaceholder: "내 이름은..",
-    situationCharacter: "/images/fortune-detail-2-sit.jpg",
-    situationCharacter2: "/main/sajudetail/fortune-detail-2-2.png",
+    situationCharacter: "/main/sajudetail/fortune-detail-2-2.png",
+    situationCharacter2: "/main/sajudetail/fortune-detail-1-3.png",
     situationGreeting:
       "흠.. 좋아요.\n더 정확히 봐드리기 위해\n지금 연애 상황을 알려주시겠어요?",
     situationPlaceholder: "지금 나의 연애는..",
@@ -164,17 +163,19 @@ export default function FortuneDetail({ id }: Props) {
           />
           <div className="absolute inset-0 bg-black/20" aria-hidden="true" />
 
-          {/* 2. character2 = 사람이미지 (person) — 상단 중앙, 부모 넘어 확장 */}
-          <div className="absolute left-1/2 top-[15%] z-10 w-[125%] min-w-[500px] -translate-x-1/2">
-            <div className="relative aspect-[3/4] w-full">
-              <Image
-                src={data.character2}
-                alt={data.title}
-                fill
-                className="object-contain object-bottom"
-              />
+          {/* 2. character2 = 사람이미지 (person) — 상단 중앙, 부모 넘어 확장 (선택) */}
+          {data.character2 && (
+            <div className="absolute left-1/2 top-[15%] z-10 w-[125%] min-w-[500px] -translate-x-1/2">
+              <div className="relative aspect-[3/4] w-full">
+                <Image
+                  src={data.character2}
+                  alt={data.title}
+                  fill
+                  className="object-contain object-bottom"
+                />
+              </div>
             </div>
-          </div>
+          )}
 
           {/* 그라데이션: 위 투명 → 아래 어두움 (2번과 3번 사이) */}
           <div
