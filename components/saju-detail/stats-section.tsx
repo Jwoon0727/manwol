@@ -25,7 +25,7 @@ export default function StatsSection() {
           backgroundImage: 'url("/main/saju-result/bg.png")',
         }}
       />
-      <div className="relative z-10 max-w-4xl mx-auto px-6">
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
         {/* Section header */}
         <div className="mb-8">
           <p

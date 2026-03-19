@@ -46,7 +46,7 @@ const PILLARS = [
 export default function FivePillars() {
   return (
     <section className=" w-full py-14" style={{ background: "#0E0E0E" }}>
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="mt-10 mb-6">
           <p

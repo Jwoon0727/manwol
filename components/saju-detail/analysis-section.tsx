@@ -15,6 +15,21 @@ function SectionTag({ children }: { children: React.ReactNode }) {
   );
 }
 
+function HeaderTag({ children }: { children: React.ReactNode }) {
+  return (
+    <span
+      className="inline-block px-3 py-1 rounded-full text-[11px] font-medium"
+      style={{
+        background: "#fff",
+        color: "#374151",
+        border: "1px solid #e5e7eb",
+      }}
+    >
+      {children}
+    </span>
+  );
+}
+
 function BottomTagBar({ tags }: { tags: string[] }) {
   return (
     <div
@@ -30,7 +45,10 @@ function BottomTagBar({ tags }: { tags: string[] }) {
           className="px-4 py-3 text-xs"
           style={{
             color: "rgba(255,255,255,0.55)",
-            borderRight: i < tags.length - 1 ? "1px solid rgba(201,168,76,0.12)" : undefined,
+            borderRight:
+              i < tags.length - 1
+                ? "1px solid rgba(201,168,76,0.12)"
+                : undefined,
           }}
         >
           {tag}
@@ -49,22 +67,20 @@ function NoteBox({
   children: React.ReactNode;
   variant: "red" | "blue";
 }) {
-  const colors =
-    variant === "red"
-      ? { border: "#e05555", bg: "rgba(224,85,85,0.06)", titleColor: "#e05555" }
-      : { border: "#4a8fcb", bg: "rgba(74,143,203,0.06)", titleColor: "#4a8fcb" };
+  const titleColor = variant === "red" ? "#e05555" : "#4a8fcb";
 
   return (
     <div
-      className="rounded-lg p-4 mb-3"
-      style={{ background: colors.bg, border: `1px solid ${colors.border}`, borderLeftWidth: 3 }}
+      className="rounded-xl p-5 md:p-6 mb-4 last:mb-0"
+      style={{
+        background: "#fff",
+        border: "1px solid #e5e7eb",
+      }}
     >
-      <p className="text-xs font-bold mb-1.5" style={{ color: colors.titleColor }}>
+      <p className="text-sm font-bold mb-2" style={{ color: titleColor }}>
         {title}
       </p>
-      <p className="text-xs leading-relaxed" style={{ color: "rgba(30,28,22,0.72)" }}>
-        {children}
-      </p>
+      <p className="text-sm leading-relaxed text-gray-900">{children}</p>
     </div>
   );
 }
@@ -81,23 +97,35 @@ function AnalysisCard({
   return (
     <div
       className="rounded-xl overflow-hidden mb-5"
-      style={{ border: "1px solid #e8e2d0", background: "#fff" }}
+      style={{ border: "1px solid #e5e7eb", background: "#fff" }}
     >
       <div className="p-6 md:p-8">
-        <h3 className="text-base font-bold text-foreground mb-4">{title}</h3>
+        {/* Header: title left, tags right */}
+        <div className="flex flex-wrap items-center justify-between gap-3 mb-4 pb-4 border-b border-gray-200">
+          <h3 className="text-lg md:text-xl font-bold text-foreground">
+            {title}
+          </h3>
+          <div className="flex flex-wrap gap-2">
+            {tags.map((tag, i) => (
+              <HeaderTag key={i}>{tag}</HeaderTag>
+            ))}
+          </div>
+        </div>
         {children}
       </div>
-      <BottomTagBar tags={tags} />
     </div>
   );
 }
 
 export default function AnalysisSection() {
   return (
-    <section className="w-full bg-white py-16">
-      <div className="max-w-3xl mx-auto px-5">
+    <section className="w-full bg-[#F7F7F7] py-16">
+      <div className="max-w-6xl mx-auto px-5">
         {/* Section label */}
-        <p className="text-[11px] font-semibold mb-2" style={{ color: "#c9a84c" }}>
+        <p
+          className="text-[11px] font-semibold mb-2"
+          style={{ color: "#c9a84c" }}
+        >
           2024 정통 해설 리포트
         </p>
 
@@ -110,169 +138,272 @@ export default function AnalysisSection() {
 
         {/* Subtitle */}
         <p className="text-sm text-muted-foreground leading-relaxed mb-10">
-          격에서 배우자공간, 가정의 모든 중명을 하나씩 풀어냅니다.
+          격국에서 배우자궁까지, 명식의 모든 층위를 하나씩 풀어냅니다.
           <br />
-          단순한 예언이 아닌, 사주에 맞는 구조적 이해를 통해 작성합니다.
+          단순한 예언이 아닌, 사주에 맞는 구조적 이해를 통해 작성했습니다.
         </p>
 
         {/* Card 1: 2026 정통 해설 개요 */}
         <AnalysisCard
           title="2026 정통 해설 개요"
-          tags={["원국 4주 (庶局/丁巳/丙寅/乙未)", "현재 대운 계속 2020~2029", "2026 세운 丙午(병오)"]}
+          tags={[
+            "원국 4주 戊辰 / 丁巳 / 丙寅 / 乙未",
+            "현재 대운 계축 2020-2029",
+            "2026 세운 丙午(병오)",
+          ]}
         >
-          {/* Top tag chips */}
-          <div className="flex flex-wrap gap-2 mb-5">
-            <SectionTag>원국 4주 (庶局/丁巳/丙寅/乙未)</SectionTag>
-            <SectionTag>현재 대운 계속 2020~2029</SectionTag>
-            <SectionTag>2026 세운 丙午(병오)</SectionTag>
-          </div>
-
-          <div className="space-y-3 text-sm leading-relaxed" style={{ color: "rgba(30,28,22,0.78)" }}>
+          <div
+            className="space-y-3 text-sm leading-relaxed"
+            style={{ color: "rgba(30,28,22,0.78)" }}
+          >
             <p>
-              월령은 己(사)라 여름의 뜨거운 공기 속에서 일간 丙(병)이 신강으로 서 있습니다.
-              삶이 알맞은 기체 체력과 자신력이 잡혀 먼지 달려가는 흐름이 자연스럽습니다.
+              월령은 巳(사)라 여름의 뜨거운 공기 속에서 일간 丙(병)이 신강으로
+              서 있습니다.
+              <br />
+              쉽게 말해{" "}
+              <strong>
+                기본 체력과 추진력이 강해 먼저 달려가려는 흐름이 자연스럽습니다
+              </strong>
             </p>
+            <br />
             <p>
-              <strong>삶이 달아 기체에서 &apos;내 힘&apos;은 충분하니, 냉정함과 조절로 방향을 잡을수록 성과가 선명해집니다.</strong>
+              격국은 건록격이며 구조상 비견, 균형상 용신은 수(水) 축을 우선으로
+              봅니다. <br />
+              쉽게 말해{" "}
+              <strong>
+                ‘내 힘’은 충분하니, 냉정함과 조절로 방향을 잡을수록 성과가
+                선명해집니다.
+              </strong>
             </p>
+            <br />
             <p>
-              격국은 건록격이며 구조상 비견, 균형상 용신은 수(水) 축을 우선으로 봅니다.
-              삶이 달아 &apos;내 힘&apos;은 충분하니, 냉정함과 조절로 방향을 잡을수록 성과가 선명해집니다.
-            </p>
-            <p>
-              2026년 세운 丙午(병오)는 사주 미래측을 건드리며 전체적으로 보조 작용을 합니다.
-              삶이 달 때 속도는 붙지만, 분흘리는 축을 먼저 다지는 사람이 끝에 더 안정적으로 남습니다.
+              2026년 세운 丙午(병오)는 시주 미래축을 건드리며 전체적으로 보조
+              작용을 합니다. <br />
+              쉽게 말해{" "}
+              <strong>
+                기회도 속도도 붙지만, 흔들리는 축을 먼저 다잡는 사람이
+              </strong>
+              <strong>끝에 더 안정적으로 남습니다.</strong>
             </p>
           </div>
 
           <div className="mt-5 space-y-3">
             <NoteBox title="올해 주의점" variant="red">
-              주의점은 초·추 욕심과 진두세 발의 방향이라 언뜻 보면 기회처럼, 물목하이 커덧수록 관계에 미세한 영향이 생긴다는 것입니다.
-              속도나 경쟁으로 밀어붙이기보다, 한 번 더 확인하고 한 박자 쉬는 승균이 손실을 막는 선정한 기준이 됩니다.
+              주의점은 未-午 육합과 巳午未 방합·방국이 만드는 변동성으로,
+              움직임이 커질수록 판단과 관계의 미세한 엇갈림이 생기기 쉽다는 데
+              있습니다.
+              <br />
+              쉽게 말하면 특히 주의 달에는 속도나 열정으로 밀어붙이기보다, 한 번
+              더 확인하고 한 박자 쉬는 습관이 손실을 막는 안전장치가 됩니다.
             </NoteBox>
             <NoteBox title="운영 원칙" variant="blue">
-              신수를 제시한 11월 10달 3월을 함께 수(水)·목(木) 저에 있는 루틴을 쉬라 고정하고, 주 일년에 관계·게마·차를 판단을 채워 미성 성장하는 방식이 좋습니다.
-              삶이 달이라 동네는 속도 낼 틈 실수를 줄이는 것이 물질에 성량 맞는 원칙입니다.
+              상승월로 제시된 11월·10월·3월을 향해 수(水)·목(木) 축에 맞는
+              루틴을 하나 고정하고, 주의 달에는 관계·계약·지출 판단을 하루 이상
+              숙성하는 방식이 좋습니다.
+              <br /> 쉽게 말하면 좋은 달에는 ‘틀(구조)’을 세우고, 까다로운
+              달에는 ‘속도’를 낮춰 실수를 줄이는 것이 올해의 운영 핵심입니다.
             </NoteBox>
           </div>
 
           {/* Bottom stat row */}
           <div
             className="grid grid-cols-3 rounded-lg overflow-hidden mt-6"
-            style={{ background: "#111108", border: "1px solid rgba(201,168,76,0.18)" }}
+            style={{
+              background: "#333333",
+              border: "1px solid rgba(255,255,255,0.08)",
+            }}
           >
             {[
               { label: "핵심 용신", value: "수(水) / 목(木)" },
-              { label: "세운 성향", value: "비견 / 갑재" },
-              { label: "연간 미래측", value: "사주 미래측" },
+              { label: "세운 십신", value: "비견 / 겁재" },
+              { label: "연간 작동축", value: "시주 미래축" },
             ].map((item, i, arr) => (
               <div
                 key={item.label}
                 className="p-4 flex flex-col gap-1"
                 style={{
-                  borderRight: i < arr.length - 1 ? "1px solid rgba(201,168,76,0.12)" : undefined,
+                  borderRight:
+                    i < arr.length - 1
+                      ? "1px solid rgba(255,255,255,0.12)"
+                      : undefined,
                 }}
               >
-                <p className="text-[10px]" style={{ color: "rgba(255,255,255,0.4)" }}>
+                <p
+                  className="text-[10px]"
+                  style={{ color: "rgba(255,255,255,0.5)" }}
+                >
                   {item.label}
                 </p>
-                <p className="text-sm font-bold" style={{ color: "#c9a84c" }}>
-                  {item.value}
-                </p>
+                <p className="text-sm font-bold text-white">{item.value}</p>
               </div>
             ))}
           </div>
         </AnalysisCard>
 
         {/* Card 2: 판독 기준과 원국 개요 */}
-        <AnalysisCard
-          title="판독 기준과 원국 개요"
-          tags={["원국 4주 (庶局/丁巳/丙寅/乙未)", "현재 대운 계속", "세운 丙午(병오)"]}
-        >
-          <div className="space-y-3 text-sm leading-relaxed" style={{ color: "rgba(30,28,22,0.78)" }}>
+        <AnalysisCard title="판독 기준과 원국 개요" tags={[]}>
+          <div
+            className="space-y-3 text-sm leading-relaxed"
+            style={{ color: "rgba(30,28,22,0.78)" }}
+          >
             <p>
-              미려인의 원독은 &apos;예예의 달린(己)→일간 丙이 체계→원국의 뿐이라 드라마(통은 두간·자잔간)→오행·조후→체격 용신→신심 공언선→배우자금(일지)→당종화해→
-              대운·세운&apos;의 순서로 읽는 것이 가장 자연스럽습니다. 원국은 庚燮(庶위) / 丁巳(정사) / 丙寅(병인) / 乙未(을미)로 구성되어 있고, 현재 대운은 계축(2020~2029)이며,
-              2026년 세운 丙午(병오)로 사주 미래측을 점령합니다.
+              의뢰인의 판독은 ‘여름의 월령(巳)→일간 丙의 체력→원국의 뿌리와
+              드러남(통근·투간·지장간)→오행·조후→격국·용신→십신·궁위론→배우자궁(일지)→합충형해파→대운·세운’의
+              순서로 읽을 때 가장 자연스럽습니다. 원국은 戊辰(무진) / 丁巳(정사)
+              / 丙寅(병인) / 乙未(을미)로 구성되어 있고, 현재 대운은
+              계축(2020–2029)이며, 2026년 세운은 丙午(병오)로 시주 미래축을
+              활성화합니다.
             </p>
+            <br />
             <p>
-              이 순서는 &apos;원의 근본&apos;부터 &apos;작동하는 지금&apos;까지를 단계적으로 훑어 들어가는 방식입니다. 월령과 할려는 계절과 기계를 정하는 출발점이고, 그 다음
-              일간(丙)은 생각과 삶을 체력점 작동합니다. 이어서 강두주지간간이 기운의 뿌리를 내려뇌저(등간), 합으로 드라뇨는지(자강간)를 확인하는 과정으로, 강한 글라따로
-              실제 영향이 날라처 미를을 생생에 줍니다. 이렇게 기본 구조를 잡아야, 계축 대운과 丙午(병오) 세운이 이다를 &apos;먹지&apos; 건드리는지 흐름이 선명해집니다.
+              이 순서는 ‘힘의 근원’부터 ‘작동되는 지점’까지를 단계적으로 좁혀
+              들어가는 방식입니다. 월령과 월지는 계절의 기세를 정하는
+              출발점이고, 그 다음 일간(丙)은 명식의 중심 체력처럼 작동합니다.
+              이어서 통근·투간·지장간은 기운이 뿌리를 내렸는지(통근), 겉으로
+              드러났는지(투간), 속에 무엇을 품었는지(지장간)를 확인하는 절차로,
+              같은 글자라도 실제 영향력이 달라지는 이유를 설명해 줍니다. 이렇게
+              기본 구조를 잡아야, 계축 대운과 丙午(병오) 세운이 어디를 ‘먼저’
+              건드리는지 흐름이 선명해집니다.
             </p>
+            <br />
             <p>
-              쉬운 말로 하면, 의 방식은 &apos;계일이 도갑에 알아주고, 중심 불(丙)이 알마나 버려뇨지를 먼저 본 뒤, 2026년에는 丙午(병오)가 들어와서 사주 미래측이라는 미케
-              맥 축이 실제 흐름의 압라이는 어떠는지 분석합니다. 그래서 이후 해설은 사건을 잔장이기보다, 이번 추이 배 먹자 들이라는는—원국(庶局/丙인) / 丁巳(정사) /
-              丙寅(병인) / 乙未(을미)—를 따라가며 읽는 방식으로 진출하는 것이 핵심 참의가 됩니다.
+              쉬운 말로 번역하면, 이 명식은 ‘계절이 뜨겁게 밀어주고, 중심
+              불(丙)이 얼마나 버티는지’를 먼저 본 뒤, 2026년에는 丙午(병오)가
+              들어오며 시주 미래축이라는 미래·확장 축이 실제로 눌리고
+              당겨지는지를 확인하는 판입니다. 그래서 이후 해설은 사건을
+              단정하기보다, 어떤 축이 왜 먼저 움직이는지—원국(戊辰(무진) /
+              丁巳(정사) / 丙寅(병인) / 乙未(을미))과 운(계축, 丙午(병오))의
+              연결 고리—를 따라가며 읽는 방식으로 전개하는 것이 핵심 함의가
+              됩니다.
             </p>
+          </div>
+          {/* 태그 — p태그 밑에 */}
+          <div className="flex flex-wrap gap-2 mt-5">
+            <HeaderTag>원국 4주 戊辰 / 丁巳 / 丙寅 / 乙未</HeaderTag>
+            <HeaderTag>현재 대운 계축 2020-2029</HeaderTag>
+            <HeaderTag>2026 세운 丙午(병오)</HeaderTag>
           </div>
         </AnalysisCard>
 
         {/* Card 3: 월령과 일간 */}
-        <AnalysisCard
-          title="월령과 일간"
-          tags={["월별 (己丑)", "사람 결주기 / 현탁", "일간 丙(병) / 신강"]}
-        >
-          <div className="space-y-3 text-sm leading-relaxed" style={{ color: "rgba(30,28,22,0.78)" }}>
+        <AnalysisCard title="월령과 일간" tags={[]}>
+          <div
+            className="space-y-3 text-sm leading-relaxed"
+            style={{ color: "rgba(30,28,22,0.78)" }}
+          >
             <p>
-              미려인의 월칙은 올정형을 달린 己(사)가 탈라들어는 여름의 기세합니다. 겹조조 조간, 초급성 고른한 공기 속에 丙(병) 화(火)가 높이나며, 전체 체력은 신강
-              81정도로 단단히 서 있습니다. 미 기본 운도 체력이 분명하니 이후 해석에서는 흐름이 쉽 파악됩니다.
+              의뢰인 명식의 출발점은 월령 巳(사)가 만들어내는 여름의 기세입니다.
+              열조·조조 조건, 즉 덥고 건조한 공기 속에 일간 丙(병) 화(火)가
+              놓이면서, 전체 체력은 신강 81.1점으로 단단히 서 있습니다. 이 기본
+              온도와 체력이 분명하니 이후 해석에서도 중심이 쉽게 흔들리지
+              않습니다.
             </p>
+            <br />
             <p>
-              지원 득이도 중별과 몇 없이 않에 없습니다. 월령이 己(사)이라 여름의 유지가 강력하고, 사람이 庚(경) 중가의 일간 준으로 전체로 적용됩니다. 환청이 &apos;다가 구부는
-              주만 이전&apos;의 정신에 해결하는 상신으로, 월령이 한체관계가 그 기운의 배경이라면 한당이 됩니다. 이구에는 특흔 흠 축(계절의 도독), 특한 흠축(여어여의 미바)으로
-              고 전하 아 그래 먼걸 자주 분위로에서 확인됩니다.
+              작동 원리는 ‘월령은 계절의 힘, 일간은 그 안에서 움직이는
+              주인공’이라는 틀로 보면 정리됩니다. 월령이 巳(사)라 여름의 화기가
+              전제되고, 사령이 庚(경) 중기라 일간 기준으로 편재로 작동합니다.
+              편재는 ‘내가 다루는 자원·현실의 재료’에 해당하는 십신으로, 월령의
+              한복판에서 그 기운이 배경처럼 깔린다는 뜻입니다. 여기에 득령
+              충족(계절의 도움), 득지 충족(뿌리의 도움), 득세 충족(주변의
+              지원)으로 신강 판단이 세 갈래로 확인됩니다.
             </p>
+            <br />
             <p>
-              쉽게 번역하면, 여름 한가운데에 타고고 마래 공기가 기세이고, 그 속에서 丙(병)이라는 불꽃 주인공의 체력은 충분한데 그림입니다. &apos;신강&apos;은 기운의 여면지 않이
-              비처는 힘이 눌러 있으며, 사람 결 주기분된는 계절의 통신에서 현실 제조를 끌어는 성향이 &apos;갱영&apos;이 됩 작동한다는 걸 살라됩니다. 따라서 이분에서 이 갈칙
-              화(水)가 관찰하지 않도록 초분 균형을 어떻게 잡는지가, 갑 상향이나, 걸과를 달이 이든는 핵심 참 합니다.
+              쉽게 번역하면, 여름 한가운데의 뜨겁고 마른 공기가 기본이고, 그
+              속에서 丙(병)이라는 불의 주인공이 체력이 충분하다는 그림입니다.
+              ‘신강’은 기운이 약하지 않아 버티는 힘이 있다는 말이며, ‘사령 경
+              중기/편재’는 계절의 중심층에서 현실 재료를 만지는 성향이 함께
+              작동한다는 해석의 실마리입니다. 따라서 이후에는 이 강한 화(火)가
+              과열되지 않도록 조후의 균형을 어떻게 잡는지가, 같은 성향이라도
+              결과를 달리 만드는 핵심 함의가 됩니다.
             </p>
+          </div>
+          {/* 태그 — p태그 밑에 */}
+          <div className="flex flex-wrap gap-2 mt-5">
+            <HeaderTag>원국 4주 戊辰 / 丁巳 / 丙寅 / 乙未</HeaderTag>
+            <HeaderTag>현재 대운 계축 2020-2029</HeaderTag>
+            <HeaderTag>2026 세운 丙午(병오)</HeaderTag>
           </div>
         </AnalysisCard>
 
         {/* Card 4: 통근·투간·지장간 */}
-        <AnalysisCard
-          title="통근·투간·지장간"
-          tags={["뿌리 지지인 丙(병), 庚(庚), 戊(戊)", "투간 乙 丙", "통근·투 了, 丙, 乙"]}
-        >
-          <div className="space-y-3 text-sm leading-relaxed" style={{ color: "rgba(30,28,22,0.78)" }}>
+        <AnalysisCard title="통근·투간·지장간" tags={[]}>
+          <div
+            className="space-y-3 text-sm leading-relaxed"
+            style={{ color: "rgba(30,28,22,0.78)" }}
+          >
             <p>
-              미려인의 통근은 불꽃(己) 속 지지인 丙(병) 庚(庚) 戊(병)이 합쳐하고, 이 가운데에 일간 차지하여·뿌리 지장간은 구성하고, 이 가운에 투간된 것들은 庚(丙이
-              주), 변경합니다. 통근·투·지장간은 계절의 &apos;배연의 손합&apos;, &apos;재연의 손합&apos;을 못한하는 구조가 됩니다.
+              의뢰인 명식은 월지(巳) 속 지장간 丙(병)·戊(무)·庚(경) 중에서 戊,
+              丙이 천간으로 투간되어, ‘겉으로 드러난 힘’과 ‘속에서 받쳐 주는
+              뿌리’가 같은 방향으로 연결됩니다. 또한 월지에 통근한 천간이 戊,
+              丙으로 확인되어, 눈에 보이는 추진력과 실제 지속력이 분리되지 않고
+              함께 작동하는 구조가 됩니다.
             </p>
             <p>
-              통근·투·지장간(乙, 庚(庚), 戊(병))를 확인했을 때, 이 가운데에 천간에 현함된 수, 변경합니다. 투간된 것들은 庚(丙이 주, 庚(庚)이 주, 天(기타) 천간에 드나들어 있습니다.
-              축 축적합은 보기이기에 아어가는 정형합게 된 다 쉬더 있음을 알정합니다.
+              통근·투간·지장간은 각각 ‘뿌리’, ‘표면으로의 등장’, ‘가지 속 숨은
+              재료’를 보는 장치입니다. 월지 지장간은 丙(병), 戊(무), 庚(경)로
+              구성되고, 이 가운데 투간된 천간은 무, 병입니다. 통근은 “천간
+              글자가 어디에 발을 딛고 서 있나”를 보는 것인데, 월지에 통근한
+              천간이 戊, 丙이며, 가시 천간의 통근은 戊(辰巳寅), 丁(未),
+              丙(巳寅), 乙(辰未)로 요약됩니다. 즉 월령의 본기·중기·여기가 실제
+              천간 작동으로 이어지는지 점검했을 때, 주요 축이 실전에서 힘을 잃지
+              않도록 뒷받침이 있는 편입니다.
             </p>
             <p>
-              위의 말보 번역하면, &apos;원의 건가가 지기 기발합니다다&apos;, &apos;태연의 손합&apos;, 교통합니 붙 봐도 된 사람이 있다는 것입니다. 그래서 이번 도난의 생활행합들도
-              도 시 다에게 생이는 합텍터이빙이다, 나무 낡은 그 속도로 부성선의 생향으로 발화하기 않습니다. 택싱으로이는 이랬 기발이나 나한에 나타봐서를 제,
-              &apos;그의 기적에 걸 더 아이다는&apos; 균 이 종신한 선단할 때 이 통근·투간 구조가 중요한 기준이 됩니다.
+                쉬운 말로 번역하면, ‘겉으로 드러난 성향(천간)’이 공중에 뜨지
+              않고 ‘현실에서 버티는 근거(지지의 뿌리)’를 갖고 있다는 뜻입니다.
+              그래서 강해 보이기만 하고 금방 꺾이는 형태라기보다, 눈에 덜 띄는
+              요소도 꾸준히 영향력을 발휘하기 쉽습니다. 해석상으로는 어떤
+              기질이나 선택이 나타났을 때, 그것이 일시적 분위기인지 장기적으로
+              굳는 흐름인지 판단할 때 이 통근·투간 구조가 중요한 기준이 됩니다.
             </p>
+          </div>
+          {/* 태그 — p태그 밑에 */}
+          <div className="flex flex-wrap gap-2 mt-5">
+            <HeaderTag>뿌리 지지인 丙(병), 庚(庚), 戊(戊)</HeaderTag>
+            <HeaderTag>투간 乙 丙</HeaderTag>
+            <HeaderTag>통근·투 了, 丙, 乙</HeaderTag>
           </div>
         </AnalysisCard>
 
         {/* Card 5: 오행·조후 */}
-        <AnalysisCard
-          title="오행·조후"
-          tags={["조후 불(火/조후)", "과잉 없는 사주(水, 묘토)", "화토 평형"]}
-        >
-          <div className="space-y-3 text-sm leading-relaxed" style={{ color: "rgba(30,28,22,0.78)" }}>
+        <AnalysisCard title="오행·조후" tags={[]}>
+          <div
+            className="space-y-3 text-sm leading-relaxed"
+            style={{ color: "rgba(30,28,22,0.78)" }}
+          >
             <p>
-              미려인 생자의 오행·조후·화 미치기가 각 비도도 깊은 구성으로 찾아 됩니다. 오행 분포가 화 38.4% / 토 44.1% / 목 28.7% / 금 7.9% / 수 0.9%로 나타나며,
-              조후는 겹조조로 선정됩니다. 己(사)의 비도(특함을 됩 있어서 봄 갈찾이, 달라는 통화합했도 외부 조후는 성과별의 정동이)로 참고됩니다.
+              의뢰인 명식의 오행 · 조후는 ‘화(火)가 크게 치우친 뜨겁고 마른
+              구조’로 정리됩니다. 오행 분포가 목 18.4% / 화 44.1% / 토 28.7% /
+              금 7.9% / 수 0.9%로 나타나며, 조후는 열조·조조로 판정됩니다.
+              그래서 보정 필요 오행은 수(水), 토(土)로 잡히고, 합화는
+              불성(합해도 성질이 바뀌는 실변화가 없음)으로 봅니다.
             </p>
+            <br />
             <p>
-              작은 할여는 받은 걱정 요들을 따라가며, 한냉조로합가 많고, 마다도 조건이 동생 상관 걱정 없어도 됩니다. 화(火)가 그대로 수(水)가 가구는 없는 구조에서는
-              &apos;퍼지려는 4선&apos; 찰 있고, 조후·조(조후)가 이런에서는 이번 정당에서 속에서과 심앙리는 상신으로서는 상신로 따로, 수(水)는 식 각 조이 조후 역을
-              확실히 담당하는 속으로 작용합니다.
+              작동 원리는 생·극·설의 흐름을 따라가며, 한난조습(차고 덥고, 마르고
+              젖는 조건)을 동시에 겹쳐 읽는 데 있습니다. 화(火)가 과하고
+              수(水)가 거의 없는 구도에서는 ‘뜨거움’이 식지 않기 쉽고,
+              조조(건조함)가 더해져 순환이 빠르게 치우칩니다. 이때 토(土)는 화의
+              열을 받아 중간에서 완충하거나 담아내는 역할을 하며, 수(水)는 열을
+              식히고 건조를 적셔 전체 리듬을 고르게 만드는 축으로 작동합니다.
             </p>
+            <br />
             <p>
-              쉬운 번역에로는 &apos;별은 건가가 기발합니다에서, 과영분의 조후한무 눈이라듯 흡수되와 적중합니다다 없다&apos;에는 됩니다. 모든 합팅볼 성부 30 번 추이에 나 그 조건이
-              도 없아하면 됩니다. 또한 합적 과력봉섭의 외부 30 번 조인이는 속에서리는 성신변화는 관함찍기가들, 막아 수(水)의 갑 금처 여어짜야가들지만, 원국의 모양 구 삶
-              도 생공 부에의 초경과 흑을 어떻게 확빠냐기는가 핵심 참이가 됩니다.
+              쉬운 번역으로는 “열과 건조가 기본값이라, 균형을 잡아주는 차분함과
+              촉촉함이 중요하다”는 뜻입니다. 수(水), 토(土) 보정이 필요하다는
+              결론은 무엇을 더 ‘세게’ 하기보다, 과열된 흐름을 누그러뜨리고 지속
+              가능하게 만드는 방향의 해석을 요구합니다. 또한 합화 불성은 외부
+              조건이 와도 기질이 급격히 뒤집히기보다는, 원래의 온도·습도 성향
+              위에서 조절의 폭을 어떻게 확보하느냐가 핵심 함의가 됩니다.
             </p>
+          </div>
+          {/* 그 — p태그 밑에 */}
+          <div className="flex flex-wrap gap-2 mt-5">
+            <HeaderTag>조후 불(火/조후)</HeaderTag>
+            <HeaderTag>과잉 없는 사주(水, 묘토)</HeaderTag>
+            <HeaderTag>화토 평형</HeaderTag>
           </div>
         </AnalysisCard>
       </div>
