@@ -17,18 +17,18 @@ const slides = [
   {
     id: 2,
     tagline: "2025년 나의 운명은?",
-    title: "명천공자",
-    title2: "재물보감",
+    title: "만월공자",
+    title2: "신년운세",
     buttonText: "지금 보러가기",
-    image: "/images/card-3.jpg",
+    image: "/main/banner01.png",
   },
   {
     id: 3,
     tagline: "2025년 나의 운명은?",
-    title: "명천공자",
-    title2: "재물보감",
+    title: "만월공자",
+    title2: "신년운세",
     buttonText: "지금 보러가기",
-    image: "/images/card-3.jpg",
+    image: "/main/banner01.png",
   },
 ];
 

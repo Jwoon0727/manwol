@@ -67,7 +67,7 @@ export default function FortuneForm({
   return (
     <div className="h-screen bg-[#f0ece4] relative overflow-hidden flex flex-col ">
       {/* Header */}
-      <Navbar headerClassName="sticky top-0 bg-[#f0ece4]/90 border-[oklch(0.88_0.005_75)]" />
+      <Navbar headerClassName="sticky top-0 bg-white border-[oklch(0.88_0.005_75)]" />
 
       {/* Left background — viewport left edge */}
       <div

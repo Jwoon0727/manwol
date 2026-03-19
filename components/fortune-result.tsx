@@ -389,7 +389,7 @@ export default function FortuneResult({ id, title, name }: FortuneResultProps) {
   return (
     <div className="min-h-screen bg-[#f0ece4] relative overflow-x-hidden flex flex-col">
       {/* ── Header ── (고정, 스크롤 시 움직이지 않음) */}
-      <Navbar headerClassName="fixed top-0 left-0 right-0 z-50 bg-[#f0ece4]/90 border-[oklch(0.88_0.005_75)]" />
+      <Navbar headerClassName="fixed top-0 left-0 right-0 z-50 bg-white border-[oklch(0.88_0.005_75)]" />
 
       {/* Left background  */}
       <div

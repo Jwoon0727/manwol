@@ -142,7 +142,7 @@ export default function FortuneDetail({ id }: Props) {
       {/* 어서오세요 탭화면 */}
       <div
         className="relative w-full max-w-[450px] flex flex-col flex-shrink-0 -mt-4 -mb-4"
-        style={{ height: "calc(100vh - 3.5rem)" }}
+        style={{ height: "calc(100dvh - 3.5rem)" }}
       >
         {/* Back button */}
         <Link
@@ -224,8 +224,8 @@ export default function FortuneDetail({ id }: Props) {
 
 function PageShell({ children }: { children: React.ReactNode }) {
   return (
-    <div className="h-screen bg-[#f0ece4] relative overflow-hidden flex flex-col">
-      <Navbar headerClassName="sticky top-0 bg-[#f0ece4]/90 border-[oklch(0.88_0.005_75)]" />
+    <div className="h-screen h-[100dvh] max-h-[100dvh] bg-[#f0ece4] relative overflow-hidden overscroll-none flex flex-col">
+      <Navbar headerClassName="sticky top-0 bg-white border-[oklch(0.88_0.005_75)]" />
 
       {/* Left background — viewport left edge */}
       <div
@@ -288,7 +288,7 @@ function SituationStep({ data, onBack, onNext }: SituationStepProps) {
       <PageShell>
         <div
           className="relative w-full max-w-[450px] flex flex-col flex-shrink-0 -mt-4 -mb-4 rounded-2xl overflow-hidden"
-          style={{ height: "calc(100vh - 3.5rem)" }}
+          style={{ height: "calc(100dvh - 3.5rem)" }}
         >
           {/* Back button */}
           <button
@@ -389,7 +389,7 @@ function SituationStep({ data, onBack, onNext }: SituationStepProps) {
     <PageShell>
       <div
         className="relative w-full max-w-[450px] flex flex-col flex-shrink-0 -mt-4 -mb-4"
-        style={{ height: "calc(100vh - 3.5rem)" }}
+        style={{ height: "calc(100dvh - 3.5rem)" }}
       >
         <button
           onClick={onBack}
