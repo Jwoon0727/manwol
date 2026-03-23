@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
 type TagColor = "blue" | "orange" | "none";
@@ -139,10 +140,13 @@ export default function CelebritySaju() {
 
       {/* More button */}
       <div className="flex justify-center mt-10 mb-15">
-        <button className="inline-flex items-center gap-2 border border-[#000000] rounded-lg px-14 py-3 text-sm font-semibold text-foreground/70 hover:border-[var(--gold)] hover:text-[var(--gold)] transition-colors">
+        <Link
+          href="/saju-celeb"
+          className="inline-flex items-center gap-2 border border-[#000000] rounded-lg px-14 py-3 text-sm font-semibold text-foreground/70 hover:border-[var(--gold)] hover:text-[var(--gold)] transition-colors"
+        >
           더보기
           <ChevronRight size={14} />
-        </button>
+        </Link>
       </div>
     </section>
   );
