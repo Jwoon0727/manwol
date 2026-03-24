@@ -27,15 +27,13 @@ export function ScholarCharacter() {
               className="absolute inset-0 w-full h-full object-fill -z-10"
             />
 
-            <div className="relative z-10 flex w-full h-full px-[6%] pb-[6%]">
-              {/* 💡 수정 포인트: leading-relaxed를 leading-tight로 변경하여 줄 간격을 좁혔습니다. */}
-              <p className="ml-[5%] mb-[9%] flex-1.2 px-[4%] py-[2%] text-[14px] sm:text-[14px] md:text-[15px] lg:text-[15px] xl:text-[18px] leading-tight text-foreground font-medium text-center flex items-center justify-center">
+            <div className="relative z-10 flex w-full h-full gap-1 px-[3%] sm:px-[4%] md:px-[5%] pb-[5%]">
+              <p className="ml-[5%] mb-[9%] min-w-0 flex-1 px-[1%] sm:px-[2%] py-[2%] text-[14px] sm:text-[14px] md:text-[15px] lg:text-[15px] xl:text-[18px] leading-tight text-foreground font-medium text-center flex items-center justify-center">
                 앞전에 보신 <br /> 사주 내용을 <br /> 다시 확인하고 <br />{" "}
                 싶으시다고요?
               </p>
 
-              {/* 💡 수정 포인트: 마찬가지로 leading-tight 적용 */}
-              <p className="ml-[5%] mt-[18%] flex-1.2 px-[4%] py-[2%] text-[14px] sm:text-[14px] md:text-[15px] lg:text-[15px] xl:text-[18px] leading-tight text-foreground font-medium text-center flex items-center justify-center">
+              <p className="mr-[2%] mt-[18%] min-w-0 flex-1 px-[1%] sm:px-[2%] py-[2%] text-[14px] sm:text-[14px] md:text-[15px] lg:text-[15px] xl:text-[18px] leading-tight text-foreground font-medium text-center flex items-center justify-center">
                 기존에 입력한 <br /> 주문자 이름과 <br /> 이메일을 <br />{" "}
                 작성해주세요.
               </p>

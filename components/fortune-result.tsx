@@ -551,7 +551,8 @@ export default function FortuneResult({ id, title, name }: FortuneResultProps) {
             />
 
             {/* 말풍선 + 텍스트 2열 — 중앙보다 왼쪽에 배치 */}
-            <div className="absolute bottom-[-10%] left-[25%] sm:left-[10%] md:right-[50%] -translate-x-1/2 w-[95%]">
+            {/* 💡 수정 포인트: w-[95%]를 w-[115%]로 변경하여 너비를 넓혔습니다. (필요에 따라 110%, 120%, 130% 등으로 조절해 보세요) */}
+            <div className="absolute bottom-[-10%] left-[25%] sm:left-[10%] md:right-[50%] -translate-x-1/2 w-[115%]">
               <div className="relative">
                 <img
                   src="/main/saju-result/textbuble2.png"
@@ -559,13 +560,13 @@ export default function FortuneResult({ id, title, name }: FortuneResultProps) {
                   className="w-full h-auto object-contain"
                 />
                 <div className="absolute inset-0 flex items-center justify-between gap-2 px-[10%] py-[15%]">
-                  <p className="mt-[25%] ml-[1%] flex-1.25 text-center text-[16px] sm:text-[15px] md:text-[19px] lg:text-[20px] xl:text-[21px] leading-relaxed font-medium text-foreground whitespace-pre-line">
+                  <p className="mt-[25%] ml-[5%] flex-1.25 text-center text-[16px] sm:text-[15px] md:text-[19px] lg:text-[20px] xl:text-[21px] leading-relaxed font-medium text-foreground whitespace-pre-line">
                     상세한
                     <br /> 풀이를 위해 <br /> 소정의{" "}
                     <span className="font-bold">복채가</span>
                     <br /> <span className="font-bold">필요</span>합니다
                   </p>
-                  <p className="ml-[11%] flex-1 text-center text-[16px] sm:text-[15px] md:text-[19px] lg:text-[20px] xl:text-[21px] leading-relaxed font-medium text-foreground whitespace-pre-line">
+                  <p className="ml-[15%] flex-1 text-center text-[16px] sm:text-[15px] md:text-[19px] lg:text-[20px] xl:text-[21px] leading-relaxed font-medium text-foreground whitespace-pre-line">
                     위와 같은
                     <br /> 사주 분석을
                     <br /> 바로 알려드리고

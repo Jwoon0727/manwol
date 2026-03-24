@@ -151,7 +151,7 @@ export default function Navbar({ headerClassName = "" }: NavbarProps) {
               <div key={section.title} className="mb-2">
                 <button
                   onClick={() => toggleSection(section.title)}
-                  className="w-full flex items-center justify-between py-3 text-left font-bold text-[16px] md:text-[17px] text-foreground hover:text-primary transition-colors"
+                  className="w-full flex items-center justify-between py-3 text-left font-bold text-[16px] md:text-[17px] text-foreground  transition-colors"
                   aria-expanded={isExpanded}
                 >
                   {section.title}
@@ -169,7 +169,7 @@ export default function Navbar({ headerClassName = "" }: NavbarProps) {
                         <Link
                           href={item.href}
                           onClick={() => setDrawerOpen(false)}
-                          className="block py-3 pl-4 text-[14px] md:text-[15px] text-foreground/80 hover:text-primary hover:bg-muted/60 rounded-lg transition-colors"
+                          className="block py-3 pl-4 text-[14px] md:text-[15px] text-foreground/80  hover:bg-muted/60 rounded-lg transition-colors"
                         >
                           {item.label}
                         </Link>
