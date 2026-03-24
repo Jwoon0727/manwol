@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const POPULAR_TAGS = [
@@ -121,13 +122,14 @@ export default function DreamAnalysis() {
           </h2>
         </div>
 
-        <button
-          className="flex-shrink-0 mr-4 md:mr-8 flex items-center gap-1.5 rounded-sm font-semibold text-[12px] md:text-[14px] px-4 py-2 md:px-7 md:py-3.5 transition-opacity hover:opacity-90 text-[oklch(0.25_0.05_70)]"
+        <Link
+          href="/saju-dream"
+          className="flex-shrink-0 mr-4 md:mr-8 flex items-center gap-1.5 rounded-sm font-semibold text-[12px] md:text-[14px] px-4 py-2 md:px-7 md:py-3.5 transition-opacity hover:opacity-90 text-[oklch(0.25_0.05_70)] inline-flex"
           style={{ background: "#FECF61" }}
         >
           꿈 검색하기
           <ArrowRight size={14} strokeWidth={3} aria-hidden />
-        </button>
+        </Link>
       </div>
 
       {/* Popular tags */}

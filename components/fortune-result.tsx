@@ -512,13 +512,25 @@ export default function FortuneResult({ id, title, name }: FortuneResultProps) {
               className="object-cover object-top"
             />
 
-            {/* 말풍선 */}
+            {/* 말풍선 + 텍스트 2열 (midBubble을 줄 단위로 반으로 나눔, 별도 필드 없음) */}
             <div className="absolute bottom-[-10%] left-1/2 -translate-x-1/2 w-[95%]">
-              <img
-                src="/main/saju-result/textbuble.png"
-                alt="말풍선"
-                className="w-full h-auto object-contain"
-              />
+              <div className="relative">
+                <img
+                  src="/main/saju-result/textbuble.png"
+                  alt="말풍선"
+                  className="w-full h-auto object-contain"
+                />
+                <div className="absolute inset-0 flex items-center justify-between gap-2 px-[5%] py-[15%]">
+                  <p className="mt-[26%] mr-[2%]  flex-1.2 text-center text-[12px] sm:text-[15px] md:text-[22px] lg:text-[22px] xl:text-[23px] leading-relaxed font-medium text-foreground whitespace-pre-line">
+                    만월성 만의 <br /> 노하우가 담긴 <br />{" "}
+                    <span className="font-bold">정확한 풀이예시</span>를 <br />{" "}
+                    보여드리죠.
+                  </p>
+                  <p className="mb-[6%] mr-[2%] flex-1 text-center text-[12px] sm:text-[15px] md:text-[22px] lg:text-[22px] xl:text-[24px] leading-relaxed font-medium text-foreground whitespace-pre-line">
+                    위 항목들이 <br /> 어떻게 나오는지 <br /> 궁금하시다고요?
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -538,17 +550,31 @@ export default function FortuneResult({ id, title, name }: FortuneResultProps) {
               className="object-cover object-top  shadow-md"
             />
 
-            {/* 말풍선 */}
-            <div className="absolute top-[65%] left-[-20%] w-[95%]">
-              <img
-                src="/main/saju-result/textbuble02.png"
-                alt="말풍선"
-                className="w-full h-auto object-contain"
-              />
+            {/* 말풍선 + 텍스트 2열 — 중앙보다 왼쪽에 배치 */}
+            <div className="absolute bottom-[-10%] left-[25%] sm:left-[10%] md:right-[50%] -translate-x-1/2 w-[95%]">
+              <div className="relative">
+                <img
+                  src="/main/saju-result/textbuble2.png"
+                  alt="말풍선"
+                  className="w-full h-auto object-contain"
+                />
+                <div className="absolute inset-0 flex items-center justify-between gap-2 px-[10%] py-[15%]">
+                  <p className="mt-[25%] ml-[1%] flex-1.25 text-center text-[12px] sm:text-[15px] md:text-[19px] lg:text-[20px] xl:text-[21px] leading-relaxed font-medium text-foreground whitespace-pre-line">
+                    상세한
+                    <br /> 풀이를 위해 <br /> 소정의 복채가
+                    <br /> 필요합니다
+                  </p>
+                  <p className="ml-[11%] flex-1 text-center text-[12px] sm:text-[15px] md:text-[19px] lg:text-[20px] xl:text-[21px] leading-relaxed font-medium text-foreground whitespace-pre-line">
+                    위와 같은
+                    <br /> 사주 분석을
+                    <br /> 바로 알려드리고
+                    <br /> 싶지만...
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
-
         {/* 6. Payment card */}
         <FortunePaymentCard />
       </div>
