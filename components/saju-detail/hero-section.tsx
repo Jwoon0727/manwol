@@ -18,7 +18,7 @@ export default function HeroSection() {
           <div className="flex-1 min-w-0 flex flex-col items-center md:items-start text-center md:text-left">
             <div className="flex items-center gap-2 mb-3 pt-8">
               <span
-                className="
+                className="font-pretendard
   bg-white/10
   backdrop-blur-xl
   rounded-full
@@ -34,7 +34,7 @@ export default function HeroSection() {
               </span>
 
               <span
-                className=" px-4.5 py-2 text-sm md:text-base font-bold tracking-wider rounded-full backdrop-blur-md flex items-center justify-center leading-none"
+                className="font-pretendard px-4.5 py-2 text-sm md:text-base font-bold tracking-wider rounded-full backdrop-blur-md flex items-center justify-center leading-none"
                 style={{
                   background: "rgba(255, 217, 0, 0.1)",
                   color: "#FFC800",
@@ -90,12 +90,14 @@ export default function HeroSection() {
               {/* 텍스트 */}
               <div className="text-center md:text-left">
                 <div className="flex flex-col md:flex-row items-center md:items-center justify-center md:justify-start gap-1 md:gap-2 mb-3">
-                  <span className="text-white font-bold text-lg">도연선생</span>
-                  <span className="text-white/40 text-sm">
+                  <span className="font-pretendard text-white font-bold text-lg">
+                    도연선생
+                  </span>
+                  <span className="font-pretendard text-white/40 text-sm">
                     사주·운세 전문 상담
                   </span>
                 </div>
-                <p className="ml-2 text-white text-sm mt-0.5 leading-relaxed">
+                <p className="font-pretendard ml-2 text-white text-sm mt-0.5 leading-relaxed">
                   확장과 실행에 유리한 흐름입니다.
                   <br />
                   기회를 선점하는 전략이 중요합니다.
@@ -121,10 +123,10 @@ export default function HeroSection() {
                     className="relative px-6 py-4 flex-shrink-0"
                   >
                     {/* 내용 */}
-                    <p className="text-[#FFD594] text-[14px] font-medium tracking-widest uppercase mb-1">
+                    <p className="font-pretendard text-[#FFD594] text-[14px] font-medium tracking-widest uppercase mb-1">
                       {item.label}
                     </p>
-                    <p className="text-white/80 text-[16px] leading-snug">
+                    <p className="font-pretendard text-white/80 text-[16px] leading-snug">
                       {item.value}
                     </p>
 
@@ -235,19 +237,21 @@ export default function HeroSection() {
               ].map((s) => (
                 <div key={s.label}>
                   <p
-                    className="text-[#FFD594] font-black leading-none"
+                    className="font-pretendard text-[#FFD594] font-black leading-none"
                     style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)" }}
                   >
                     {s.value}
                   </p>
-                  <p className="text-white/40 text-xs mt-1">{s.label}</p>
+                  <p className="font-pretendard text-white/40 text-xs mt-1">
+                    {s.label}
+                  </p>
                 </div>
               ))}
             </div>
 
             {/* 格局 meta text */}
             <div
-              className="text-center text-[15px] leading-relaxed self-center w-full mt-7"
+              className="font-pretendard text-center text-[15px] leading-relaxed self-center w-full mt-7"
               style={{ color: "rgba(255,255,255,0.4)" }}
             >
               <p>格局 건록격 ｜ 用神 수(水) / 목(木)</p>
@@ -263,10 +267,10 @@ export default function HeroSection() {
         <div className="flex flex-col  lg:flex-row gap-8 lg:gap-2 items-start">
           {/* Left slogan */}
           <div className="hidden lg:flex mr-20 flex-shrink-0 lg:w-48 mt-6 lg:mt-8 flex-col">
-            <p className="text-white text-[28px] leading-snug font-medium mb-0">
+            <p className="font-pretendard text-white text-[28px] leading-snug font-medium mb-0">
               당신의 2026,
             </p>
-            <p className="text-[#FFD594] text-[28px] leading-snug font-semibold tracking-tight -mt-1">
+            <p className="font-pretendard text-[#FFD594] text-[28px] leading-snug font-semibold tracking-tight -mt-1">
               세 가지 축으로
               <br />
               읽습니다.
@@ -307,15 +311,15 @@ export default function HeroSection() {
                 }}
               >
                 <p
-                  className="text-[11px] font-medium tracking-widest mb-0.5"
+                  className="font-pretendard text-[11px] font-medium tracking-widest mb-0.5"
                   style={{ color: card.typeColor }}
                 >
                   {card.type}
                 </p>
-                <p className="text-white font-bold text-[18px] mb-2 leading-snug">
+                <p className="font-pretendard text-white font-bold text-[18px] mb-2 leading-snug">
                   {card.title}
                 </p>
-                <p className="text-white/70 text-xs leading-relaxed">
+                <p className="font-pretendard text-white/70 text-xs leading-relaxed">
                   {card.desc}
                 </p>
               </div>

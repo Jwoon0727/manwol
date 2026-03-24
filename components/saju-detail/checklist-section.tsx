@@ -28,17 +28,17 @@ export default function ChecklistSection({
         {/* Header */}
         <div className="mb-8">
           <p
-            className="text-xs font-semibold tracking-widest mb-1"
+            className="font-pretendard text-xs font-semibold tracking-widest mb-1"
             style={{ color: "#c9a84c" }}
           >
             실천 체크리스트
           </p>
-          <h2 className="text-2xl md:text-3xl font-black text-foreground leading-tight">
+          <h2 className="font-pretendard text-2xl md:text-3xl font-black text-foreground leading-tight">
             해야 할 것과
             <br />
             <span style={{ color: "#c9a84c" }}>하지 말아야 할 것</span>으로 구분
           </h2>
-          <p className="text-muted-foreground text-sm mt-2">
+          <p className="font-pretendard text-muted-foreground text-sm mt-2">
             2026년을 잘 살아내기 위한 가장 구체적인 행동 지침입니다.운은 방향을
             알려주고, 행동이 결과를 만듭니다.이 리스트를 자주 꺼내보고 판단의
             기준으로 삼으세요.
@@ -55,7 +55,7 @@ export default function ChecklistSection({
             }}
           >
             <h3
-              className="text-base font-bold mb-5"
+              className="font-pretendard text-base font-bold mb-5"
               style={{ color: "#3355FF" }}
             >
               해야 할 것 (DO)
@@ -80,7 +80,7 @@ export default function ChecklistSection({
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
                   </span>
-                  <span className="text-sm leading-relaxed text-gray-800">
+                  <span className="font-pretendard text-sm leading-relaxed text-gray-800">
                     {item}
                   </span>
                 </li>
@@ -114,7 +114,7 @@ export default function ChecklistSection({
                     color: "#FFD061",
                   }}
                 >
-                  <Lock className="w-4 h-4 shrink-0" />
+                  <Lock className="font-pretendard w-4 h-4 shrink-0" />
                   결제 후 전체 공개
                 </button>
               </div>
@@ -123,7 +123,7 @@ export default function ChecklistSection({
               className={previewMode ? "blur-[10px] pointer-events-none" : ""}
             >
               <h3
-                className="text-base font-bold mb-5"
+                className="font-pretendard text-base font-bold mb-5"
                 style={{ color: "#FF2C30" }}
               >
                 피해야 할 것 (AVOID)
@@ -148,7 +148,7 @@ export default function ChecklistSection({
                         <polyline points="20 6 9 17 4 12" />
                       </svg>
                     </span>
-                    <span className="text-sm leading-relaxed text-gray-800">
+                    <span className="font-pretendard text-sm leading-relaxed text-gray-800">
                       {item}
                     </span>
                   </li>

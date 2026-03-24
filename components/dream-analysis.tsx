@@ -104,7 +104,7 @@ export default function DreamAnalysis() {
   return (
     <section className="mt-15 mb-55 py-12 md:py-16 px-4 md:px-8 max-w-7xl mx-auto">
       {/* Section title */}
-      <h2 className="text-xl md:text-2xl font-bold text-foreground mb-6">
+      <h2 className="font-pretendard text-xl md:text-2xl font-bold text-foreground mb-6">
         꿈 해몽 분석
       </h2>
 
@@ -112,19 +112,20 @@ export default function DreamAnalysis() {
       <div className="flex items-center bg-[#2A2520] rounded-2xl overflow-hidden mb-5 shadow-lg">
         {/* Text area */}
         <div className="relative px-4 py-4 md:px-6 md:py-5 flex-1 min-w-0">
-          <p className="text-white/50 text-[10px] md:text-[11px] font-medium mb-1 tracking-wide">
+          <p className="font-pretendard text-white/50 text-[10px] md:text-[11px] font-medium mb-1 tracking-wide">
             오늘의 꿈 해몽
           </p>
 
-          <h2 className="bg-transparent text-white text-[16px] md:text-[28px] font-extrabold leading-tight">
-            간밤에 꾼 꿈, <span className="text-[#FECF61]">무슨 의미</span>
+          <h2 className="font-pretendard bg-transparent text-white text-[16px] md:text-[28px] font-extrabold leading-tight">
+            간밤에 꾼 꿈,{" "}
+            <span className="font-pretendard text-[#FECF61]">무슨 의미</span>
             일까요?
           </h2>
         </div>
 
         <Link
           href="/saju-dream"
-          className="flex-shrink-0 mr-4 md:mr-8 flex items-center gap-1.5 rounded-sm font-semibold text-[12px] md:text-[14px] px-4 py-2 md:px-7 md:py-3.5 transition-opacity hover:opacity-90 text-[oklch(0.25_0.05_70)] inline-flex"
+          className="font-pretendardflex-shrink-0 mr-4 md:mr-8 flex items-center gap-1.5 rounded-sm font-semibold text-[12px] md:text-[14px] px-4 py-2 md:px-7 md:py-3.5 transition-opacity hover:opacity-90 text-[oklch(0.25_0.05_70)] inline-flex"
           style={{ background: "#FECF61" }}
         >
           꿈 검색하기
@@ -134,12 +135,14 @@ export default function DreamAnalysis() {
 
       {/* Popular tags */}
       <div className="mb-8 flex flex-wrap items-center gap-2">
-        <p className="flex-shrink-0 text-sm text-muted-foreground">인기 주제</p>
+        <p className="font-pretendard flex-shrink-0 text-sm text-muted-foreground">
+          인기 주제
+        </p>
         {POPULAR_TAGS.map((tag) => (
           <button
             key={tag}
             onClick={() => setActiveTag(tag)}
-            className={`text-[12px] rounded-full px-3.5 py-1.5 border transition-colors font-medium ${
+            className={`font-pretendard text-[12px] rounded-full px-3.5 py-1.5 border transition-colors font-medium ${
               activeTag === tag
                 ? "border-[oklch(0.72_0.12_75)] text-[oklch(0.45_0.1_70)] bg-[#ECECEC]"
                 : "border-border text-muted-foreground bg-[#ECECEC] hover:border-[oklch(0.72_0.12_75)] hover:text-[oklch(0.45_0.1_70)]"
@@ -169,10 +172,12 @@ export default function DreamAnalysis() {
               />
             </span>
             <div>
-              <p className="text-[18px] font-semibold text-foreground leading-snug">
+              <p className="font-pretendard text-[18px] font-semibold text-foreground leading-snug">
                 {title}
               </p>
-              <p className="text-[12px] text-muted-foreground mt-0.1">{sub}</p>
+              <p className="font-pretendard text-[12px] text-muted-foreground mt-0.1">
+                {sub}
+              </p>
             </div>
           </button>
         ))}

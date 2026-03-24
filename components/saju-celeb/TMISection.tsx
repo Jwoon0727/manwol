@@ -40,23 +40,29 @@ export default function TMISection() {
       <div className="max-w-4xl mx-auto px-6">
         {/* Label */}
         <p
-          className="text-xs tracking-widest font-medium mb-4"
+          className="font-pretendard text-xs tracking-widest font-medium mb-4"
           style={{ color: "#CE8600" }}
         >
           연애부터 건강 까지
         </p>
 
         {/* Heading */}
-        <h2 className="text-3xl font-bold mb-1" style={{ color: "#1a1a1a" }}>
+        <h2
+          className="font-pretendard text-3xl font-bold mb-1"
+          style={{ color: "#1a1a1a" }}
+        >
           차은우의 사주,
         </h2>
-        <h2 className="text-3xl font-bold mb-4" style={{ color: "#CE8600" }}>
+        <h2
+          className="font-pretendard text-3xl font-bold mb-4"
+          style={{ color: "#CE8600" }}
+        >
           TMI 탐구
         </h2>
 
         {/* Description */}
         <p
-          className="text-sm leading-relaxed mb-20"
+          className="font-pretendard text-sm leading-relaxed mb-20"
           style={{ color: "#333333" }}
         >
           별빛 비주얼 뒤 편안한 루틴·건강 비밀을 사주로 해석합니다.
@@ -76,7 +82,7 @@ export default function TMISection() {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className="px-6 py-3 mt-8 text-md font-semibold transition-colors relative"
+                className="font-pretendard px-6 py-3 mt-8 text-md font-semibold transition-colors relative"
                 style={{
                   color: activeTab === tab ? "#FFA100" : "#333333",
                   background: "transparent",
@@ -94,14 +100,17 @@ export default function TMISection() {
 
           {/* Tab Content */}
           <div className="p-7">
-            <h3 className="text-xl font-bold mb-3" style={{ color: "#1a1a1a" }}>
+            <h3
+              className="font-pretendard text-xl font-bold mb-3"
+              style={{ color: "#1a1a1a" }}
+            >
               {content.subtitle}
             </h3>
             <ul className="space-y-0.5">
               {content.body.map((line, i) => (
                 <li
                   key={i}
-                  className="flex gap-1 text-md leading-snug"
+                  className="font-pretendard flex gap-1 text-md leading-snug"
                   style={{ color: "#555" }}
                 >
                   <span>{line}</span>
@@ -119,10 +128,16 @@ export default function TMISection() {
             border: "1px solid #CE8600",
           }}
         >
-          <h3 className="text-xl font-bold mb-3" style={{ color: "#1a1a1a" }}>
+          <h3
+            className="font-pretendard text-xl font-bold mb-3"
+            style={{ color: "#1a1a1a" }}
+          >
             차은우의 사주 핵심 포인트
           </h3>
-          <p className="text-sm leading-relaxed" style={{ color: "#333333" }}>
+          <p
+            className="font-pretendard text-sm leading-relaxed"
+            style={{ color: "#333333" }}
+          >
             관계·재물·건강은 각각 따로 움직이지 않고 연결되어 작동합니다.
             차은우의 경우 강점은 빠르게 확장되지만, 피로 신호를 늦게 인지하면
             퍼포먼스가 급격히 흔들릴 수 있어 리듬 관리가 중요합니다.

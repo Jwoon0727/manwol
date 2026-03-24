@@ -490,10 +490,10 @@ export default function FortuneResult({ id, title, name }: FortuneResultProps) {
                 <Icon className="w-4 h-4" style={{ color }} />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-[14px] font-semibold text-foreground leading-tight">
+                <p className="font-pretendard text-[14px] font-semibold text-foreground leading-tight">
                   {label}
                 </p>
-                <p className="text-[12px] text-muted-foreground mt-1 leading-relaxed">
+                <p className="font-pretendard text-[12px] text-muted-foreground mt-1 leading-relaxed">
                   {sub}
                 </p>
               </div>
@@ -521,12 +521,14 @@ export default function FortuneResult({ id, title, name }: FortuneResultProps) {
                   className="w-full h-auto object-contain"
                 />
                 <div className="absolute inset-0 flex items-center justify-between gap-2 px-[5%] py-[15%]">
-                  <p className="mt-[26%] mr-[2%]  flex-1.2 text-center text-[16px] sm:text-[18px] md:text-[22px] lg:text-[22px] xl:text-[23px] leading-tight font-medium text-foreground whitespace-pre-line">
+                  <p className="font-pretendard mt-[26%] mr-[2%]  flex-1.2 text-center text-[16px] sm:text-[18px] md:text-[22px] lg:text-[22px] xl:text-[23px] leading-tight font-medium text-foreground whitespace-pre-line">
                     만월성 만의 <br /> 노하우가 담긴 <br />{" "}
-                    <span className="font-bold">정확한 풀이예시</span>를 <br />{" "}
-                    보여드리죠.
+                    <span className="font-pretendard font-bold">
+                      정확한 풀이예시
+                    </span>
+                    를 <br /> 보여드리죠.
                   </p>
-                  <p className="mb-[3%] mr-[2%] flex-1 text-center text-[16px] sm:text-[18px] md:text-[22px] lg:text-[22px] xl:text-[24px] leading-tight font-medium text-foreground whitespace-pre-line">
+                  <p className="font-pretendard mb-[3%] mr-[2%] flex-1 text-center text-[16px] sm:text-[18px] md:text-[22px] lg:text-[22px] xl:text-[24px] leading-tight font-medium text-foreground whitespace-pre-line">
                     위 항목들이 <br /> 어떻게 나오는지 <br /> 궁금하시다고요?
                   </p>
                 </div>
@@ -560,13 +562,15 @@ export default function FortuneResult({ id, title, name }: FortuneResultProps) {
                   className="w-full h-auto object-contain"
                 />
                 <div className="absolute inset-0 flex items-center justify-between gap-2 px-[10%] py-[15%]">
-                  <p className="mt-[25%] ml-[2%] flex-1.25 text-center text-[18px] sm:text-[15px] md:text-[19px] lg:text-[20px] xl:text-[21px] leading-tight font-medium text-foreground whitespace-pre-line">
+                  <p className="font-pretendard mt-[25%] ml-[2%] flex-1.25 text-center text-[18px] sm:text-[15px] md:text-[19px] lg:text-[20px] xl:text-[21px] leading-tight font-medium text-foreground whitespace-pre-line">
                     상세한
                     <br /> 풀이를 위해 <br /> 소정의{" "}
-                    <span className="font-bold">복채가</span>
-                    <br /> <span className="font-bold">필요</span>합니다
+                    <span className="font-pretendard font-bold">복채가</span>
+                    <br />{" "}
+                    <span className="font-pretendard font-bold">필요</span>
+                    합니다
                   </p>
-                  <p className="ml-[10%] flex-1 text-center text-[18px] sm:text-[15px] md:text-[19px] lg:text-[20px] xl:text-[21px] leading-tight font-medium text-foreground whitespace-pre-line">
+                  <p className="font-pretendard ml-[10%] flex-1 text-center text-[18px] sm:text-[15px] md:text-[19px] lg:text-[20px] xl:text-[21px] leading-tight font-medium text-foreground whitespace-pre-line">
                     위와 같은
                     <br /> 사주 분석을
                     <br /> 바로 알려드리고

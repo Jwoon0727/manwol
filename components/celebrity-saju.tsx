@@ -118,8 +118,10 @@ export default function CelebritySaju() {
             </div>
 
             {/* Info */}
-            <h3 className="text-sm font-bold text-foreground">{celeb.name}</h3>
-            <p className="text-[11px] text-[#666666] mt-0.5 line-clamp-2 leading-relaxed">
+            <h3 className="font-pretendard text-sm font-bold text-foreground">
+              {celeb.name}
+            </h3>
+            <p className="font-pretendard text-[11px] text-[#666666] mt-0.5 line-clamp-2 leading-relaxed">
               {celeb.desc}
             </p>
 
@@ -142,7 +144,7 @@ export default function CelebritySaju() {
       <div className="flex justify-center mt-10 mb-15">
         <Link
           href="/saju-celeb"
-          className="inline-flex items-center gap-2 border border-[#000000] rounded-lg px-14 py-3 text-sm font-semibold text-foreground/70 hover:border-[var(--gold)] hover:text-[var(--gold)] transition-colors"
+          className="font-pretendard inline-flex items-center gap-2 border border-[#000000] rounded-lg px-14 py-3 text-sm font-semibold text-foreground/70 hover:border-[var(--gold)] hover:text-[var(--gold)] transition-colors"
         >
           더보기
           <ChevronRight size={14} />

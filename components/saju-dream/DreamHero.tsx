@@ -20,6 +20,7 @@ export default function DreamHero() {
         {/* pill badge */}
         <div
           className="bg-white/10
+          font-pretendard
   backdrop-blur-xl
   rounded-full
   px-4.5 py-2
@@ -34,7 +35,7 @@ export default function DreamHero() {
 
         {/* title */}
         <h1
-          className="font-bold leading-tight mt-5 mb-4 text-balance"
+          className="font-pretendard font-bold leading-tight mt-5 mb-4 text-balance"
           style={{ fontSize: "clamp(1.8rem, 5vw, 3rem)" }}
         >
           <span
@@ -52,7 +53,7 @@ export default function DreamHero() {
 
         {/* subtitle */}
         <p
-          className="text-lg mb-8"
+          className="font-pretendard text-lg mb-8"
           style={{
             color: "#ffffff",
             fontFamily: "Jeju Myeongjo, serif",
@@ -67,7 +68,7 @@ export default function DreamHero() {
           {tabs.map((tab, i) => (
             <button
               key={tab}
-              className="text-sm px-4 py-1.5 rounded-full transition-colors"
+              className="font-pretendard text-sm px-4 py-1.5 rounded-full transition-colors"
               style={{
                 color: "#ffffff",
                 border: "0.8px solid #ffffff",

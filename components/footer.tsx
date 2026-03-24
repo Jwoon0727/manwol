@@ -21,7 +21,7 @@ export default function Footer() {
                   key={link.label}
                   href={link.href}
                   // 💡 수정: 텍스트 색상을 #ffffff로 변경
-                  className="text-sm text-[#ffffff] hover:text-[var(--gold)] transition-colors"
+                  className="font-pretendard text-sm text-[#ffffff] hover:text-[var(--gold)] transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -40,7 +40,7 @@ export default function Footer() {
                 className="w-[80px] h-auto md:w-[95px]"
               />
             </div>
-            <p className="text-sm text-white leading-relaxed">
+            <p className="font-pretendard text-sm text-white leading-relaxed">
               당신의 운명이 가장 밝게 빛나는 순간을 함께합니다.
               <br />
               만월성 온라인 사주 서비스.
@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white pt-6 flex flex-col md:flex-row items-center justify-between gap-2">
-          <p className="text-xs text-white">
+          <p className="font-pretendard text-xs text-white">
             © 2026 만월성(Manwolseong). All rights reserved.
           </p>
         </div>

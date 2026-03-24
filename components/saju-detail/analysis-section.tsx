@@ -123,21 +123,21 @@ export default function AnalysisSection() {
       <div className="max-w-6xl mx-auto px-5">
         {/* Section label */}
         <p
-          className="text-[11px] font-semibold mb-2"
+          className="font-pretendard text-[11px] font-semibold mb-2"
           style={{ color: "#c9a84c" }}
         >
           2024 정통 해설 리포트
         </p>
 
         {/* Title */}
-        <h2 className="text-3xl md:text-4xl font-black leading-tight mb-3">
+        <h2 className="font-pretendard text-3xl md:text-4xl font-black leading-tight mb-3">
           원국이
           <br />
           <span style={{ color: "#c9a84c" }}>말하는 것들</span>
         </h2>
 
         {/* Subtitle */}
-        <p className="text-sm text-muted-foreground leading-relaxed mb-10">
+        <p className="font-pretendard text-sm text-muted-foreground leading-relaxed mb-10">
           격국에서 배우자궁까지, 명식의 모든 층위를 하나씩 풀어냅니다.
           <br />
           단순한 예언이 아닌, 사주에 맞는 구조적 이해를 통해 작성했습니다.
@@ -153,7 +153,7 @@ export default function AnalysisSection() {
           ]}
         >
           <div
-            className="space-y-3 text-sm leading-relaxed"
+            className="font-pretendard space-y-3 text-sm leading-relaxed"
             style={{ color: "rgba(30,28,22,0.78)" }}
           >
             <p>
@@ -207,7 +207,7 @@ export default function AnalysisSection() {
 
           {/* Bottom stat row */}
           <div
-            className="flex flex-col md:flex-row w-full text-sm rounded-lg overflow-hidden relative mt-6"
+            className="font-pretendard flex flex-col md:flex-row w-full text-sm rounded-lg overflow-hidden relative mt-6"
             style={{
               background: "#333333",
               border: "1px solid rgba(255,255,255,0.08)",
@@ -224,21 +224,21 @@ export default function AnalysisSection() {
               >
                 {/* 모바일용 */}
                 <div className="flex justify-between items-center gap-3 md:hidden w-full">
-                  <p className="text-[#FFD594] text-[13px] font-medium tracking-widest uppercase shrink-0">
+                  <p className="font-pretendard text-[#FFD594] text-[13px] font-medium tracking-widest uppercase shrink-0">
                     {item.label}
                   </p>
 
-                  <p className="text-white text-[18px] font-bold leading-snug text-right min-w-0 break-keep">
+                  <p className="font-pretendard text-white text-[18px] font-bold leading-snug text-right min-w-0 break-keep">
                     {item.value}
                   </p>
                 </div>
 
                 {/* PC용 */}
                 <div className="hidden md:block">
-                  <p className="text-[#FFD594] text-[14px] font-medium tracking-widest uppercase mb-1">
+                  <p className="font-pretendard text-[#FFD594] text-[14px] font-medium tracking-widest uppercase mb-1">
                     {item.label}
                   </p>
-                  <p className="text-white text-[20px] font-bold leading-snug">
+                  <p className="font-pretendard text-white text-[20px] font-bold leading-snug">
                     {item.value}
                   </p>
                 </div>
@@ -261,7 +261,7 @@ export default function AnalysisSection() {
         {/* Card 2: 판독 기준과 원국 개요 */}
         <AnalysisCard title="판독 기준과 원국 개요" tags={[]}>
           <div
-            className="space-y-3 text-sm leading-relaxed"
+            className="font-pretendard space-y-3 text-sm leading-relaxed"
             style={{ color: "rgba(30,28,22,0.78)" }}
           >
             <p>
@@ -296,7 +296,7 @@ export default function AnalysisSection() {
             </p>
           </div>
           {/* 태그 — p태그 밑에 */}
-          <div className="flex flex-wrap gap-2 mt-5">
+          <div className="font-pretendard flex flex-wrap gap-2 mt-5">
             <HeaderTag>원국 4주 戊辰 / 丁巳 / 丙寅 / 乙未</HeaderTag>
             <HeaderTag>현재 대운 계축 2020-2029</HeaderTag>
             <HeaderTag>2026 세운 丙午(병오)</HeaderTag>
@@ -306,7 +306,7 @@ export default function AnalysisSection() {
         {/* Card 3: 월령과 일간 */}
         <AnalysisCard title="월령과 일간" tags={[]}>
           <div
-            className="space-y-3 text-sm leading-relaxed"
+            className="font-pretendard space-y-3 text-sm leading-relaxed"
             style={{ color: "rgba(30,28,22,0.78)" }}
           >
             <p>
@@ -338,7 +338,7 @@ export default function AnalysisSection() {
             </p>
           </div>
           {/* 태그 — p태그 밑에 */}
-          <div className="flex flex-wrap gap-2 mt-5">
+          <div className="font-pretendard flex flex-wrap gap-2 mt-5">
             <HeaderTag>원국 4주 戊辰 / 丁巳 / 丙寅 / 乙未</HeaderTag>
             <HeaderTag>현재 대운 계축 2020-2029</HeaderTag>
             <HeaderTag>2026 세운 丙午(병오)</HeaderTag>
@@ -348,7 +348,7 @@ export default function AnalysisSection() {
         {/* Card 4: 통근·투간·지장간 */}
         <AnalysisCard title="통근·투간·지장간" tags={[]}>
           <div
-            className="space-y-3 text-sm leading-relaxed"
+            className="font-pretendard space-y-3 text-sm leading-relaxed"
             style={{ color: "rgba(30,28,22,0.78)" }}
           >
             <p>
@@ -378,7 +378,7 @@ export default function AnalysisSection() {
             </p>
           </div>
           {/* 태그 — p태그 밑에 */}
-          <div className="flex flex-wrap gap-2 mt-5">
+          <div className="font-pretendard flex flex-wrap gap-2 mt-5">
             <HeaderTag>뿌리 지지인 丙(병), 庚(庚), 戊(戊)</HeaderTag>
             <HeaderTag>투간 乙 丙</HeaderTag>
             <HeaderTag>통근·투 了, 丙, 乙</HeaderTag>
@@ -418,7 +418,7 @@ export default function AnalysisSection() {
             </p>
           </div>
           {/* 그 — p태그 밑에 */}
-          <div className="flex flex-wrap gap-2 mt-5">
+          <div className="font-pretendard flex flex-wrap gap-2 mt-5">
             <HeaderTag>조후 불(火/조후)</HeaderTag>
             <HeaderTag>과잉 없는 사주(水, 묘토)</HeaderTag>
             <HeaderTag>화토 평형</HeaderTag>

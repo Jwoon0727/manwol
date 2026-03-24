@@ -41,7 +41,7 @@ export default function DreamFAQ() {
       <div className="max-w-3xl mx-auto px-6">
         {/* Centered heading */}
         <h2
-          className="font-bold text-center mb-10 leading-tight"
+          className="font-pretendard font-bold text-center mb-10 leading-tight"
           style={{ fontSize: "2.5rem" }}
         >
           <span style={{ color: "#ffffff" }}>가족 꿈 FAQ </span>
@@ -65,7 +65,7 @@ export default function DreamFAQ() {
                   onClick={() => setOpen(isOpen ? null : i)}
                 >
                   <span
-                    className="font-semibold leading-snug"
+                    className="font-pretendard font-semibold leading-snug"
                     style={{ fontSize: "1.1rem", color: "#e8e3d8" }}
                   >
                     {faq.q}
@@ -98,7 +98,7 @@ export default function DreamFAQ() {
                     style={{ borderTop: "1.5px solid #2a2a2a" }}
                   >
                     <p
-                      className="text-sm leading-relaxed pt-4"
+                      className="font-pretendard text-sm leading-relaxed pt-4"
                       style={{ color: "#ffffff" }}
                     >
                       {faq.a}

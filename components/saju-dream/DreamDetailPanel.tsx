@@ -196,13 +196,16 @@ function DetailCard({ row, dark }: { row: DetailRow; dark: boolean }) {
         style={{ borderBottom: `0.1px solid ${dark ? "#ffffff" : "#333333"}` }}
       >
         <p
-          className="text-lg font-semibold"
+          className="font-pretendard text-lg font-semibold"
           style={{ color: dark ? "#e8e3d8" : "#1a1a1a" }}
         >
           {row.question}
         </p>
         {row.keywords && (
-          <span className="text-xs" style={{ color: dark ? "#666" : "#999" }}>
+          <span
+            className="font-pretendard text-xs"
+            style={{ color: dark ? "#666" : "#999" }}
+          >
             {row.keywords}
           </span>
         )}
@@ -212,13 +215,13 @@ function DetailCard({ row, dark }: { row: DetailRow; dark: boolean }) {
         {/* 왼쪽 박스 */}
         <div className="px-8 py-5">
           <p
-            className="text-sm font-bold mb-2"
+            className="font-pretendard text-sm font-bold mb-2"
             style={{ color: dark ? "#ffffff" : "#333333" }}
           >
             {row.left.label}
           </p>
           <p
-            className="text-sm leading-relaxed"
+            className="font-pretendard text-sm leading-relaxed"
             style={{ color: dark ? "#ffffff" : "#333333" }}
           >
             {row.left.body}
@@ -228,13 +231,13 @@ function DetailCard({ row, dark }: { row: DetailRow; dark: boolean }) {
         {/* 오른쪽 박스 */}
         <div className="px-8 py-5">
           <p
-            className="text-sm font-bold mb-2"
+            className="text-sm font-pretendard font-bold mb-2"
             style={{ color: dark ? "#FFD594" : "#CE8600" }}
           >
             {row.right.label}
           </p>
           <p
-            className="text-sm leading-relaxed"
+            className="font-pretendard text-sm leading-relaxed"
             style={{ color: dark ? "#FFD594" : "#CE8600" }}
           >
             {row.right.body}
@@ -262,24 +265,27 @@ export default function DreamDetailPanel({
     >
       <div className="max-w-4xl mx-auto px-6">
         {/* header */}
-        <p className="text-xs font-semibold mb-3" style={{ color: "#FFD594" }}>
+        <p
+          className="font-pretendard text-xs font-semibold mb-3"
+          style={{ color: "#FFD594" }}
+        >
           {sectionLabel}
         </p>
         <h2
-          className="font-bold leading-tight mb-1"
+          className="font-pretendard font-bold leading-tight mb-1"
           style={{ fontSize: "1.6rem", color: dark ? "#FFD594" : "#CE8600" }}
         >
           {heading}
         </h2>
         <p
-          className="font-bold mb-4"
+          className="font-pretendard font-bold mb-4"
           style={{ fontSize: "1.6rem", color: dark ? "#ffffff" : "#1a1a1a" }}
         >
           {subheading}
         </p>
         {description && (
           <p
-            className="text-sm leading-relaxed mb-10"
+            className="font-pretendard text-sm leading-relaxed mb-10"
             style={{ color: dark ? "#ffffff" : "#666" }}
           >
             {description}
@@ -290,7 +296,7 @@ export default function DreamDetailPanel({
           {groups.map((group, gi) => (
             <div key={gi}>
               <h3
-                className="text-xl font-bold mb-4 pb-2"
+                className="font-pretendard text-xl font-bold mb-4 pb-2"
                 style={{ color: dark ? "#FFD594" : "#CE8600" }}
               >
                 {group.groupTitle}

@@ -144,7 +144,7 @@ export default function FortuneForm({
               <div className="min-h-0 flex-1 space-y-4 md:space-y-7 overflow-y-auto">
                 {/* 이름 */}
                 <div>
-                  <label className="block text-[13px] md:text-[16px] text-white mb-1.5 md:mb-2 font-bold">
+                  <label className="font-pretendard block text-[13px] md:text-[16px] text-white mb-1.5 md:mb-2 font-bold">
                     이름
                   </label>
                   <input
@@ -152,14 +152,14 @@ export default function FortuneForm({
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="이름을 입력해 주세요."
-                    className="w-full pt-2.5 md:pt-4 bg-transparent border border-white rounded-lg md:rounded-xl px-3 md:px-4 py-2 md:py-3 text-[14px] md:text-[17px] text-white placeholder:text-white placeholder:text-[14px] md:placeholder:text-[16px] focus:outline-none focus:border-white transition-colors"
+                    className="font-pretendard w-full pt-2.5 md:pt-4 bg-transparent border border-white rounded-lg md:rounded-xl px-3 md:px-4 py-2 md:py-3 text-[14px] md:text-[17px] text-white placeholder:text-white placeholder:text-[14px] md:placeholder:text-[16px] focus:outline-none focus:border-white transition-colors"
                   />
                 </div>
 
                 {/* 생년월일 */}
                 <div>
                   <div className="flex items-center justify-between mb-1.5 md:mb-2">
-                    <label className="text-[13px] md:text-[16px] text-white font-bold">
+                    <label className="font-pretendard text-[13px] md:text-[16px] text-white font-bold">
                       나의 생년월일
                     </label>
                     <div className="flex items-center gap-2 md:gap-3 text-[13px] md:text-[16px]">
@@ -167,7 +167,7 @@ export default function FortuneForm({
                         <button
                           key={type}
                           onClick={() => setCalendarType(type)}
-                          className="flex items-center gap-1 transition-colors"
+                          className="font-pretendard flex items-center gap-1 transition-colors"
                         >
                           <span
                             className={`w-3.5 h-3.5 md:w-4 md:h-4 rounded-full border flex items-center justify-center transition-colors shrink-0 ${
@@ -199,14 +199,14 @@ export default function FortuneForm({
                     onChange={handleBirthDateChange}
                     placeholder="0000.00.00"
                     maxLength={10}
-                    className="w-full pt-2.5 md:pt-4 bg-transparent border border-white rounded-lg md:rounded-xl px-3 md:px-4 py-2 md:py-3 text-[14px] md:text-[17px] text-white placeholder:text-white placeholder:text-[14px] md:placeholder:text-[16px] focus:outline-none focus:border-white transition-colors"
+                    className="font-pretendard w-full pt-2.5 md:pt-4 bg-transparent border border-white rounded-lg md:rounded-xl px-3 md:px-4 py-2 md:py-3 text-[14px] md:text-[17px] text-white placeholder:text-white placeholder:text-[14px] md:placeholder:text-[16px] focus:outline-none focus:border-white transition-colors"
                   />
                 </div>
 
                 {/* 태어난 시간 */}
                 <div>
                   <div className="flex items-center justify-between mb-1.5 md:mb-2">
-                    <label className="text-[13px] md:text-[16px] text-white font-bold">
+                    <label className="font-pretendard text-[13px] md:text-[16px] text-white font-bold">
                       나의 태어난 시간
                     </label>
                     <button
@@ -242,14 +242,14 @@ export default function FortuneForm({
                       }`}
                     >
                       <span
-                        className={`text-[14px] md:text-[16px] ${!birthTime && !unknownTime ? "text-white" : ""}`}
+                        className={`font-pretendard text-[14px] md:text-[16px] ${!birthTime && !unknownTime ? "text-white" : ""}`}
                       >
                         {unknownTime
                           ? "시간모름"
                           : birthTime || "태어난 시간을 선택해주세요."}
                       </span>
                       <ChevronDown
-                        className={`w-5 h-5 md:w-6 md:h-6 transition-transform ${timeOpen ? "rotate-180" : ""} ${unknownTime ? "text-white/60" : "text-white"}`}
+                        className={`font-pretendard w-5 h-5 md:w-6 md:h-6 transition-transform ${timeOpen ? "rotate-180" : ""} ${unknownTime ? "text-white/60" : "text-white"}`}
                       />
                     </button>
                     {timeOpen && !unknownTime && (
@@ -261,7 +261,7 @@ export default function FortuneForm({
                               setBirthTime(t);
                               setTimeOpen(false);
                             }}
-                            className={`w-full px-4 py-2.5 text-[13px] text-left hover:bg-white/10 transition-colors ${birthTime === t ? "text-white font-bold" : "text-white/60"}`}
+                            className={`font-pretendard w-full px-4 py-2.5 text-[13px] text-left hover:bg-white/10 transition-colors ${birthTime === t ? "text-white font-bold" : "text-white/60"}`}
                           >
                             {t}
                           </button>
@@ -273,7 +273,7 @@ export default function FortuneForm({
 
                 {/* 성별 */}
                 <div>
-                  <label className="block text-[13px] md:text-[16px] text-white font-bold mb-1.5 md:mb-2">
+                  <label className="font-pretendard block text-[13px] md:text-[16px] text-white font-bold mb-1.5 md:mb-2">
                     성별
                   </label>
                   <div className="grid grid-cols-2 gap-2 md:gap-3">
@@ -297,7 +297,7 @@ export default function FortuneForm({
               {/* Submit */}
               <button
                 onClick={handleSubmit}
-                className="mb-4 md:mb-6 z-30 flex-shrink-0 w-full py-2.5 md:py-3 rounded-lg font-bold text-[15px] md:text-[19px] transition-opacity hover:opacity-90 active:opacity-80"
+                className="font-pretendard mb-4 md:mb-6 z-30 flex-shrink-0 w-full py-2.5 md:py-3 rounded-lg font-bold text-[15px] md:text-[19px] transition-opacity hover:opacity-90 active:opacity-80"
                 style={{
                   background:
                     "linear-gradient(to right, #FEFFCB 0%, #FFE7A0 100%)",

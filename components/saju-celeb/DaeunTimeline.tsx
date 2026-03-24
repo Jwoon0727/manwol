@@ -49,7 +49,7 @@ export default function DaeunTimeline() {
       <div className="max-w-4xl mx-auto px-6">
         {/* Label */}
         <p
-          className="text-xs tracking-widest mb-3 font-medium"
+          className="font-pretendard text-xs tracking-widest mb-3 font-medium"
           style={{ color: "#c8973a" }}
         >
           대운의 시기는?
@@ -57,13 +57,13 @@ export default function DaeunTimeline() {
 
         {/* Heading */}
         <h2
-          className="font-bold text-balance leading-tight"
+          className="font-pretendard font-bold text-balance leading-tight"
           style={{ fontSize: "2rem", color: "#c8973a" }}
         >
           대운 타임라인:
         </h2>
         <h2
-          className="font-bold mb-4 leading-tight"
+          className="font-pretendard font-bold mb-4 leading-tight"
           style={{ fontSize: "2rem", color: "#1a1a1a" }}
         >
           8세 → 100세
@@ -71,7 +71,7 @@ export default function DaeunTimeline() {
 
         {/* Description */}
         <div
-          className="text-sm leading-relaxed mb-10"
+          className="font-pretendard text-sm leading-relaxed mb-10"
           style={{ color: "#666" }}
         >
           <p>출생시각 미상(12:00 기준)으로 계산한 대운 흐름입니다.</p>
@@ -108,21 +108,21 @@ export default function DaeunTimeline() {
             >
               {/* Age range */}
               <p
-                className="text-[16px] font-bold mb-1"
+                className="font-pretendard text-[16px] font-bold mb-1"
                 style={{ color: "#1a1a1a" }}
               >
                 {period.range}
               </p>
               {/* Subtitle */}
               <p
-                className="text-[20px] font-bold mb-4"
+                className="font-pretendard text-[20px] font-bold mb-4"
                 style={{ color: "#c8973a" }}
               >
                 {period.label}
               </p>
               {/* Body */}
               <p
-                className="text-sm leading-relaxed"
+                className="font-pretendard text-sm leading-relaxed"
                 style={{ color: "#555", wordBreak: "keep-all" }}
               >
                 {period.content}

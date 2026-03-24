@@ -28,12 +28,12 @@ export function ScholarCharacter() {
             />
 
             <div className="relative z-10 flex w-full h-full gap-1 px-[3%] sm:px-[4%] md:px-[5%] pb-[5%]">
-              <p className="ml-[5%] mb-[9%] min-w-0 flex-1 px-[1%] sm:px-[2%] py-[2%] text-[14px] sm:text-[14px] md:text-[15px] lg:text-[15px] xl:text-[18px] leading-tight text-foreground font-medium text-center flex items-center justify-center">
+              <p className="font-pretendard ml-[5%] mb-[9%] min-w-0 flex-1 px-[1%] sm:px-[2%] py-[2%] text-[14px] sm:text-[14px] md:text-[15px] lg:text-[15px] xl:text-[18px] leading-tight text-foreground font-medium text-center flex items-center justify-center">
                 앞전에 보신 <br /> 사주 내용을 <br /> 다시 확인하고 <br />{" "}
                 싶으시다고요?
               </p>
 
-              <p className="mr-[2%] mt-[18%] min-w-0 flex-1 px-[1%] sm:px-[2%] py-[2%] text-[14px] sm:text-[14px] md:text-[15px] lg:text-[15px] xl:text-[18px] leading-tight text-foreground font-medium text-center flex items-center justify-center">
+              <p className="font-pretendard mr-[2%] mt-[18%] min-w-0 flex-1 px-[1%] sm:px-[2%] py-[2%] text-[14px] sm:text-[14px] md:text-[15px] lg:text-[15px] xl:text-[18px] leading-tight text-foreground font-medium text-center flex items-center justify-center">
                 기존에 입력한 <br /> 주문자 이름과 <br /> 이메일을 <br />{" "}
                 작성해주세요.
               </p>

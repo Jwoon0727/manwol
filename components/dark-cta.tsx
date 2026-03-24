@@ -16,10 +16,10 @@ export default function DarkCta() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center gap-10 md:gap-20">
         {/* Text */}
         <div className="flex-1 pl-[8%] text-white md:pl-[5%]">
-          <p className="mb-0.5 font-bold text-lg text-white md:mb-1.5 md:text-2xl">
+          <p className="font-pretendard mb-0.5 font-bold text-lg text-white md:mb-1.5 md:text-2xl">
             친근함 속에 숨겨진
           </p>
-          <h2 className="mb-3 text-lg font-bold leading-tight text-balance md:mb-5 md:text-2xl">
+          <h2 className="font-pretendard mb-3 text-lg font-bold leading-tight text-balance md:mb-5 md:text-2xl">
             <span
               className="text-white font-medium text-4xl"
               style={{ fontFamily: "'Yeongwol', serif" }}
@@ -28,7 +28,7 @@ export default function DarkCta() {
             </span>
             의 데이터
           </h2>
-          <p className="mb-4 text-sm leading-relaxed text-white md:mb-6 md:max-w-md md:text-sm">
+          <p className="font-pretendard mb-4 text-sm leading-relaxed text-white md:mb-6 md:max-w-md md:text-sm">
             만월성은 단순히 운세를 보여주는 것에서 그치지 않습니다.
             <br />
             개성 넘치는 캐릭터 뒤에는 6인의 점술가들의 정교한 사주 풀이 로직이
@@ -38,11 +38,11 @@ export default function DarkCta() {
           </p>
           <ul className="flex flex-col gap-2 md:gap-3">
             <li className="flex items-start gap-1.5 text-xs text-white md:gap-2 md:text-sm">
-              <Check className="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-white md:h-4 md:w-4" />
+              <Check className="font-pretendard mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-white md:h-4 md:w-4" />
               6인의 실존 점술가들이 검수한 풀이 데이터
             </li>
             <li className="flex items-start gap-1.5 text-xs text-white md:gap-2 md:text-sm">
-              <Check className="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-white md:h-4 md:w-4" />
+              <Check className="font-pretendard mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-white md:h-4 md:w-4" />
               쉽게 이해할 수 있는 현대적인 해석 풀이
             </li>
           </ul>

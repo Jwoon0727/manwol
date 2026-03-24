@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import Image from "next/image";
-import { ChevronRight } from "lucide-react";
 
 const slides = [
   {
@@ -33,84 +32,113 @@ const slides = [
 ];
 
 export default function HeroBanner() {
+  const scrollRef = useRef<HTMLDivElement>(null);
   const [current, setCurrent] = useState(0);
+
+  const updateIndexFromScroll = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const w = el.offsetWidth;
+    if (w <= 0) return;
+    const idx = Math.round(el.scrollLeft / w);
+    setCurrent(Math.min(Math.max(0, idx), slides.length - 1));
+  }, []);
+
+  const goToSlide = (idx: number) => {
+    const el = scrollRef.current;
+    if (!el) return;
+    el.scrollTo({
+      left: idx * el.offsetWidth,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <section className="relative w-full aspect-[21/9] md:aspect-[25/9] min-h-[280px] overflow-hidden">
-      {slides.map((slide, idx) => (
-        <div
-          key={slide.id}
-          className={`absolute inset-0 transition-opacity duration-700 ${idx === current ? "opacity-100" : "opacity-0 pointer-events-none"}`}
-        >
-          {/* Background image - 컨테이너에 꽉 채움 (검은 배경 노출 없음) */}
-          <Image
-            src={slide.image}
-            alt={slide.title}
-            fill
-            className="object-cover object-[center_bottom] md:object-center"
-            priority={idx === 0}
-          />
+      <div
+        ref={scrollRef}
+        onScroll={updateIndexFromScroll}
+        className="flex h-full w-full snap-x snap-mandatory overflow-x-auto overflow-y-hidden scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        style={{ WebkitOverflowScrolling: "touch" }}
+      >
+        {slides.map((slide, idx) => (
+          <div
+            key={slide.id}
+            className="relative h-full w-full min-w-full shrink-0 snap-start snap-always"
+          >
+            <Image
+              src={slide.image}
+              alt={slide.title}
+              fill
+              className="object-cover object-[center_bottom] md:object-center"
+              priority={idx === 0}
+            />
 
-          {/* image2: 오른쪽에 배치, 바닥에 붙이고 크게 (있을 때만) */}
-          {slide.image2 && (
-            <div className="absolute right-0 bottom-0 w-[58%] sm:w-[44%] md:w-[44%] lg:w-[44%] flex items-end justify-end pr-[6%] md:pr-[8%] z-[5] pointer-events-none">
-              <div className="relative w-full aspect-square">
-                <Image
-                  src={slide.image2}
-                  alt=""
-                  fill
-                  className="object-contain object-right-bottom"
-                  sizes="(max-width:640px) 42vw, (max-width:1024px) 50vw, 55vw"
-                />
+            {slide.image2 && (
+              <div className="absolute right-0 bottom-0 z-[5] flex w-[58%] items-end justify-end pr-[6%] sm:w-[44%] md:w-[44%] md:pr-[8%] lg:w-[44%] pointer-events-none">
+                <div className="relative aspect-square w-full">
+                  <Image
+                    src={slide.image2}
+                    alt=""
+                    fill
+                    className="object-contain object-right-bottom"
+                    sizes="(max-width:640px) 42vw, (max-width:1024px) 50vw, 55vw"
+                  />
+                </div>
+              </div>
+            )}
+
+            <div className="relative z-10 flex h-full max-w-6xl flex-col justify-center pl-[8%] pr-[10%]">
+              <div className="flex w-fit flex-col items-center">
+                <p className="font-pretendard mb-0.5 text-center text-[10px] font-medium tracking-wide text-white md:mb-3 md:text-lg md:tracking-widest">
+                  {slide.tagline}
+                </p>
+
+                <h1
+                  className="mb-3 text-center text-white md:mb-6 md:font-medium md:leading-tight"
+                  style={{
+                    fontFamily: "'SolmoeKimDaegeon', serif",
+                    lineHeight: 1.1,
+                  }}
+                >
+                  <span
+                    className="block text-3xl md:text-6xl lg:text-7xl xl:text-8xl [@media(min-width:1800px)]:text-8xl"
+                    style={{ textShadow: "6px 6px 2px #00000040" }}
+                  >
+                    {slide.title}
+                  </span>
+
+                  {slide.title2 && (
+                    <span className="block bg-gradient-to-r from-[#FFFFFF] to-[#FEFFC9] bg-clip-text text-4xl text-transparent md:text-7xl lg:text-8xl xl:text-9xl [@media(min-width:1800px)]:text-9xl [filter:drop-shadow(6px_6px_2px_rgba(0,0,0,0.25))]">
+                      {slide.title2}
+                    </span>
+                  )}
+                </h1>
+
+                <button
+                  type="button"
+                  className="font-pretendard inline-flex items-center gap-1 rounded-full bg-[#FEFFC9] px-3 py-1 text-[10px] font-semibold text-black shadow-lg transition-colors hover:bg-[var(--gold-dark)] md:px-5 md:py-2 md:text-sm"
+                >
+                  {slide.buttonText}
+                </button>
               </div>
             </div>
-          )}
-
-          {/* Content - 왼쪽과 동일 비율 여백 유지 (모바일~PC) */}
-          <div className="relative z-10 h-full flex flex-col justify-center pl-[8%] pr-[10%] max-w-6xl">
-            <div className="flex flex-col items-center w-fit">
-              <p className="text-white text-[10px] md:text-lg mb-0.5 md:mb-3 tracking-wide md:tracking-widest font-medium text-center">
-                {slide.tagline}
-              </p>
-
-              <h1
-                className="text-white font-medium md:font-medium leading-[1.1] md:leading-tight mb-3 md:mb-6 text-center"
-                style={{
-                  fontFamily: "'SolmoeKimDaegeon', serif",
-                }}
-              >
-                <span
-                  className="text-3xl md:text-6xl lg:text-7xl xl:text-8xl [@media(min-width:1800px)]:text-8xl block"
-                  style={{ textShadow: "6px 6px 2px #00000040" }}
-                >
-                  {slide.title}
-                </span>
-
-                {slide.title2 && (
-                  <span className="text-4xl md:text-7xl lg:text-8xl xl:text-9xl [@media(min-width:1800px)]:text-9xl block bg-gradient-to-r from-[#FFFFFF] to-[#FEFFC9] bg-clip-text text-transparent [filter:drop-shadow(6px_6px_2px_rgba(0,0,0,0.25))]">
-                    {slide.title2}
-                  </span>
-                )}
-              </h1>
-
-              <button className="inline-flex items-center gap-1 bg-[#FEFFC9] hover:bg-[var(--gold-dark)] text-black text-[10px] md:text-sm font-semibold px-3 md:px-5 py-1 md:py-2 rounded-full transition-colors shadow-lg">
-                {slide.buttonText}
-              </button>
-            </div>
           </div>
-        </div>
-      ))}
-
-      {/* Dots */}
-      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2 z-20">
-        {slides.map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => setCurrent(idx)}
-            className={`w-2 h-2 rounded-full transition-all ${idx === current ? "bg-white w-12" : "bg-white/40"}`}
-            aria-label={`슬라이드 ${idx + 1}`}
-          />
         ))}
+      </div>
+
+      <div className="pointer-events-none absolute inset-x-0 bottom-5 z-20 flex justify-center">
+        <div className="pointer-events-auto flex gap-2">
+          {slides.map((_, idx) => (
+            <button
+              key={idx}
+              type="button"
+              onClick={() => goToSlide(idx)}
+              className={`h-2 rounded-full transition-all ${idx === current ? "w-12 bg-white" : "w-2 bg-white/40"}`}
+              aria-label={`슬라이드 ${idx + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

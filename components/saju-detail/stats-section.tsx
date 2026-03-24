@@ -29,17 +29,17 @@ export default function StatsSection() {
         {/* Section header */}
         <div className="mb-8">
           <p
-            className="text-xs font-semibold tracking-widest mb-1"
+            className="font-pretendard text-xs font-semibold tracking-widest mb-1"
             style={{ color: "#c9a84c" }}
           >
             핵심 지표 대시보드
           </p>
-          <h2 className="text-2xl md:text-3xl font-black text-foreground leading-tight">
+          <h2 className="font-pretendard text-2xl md:text-3xl font-black text-foreground leading-tight">
             숫자로 보는
             <br />
             <span style={{ color: "#c9a84c" }}>나의 환급</span>
           </h2>
-          <p className="text-muted-foreground text-sm mt-2">
+          <p className="font-pretendard text-muted-foreground text-sm mt-2">
             사주 명식의 핵심 수치를 데이터로 시각화합니다. <br />
             합(合)의 연결, 충(沖)의 긴장, 오행의 분포가 만드는 <br />
             당신만의 에너지 지형도.
@@ -51,17 +51,17 @@ export default function StatsSection() {
           {SUMMARY_STATS.map((s) => (
             <div
               key={s.label}
-              className="rounded-sm p-5 flex flex-col items-center justify-center gap-1 text-center"
+              className="font-pretendard rounded-sm p-5 flex flex-col items-center justify-center gap-1 text-center"
               style={{
                 background: "#ffffff",
                 boxShadow: "6px 6px 12px rgba(0,0,0,0.08)",
               }}
             >
-              <span className="text-4xl font-black text-foreground">
+              <span className="font-pretendard text-4xl font-black text-foreground">
                 {s.value}
               </span>
               <p
-                className="text-xs font-medium uppercase tracking-wide"
+                className="font-pretendard text-xs font-medium uppercase tracking-wide"
                 style={{ color: "#c9a84c" }}
               >
                 {s.label}
@@ -72,7 +72,7 @@ export default function StatsSection() {
 
         {/* Deduction balance bars */}
         <div>
-          <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
+          <h3 className="font-pretendard text-xl font-bold text-foreground mb-4 flex items-center gap-2">
             기초 오행 밸런스
           </h3>
           {/* 오행 밸런스 */}
@@ -91,12 +91,12 @@ export default function StatsSection() {
                 {/* 상단: label + value (모바일) */}
                 <div className="flex justify-between md:hidden">
                   <span
-                    className="text-base font-bold"
+                    className="font-pretendard text-base font-bold"
                     style={{ color: item.color }}
                   >
                     {item.label}
                   </span>
-                  <span className="text-lg text-[#999999] font-medium">
+                  <span className="font-pretendard text-lg text-[#999999] font-medium">
                     {item.value}%
                   </span>
                 </div>
@@ -105,7 +105,7 @@ export default function StatsSection() {
                 <div className="flex items-center gap-3 w-full">
                   {/* PC label */}
                   <span
-                    className="hidden md:block text-lg font-bold w-16 shrink-0"
+                    className="font-pretendardhidden md:block text-lg font-bold w-16 shrink-0"
                     style={{ color: item.color }}
                   >
                     {item.label}
@@ -117,7 +117,7 @@ export default function StatsSection() {
                     style={{ background: "#f3f4f6" }}
                   >
                     <div
-                      className="h-3 md:h-2.5 rounded-full transition-all duration-700"
+                      className="font-pretendard h-3 md:h-2.5 rounded-full transition-all duration-700"
                       style={{
                         width: `${item.value}%`,
                         background: item.color,
@@ -126,7 +126,7 @@ export default function StatsSection() {
                   </div>
 
                   {/* PC value */}
-                  <span className="hidden md:block text-lg text-[#999999] w-12 text-right shrink-0">
+                  <span className="font-pretendard hidden md:block text-lg text-[#999999] w-12 text-right shrink-0">
                     {item.value}%
                   </span>
                 </div>

@@ -134,19 +134,19 @@ export default function HighlightsSection() {
       <div className="max-w-4xl mx-auto px-6">
         {/* Label + Heading */}
         <p
-          className="text-xs tracking-widest mb-3 font-medium"
+          className="font-pretendard text-xs tracking-widest mb-3 font-medium"
           style={{ color: "#CE8600" }}
         >
           하이라이트
         </p>
         <h2
-          className="text-3xl font-bold  mb-1 text-balance"
+          className="font-pretendard text-3xl font-bold  mb-1 text-balance"
           style={{ color: "#1a1a1a" }}
         >
           한눈에 보는
         </h2>
         <h2
-          className="text-3xl font-bold  mb-10 text-balance"
+          className="font-pretendard text-3xl font-bold  mb-10 text-balance"
           style={{ color: "#CE8600" }}
         >
           사주 하이라이트
@@ -155,7 +155,7 @@ export default function HighlightsSection() {
         {/* Stat Cards */}
         <div className="grid grid-cols-3 gap-4 mb-15">
           {/* 카드 1 */}
-          <div className="font-sans rounded-2xl shadow-[3px_3px_0px_rgba(0,0,0,0.1)] bg-white">
+          <div className="font-pretendard  rounded-2xl shadow-[3px_3px_0px_rgba(0,0,0,0.1)] bg-white">
             <StatCard
               element="화(火)"
               percent={30}
@@ -164,7 +164,7 @@ export default function HighlightsSection() {
           </div>
 
           {/* 카드 2 */}
-          <div className="font-sans rounded-2xl shadow-[3px_3px_0px_rgba(0,0,0,0.1)] bg-white">
+          <div className="font-pretendard  rounded-2xl shadow-[3px_3px_0px_rgba(0,0,0,0.1)] bg-white">
             <StatCard
               element="목(木)"
               percent={24.9}
@@ -173,7 +173,7 @@ export default function HighlightsSection() {
           </div>
 
           {/* 카드 3 */}
-          <div className="font-sans rounded-2xl shadow-[3px_3px_0px_rgba(0,0,0,0.1)] bg-white">
+          <div className="font-pretendard  rounded-2xl shadow-[3px_3px_0px_rgba(0,0,0,0.1)] bg-white">
             <StatCard
               element="토(土)"
               percent={23.6}
@@ -183,10 +183,16 @@ export default function HighlightsSection() {
         </div>
 
         {/* Analysis Subheading */}
-        <h3 className="text-lg font-bold mb-2" style={{ color: "#1a1a1a" }}>
+        <h3
+          className="font-pretendard text-lg font-bold mb-2"
+          style={{ color: "#1a1a1a" }}
+        >
           오행 분석: 불·나무·대지의 균형
         </h3>
-        <p className="text-sm leading-relaxed mb-10" style={{ color: "#555" }}>
+        <p
+          className="font-pretendard text-sm leading-relaxed mb-10"
+          style={{ color: "#555" }}
+        >
           화(火) 30%가 무대 에너지·카리스마를, 목(木) 25%가 성장·연기 변신을,
           토(土) 24%가 근성·체력을 담당합니다.
           <br /> 금(金) 9.5%·수(水) 12%는 섬세한 디테일·팬소통을 안정적으로
@@ -202,7 +208,7 @@ export default function HighlightsSection() {
           >
             {/* 상단 텍스트 */}
             <p
-              className="text-sm font-semibold mb-4"
+              className="font-pretendard text-sm font-semibold mb-4"
               style={{ color: "#333333" }}
             >
               차은우 오행 에너지 분포
@@ -215,7 +221,7 @@ export default function HighlightsSection() {
 
             {/* 하단 텍스트 */}
             <p
-              className="text-xs text-center mt-4"
+              className="font-pretendard text-xs text-center mt-4"
               style={{ color: "#333333" }}
             >
               그래프 꼭짓점을 눌러 세부 해설을 확인하세요.
@@ -230,7 +236,7 @@ export default function HighlightsSection() {
               style={{ background: "#FECF61" }}
             >
               <p
-                className="text-base font-bold text-center leading-relaxed"
+                className="font-pretendard text-base font-bold text-center leading-relaxed"
                 style={{ color: "#333333" }}
               >
                 화(火)-목(木) 조합이 &apos;아이돌·배우&apos; 투트랙을 가능케
@@ -244,12 +250,15 @@ export default function HighlightsSection() {
               style={{ background: "#fff" }}
             >
               <h4
-                className="text-base font-bold mb-2"
+                className="font-pretendard ext-base font-bold mb-2"
                 style={{ color: "#CE8600" }}
               >
                 오행 결과 풀이
               </h4>
-              <p className="text-sm leading-relaxed" style={{ color: "#444" }}>
+              <p
+                className="font-pretendard text-sm leading-relaxed"
+                style={{ color: "#444" }}
+              >
                 차은우의 오행 분포는 강한 기운을 장점으로 밀어주고, 약한 기운은
                 생활 루틴에서 보완할수록 성과가 더 안정적으로 누적되는
                 구조입니다. 특히 활동량이 큰 시기에는 컨디션·관계·일정 관리가
@@ -263,12 +272,15 @@ export default function HighlightsSection() {
               style={{ background: "#fff" }}
             >
               <h4
-                className="text-base font-bold mb-2"
+                className="font-pretendard text-base font-bold mb-2"
                 style={{ color: "#CE8600" }}
               >
                 용신 풀이
               </h4>
-              <p className="text-sm leading-relaxed" style={{ color: "#444" }}>
+              <p
+                className="font-pretendard text-sm leading-relaxed"
+                style={{ color: "#444" }}
+              >
                 용신은 과한 기운을 조절하고 부족한 기운을 채워 전체 흐름을 균형
                 있게 만드는 역할을 합니다. 차은우의 경우 프로젝트 선택, 휴식
                 주기, 협업 방식에서 용신 방향성을 반영할수록 체감 성과와

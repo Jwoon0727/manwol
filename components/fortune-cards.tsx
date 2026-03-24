@@ -43,7 +43,7 @@ const cards = [
 export default function FortuneCards() {
   return (
     <section className="py-12 md:py-16 px-4 md:px-8 max-w-7xl mx-auto">
-      <h2 className="text-xl md:text-2xl font-bold text-foreground mb-6">
+      <h2 className="font-pretendard text-xl md:text-2xl font-bold text-foreground mb-6">
         운명이 가는 곳
       </h2>
 
@@ -85,10 +85,10 @@ export default function FortuneCards() {
             </div>
 
             <div className="px-0 pt-4">
-              <h3 className="text-lg font-medium tracking-[-0.02em] text-foreground">
+              <h3 className="font-pretendard text-lg font-semibold tracking-[-0.02em] text-foreground">
                 {card.title}
               </h3>
-              <p className="mt-0.1 text-xs leading-6 text-muted-foreground line-clamp-2">
+              <p className="font-pretendard mt-0.1 text-xs leading-6 text-muted-foreground line-clamp-2">
                 {card.subtitle}
               </p>
             </div>

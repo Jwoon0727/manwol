@@ -59,6 +59,7 @@ export default function HeroSection() {
           <div className="mb-5 pt-8">
             <span
               className="bg-white/10
+              font-pretendard
   backdrop-blur-xl
   rounded-full
   px-4.5 py-2
@@ -189,10 +190,13 @@ function SajuTable() {
     <div>
       {/* Label */}
       <div className="flex items-baseline gap-3 mb-5">
-        <span className="font-bold text-base" style={{ color: "#FFD594" }}>
+        <span
+          className="font-pretendard font-bold text-base"
+          style={{ color: "#FFD594" }}
+        >
           사주 정보 및 만세력
         </span>
-        <span className="text-xs" style={{ color: "#ffffff" }}>
+        <span className="font-pretendard text-xs" style={{ color: "#ffffff" }}>
           1997년 3월 30일 갑오시 (양력)
         </span>
       </div>
@@ -219,7 +223,7 @@ function SajuTable() {
               {pillars.map((p) => (
                 <th
                   key={p.label}
-                  className="text-[15px] font-semibold py-3 px-4 text-center"
+                  className="font-pretendard text-[15px] font-semibold py-3 px-4 text-center"
                   style={{
                     background: "#1a1a1a",
                     color: "#ffffff",
@@ -237,7 +241,7 @@ function SajuTable() {
             {/* Heavenly Stem row */}
             <tr>
               <td
-                className="py-4 px-4 text-center text-[15px] font-semibold"
+                className="font-pretendard py-4 px-4 text-center text-[15px] font-semibold"
                 style={{
                   background: "#252525",
                   color: "#ffffff",
@@ -259,7 +263,7 @@ function SajuTable() {
                   }}
                 >
                   <span
-                    className="font-serif font-bold"
+                    className="font-pretendard font-serif font-bold"
                     style={{
                       fontSize: "2rem",
                       color: p.stemHighlight ? "#d9534f" : "#ffffff",
@@ -268,7 +272,7 @@ function SajuTable() {
                     {p.stem}
                   </span>
                   <span
-                    className="text-[15px] ml-1"
+                    className="font-pretendard text-[15px] ml-1"
                     style={{ color: p.stemHighlight ? "#d9534f" : "#ffffff" }}
                   >
                     {"(" + p.stemReading + ")"}
@@ -280,7 +284,7 @@ function SajuTable() {
             {/* Earthly Branch row */}
             <tr>
               <td
-                className="py-4 px-4 text-center text-[15px] font-semibold"
+                className="font-pretendard py-4 px-4 text-center text-[15px] font-semibold"
                 style={{
                   background: "#252525",
                   color: "#ffffff",
@@ -300,7 +304,7 @@ function SajuTable() {
                   }}
                 >
                   <span
-                    className="font-serif font-bold"
+                    className="font-pretendard font-serif font-bold"
                     style={{
                       fontSize: "2rem",
                       color: p.branchHighlight ? "#d9534f" : "#ffffff",
@@ -309,7 +313,7 @@ function SajuTable() {
                     {p.branch}
                   </span>
                   <span
-                    className="text-[15px] ml-1"
+                    className="font-pretendard text-[15px] ml-1"
                     style={{ color: p.branchHighlight ? "#d9534f" : "#ffffff" }}
                   >
                     {"(" + p.branchReading + ")"}

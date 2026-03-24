@@ -324,7 +324,7 @@ function SituationStep({ data, onBack, onNext }: SituationStepProps) {
           <div className="relative z-10 flex min-h-0 flex-1 flex-col justify-end overflow-hidden">
             <div className="flex flex-col rounded-b-2xl px-6 pt-5 pb-6  shadow-2xl space-y-7">
               {/* Label */}
-              <label className="block text-[16px] text-white font-bold mb-2">
+              <label className="font-pretendard block text-[16px] text-white font-bold mb-2">
                 저의 상황은
               </label>
 
@@ -333,7 +333,7 @@ function SituationStep({ data, onBack, onNext }: SituationStepProps) {
                 <select
                   value={selected}
                   onChange={(e) => setSelected(e.target.value)}
-                  className={`w-full pt-4 appearance-none bg-transparent border border-white rounded-xl px-4 py-3 text-[17px] focus:outline-none focus:border-white transition-colors ${selected ? "text-white" : "text-white/60"}`}
+                  className={`font-pretendard w-full pt-4 appearance-none bg-transparent border border-white rounded-xl px-4 py-3 text-[17px] focus:outline-none focus:border-white transition-colors ${selected ? "text-white" : "text-white/60"}`}
                 >
                   <option value="" disabled>
                     상황을 선택해주세요.
@@ -356,7 +356,7 @@ function SituationStep({ data, onBack, onNext }: SituationStepProps) {
                   value={custom}
                   onChange={(e) => setCustom(e.target.value)}
                   placeholder="직접 입력해주세요."
-                  className="w-full bg-transparent border border-white rounded-xl px-4 py-3 text-[17px] text-white placeholder:text-white/60 placeholder:text-[16px] focus:outline-none focus:border-white transition-colors"
+                  className="font-pretendard w-full bg-transparent border border-white rounded-xl px-4 py-3 text-[17px] text-white placeholder:text-white/60 placeholder:text-[16px] focus:outline-none focus:border-white transition-colors"
                 />
               </div>
 
@@ -366,7 +366,7 @@ function SituationStep({ data, onBack, onNext }: SituationStepProps) {
                 onClick={() => {
                   if (isValid && onNext) onNext();
                 }}
-                className="w-full py-3 rounded-lg font-bold text-[19px] transition-opacity disabled:opacity-50 hover:opacity-90 active:opacity-80"
+                className="font-pretendard w-full py-3 rounded-lg font-bold text-[19px] transition-opacity disabled:opacity-50 hover:opacity-90 active:opacity-80"
                 style={{
                   background:
                     "linear-gradient(to right, #FEFFCB 0%, #FFE7A0 100%)",

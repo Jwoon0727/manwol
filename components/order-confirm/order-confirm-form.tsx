@@ -17,7 +17,7 @@ export function OrderConfirmForm() {
   return (
     <div className="flex flex-col gap-4 w-full max-w-2xl">
       {/* Title — outside the card */}
-      <h1 className="text-2xl  font-bold text-foreground text-center tracking-tight">
+      <h1 className="font-pretendard text-2xl  font-bold text-foreground text-center tracking-tight">
         주문 확인
       </h1>
 
@@ -29,7 +29,7 @@ export function OrderConfirmForm() {
           <div className="flex flex-col gap-2">
             <label
               htmlFor="orderer-name"
-              className="text-sm font-medium text-foreground"
+              className="font-pretendard text-sm font-medium text-foreground"
             >
               주문자 이름
             </label>
@@ -48,7 +48,7 @@ export function OrderConfirmForm() {
           <div className="flex flex-col gap-2">
             <label
               htmlFor="orderer-email"
-              className="text-sm font-medium text-foreground"
+              className="font-pretendard text-sm font-medium text-foreground"
             >
               주문 시 입력한 이메일
             </label>
@@ -67,7 +67,7 @@ export function OrderConfirmForm() {
           <button
             type="submit"
             disabled={isLoading}
-            className="h-14 w-full rounded-md text-base font-bold tracking-wide transition-opacity duration-200 hover:opacity-90 disabled:opacity-70"
+            className="font-pretendard h-14 w-full rounded-md text-base font-bold tracking-wide transition-opacity duration-200 hover:opacity-90 disabled:opacity-70"
             style={{
               background: "linear-gradient(to right, #FECF61, #FFBE27)",
               color: "oklch(0.1 0 0)",
@@ -79,7 +79,7 @@ export function OrderConfirmForm() {
       </div>
 
       {/* Step indicator — outside the card */}
-      <p className="text-center text-sm text-muted-foreground">
+      <p className="font-pretendard text-center text-sm text-muted-foreground">
         Step 1/2 주문 정보 입력
       </p>
     </div>

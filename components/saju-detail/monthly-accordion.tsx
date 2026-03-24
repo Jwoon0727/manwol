@@ -243,17 +243,17 @@ export default function MonthlyAccordion({
   return (
     <section className="w-full py-16" style={{ background: "#0E0E0E" }}>
       <div className="max-w-4xl mx-auto px-6">
-        <p className="text-xs font-semibold tracking-widest mb-3 text-[#FFD594]">
+        <p className="font-pretendard text-xs font-semibold tracking-widest mb-3 text-[#FFD594]">
           5대 영역 운영 가이드
         </p>
 
-        <h2 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
+        <h2 className="font-pretendard text-2xl md:text-3xl font-black text-white leading-tight mb-3">
           12달의
           <br />
           <span style={{ color: "#FFD594" }}>파도를 읽어드립니다.</span>
         </h2>
 
-        <div className="text-sm text-white leading-relaxed mb-8 space-y-0.5">
+        <div className="font-pretendard text-sm text-white leading-relaxed mb-8 space-y-0.5">
           <p>한 해는 고르게 흐르지 않습니다.</p>
           <p>강한 달과 조심할 달이 뚜렷하게 나뉩니다.</p>
           <p>파도가 오는 때를 알면 파도에 올라타거나 피할 수 있습니다.</p>
@@ -269,10 +269,10 @@ export default function MonthlyAccordion({
               background: "rgba(255,255,255,0.07)",
             }}
           >
-            <p className="text-sm font-semibold mb-2 text-blue-400">
+            <p className="font-pretendard text-sm font-semibold mb-2 text-blue-400">
               상승월 · Rise
             </p>
-            <p className="text-3xl font-black text-white tracking-tight">
+            <p className="font-pretendard text-3xl font-black text-white tracking-tight">
               11월 · 10월 · 3월
             </p>
           </div>
@@ -285,10 +285,10 @@ export default function MonthlyAccordion({
               background: "rgba(255,255,255,0.07)",
             }}
           >
-            <p className="text-sm font-semibold mb-2 text-red-400">
+            <p className="font-pretendard text-sm font-semibold mb-2 text-red-400">
               주의월 · Caution
             </p>
-            <p className="text-3xl font-black text-white tracking-tight">
+            <p className="font-pretendard text-3xl font-black text-white tracking-tight">
               1월 · 6월 · 12월
             </p>
           </div>
@@ -301,10 +301,10 @@ export default function MonthlyAccordion({
               background: "rgba(255,255,255,0.07)",
             }}
           >
-            <p className="text-sm font-semibold mb-2 text-[#FFD594]">
+            <p className="font-pretendard text-sm font-semibold mb-2 text-[#FFD594]">
               연간 효과
             </p>
-            <p className="text-3xl font-black text-white tracking-tight">
+            <p className="font-pretendard text-3xl font-black text-white tracking-tight">
               보조
             </p>
           </div>
@@ -350,13 +350,13 @@ export default function MonthlyAccordion({
                   </div>
 
                   {/* 메인 문구 */}
-                  <p className="text-lg font-bold leading-snug">
+                  <p className="font-pretendard text-lg font-bold leading-snug">
                     결제하면 이런 풀이를
                     <br />더 받아보실 수 있어요!
                   </p>
 
                   {/* 리스트 */}
-                  <div className="flex flex-col gap-2 text-sm text-gray-300 text-left w-full">
+                  <div className="font-pretendard flex flex-col gap-2 text-sm text-gray-300 text-left w-full">
                     <div className="flex items-center gap-2 text-white">
                       <span className="w-5 h-5 rounded-full shrink-0 flex items-center justify-center bg-[#FFD061] text-black">
                         <svg
@@ -375,7 +375,7 @@ export default function MonthlyAccordion({
                       2월~12월 월별 상세 분석
                     </div>
 
-                    <div className="flex items-center gap-2 font-semibold text-white">
+                    <div className="font-pretendard flex items-center gap-2 font-semibold text-white">
                       <span className="w-5 h-5 rounded-full shrink-0 flex items-center justify-center bg-[#FFD061] text-black">
                         <svg
                           width="12"
@@ -393,7 +393,7 @@ export default function MonthlyAccordion({
                       매달 반드시 챙겨야 할 액션
                     </div>
 
-                    <div className="flex items-center gap-2 font-semibold text-white">
+                    <div className="font-pretendard flex items-center gap-2 font-semibold text-white">
                       <span className="w-5 h-5 rounded-full shrink-0 flex items-center justify-center bg-[#FFD061] text-black">
                         <svg
                           width="12"
@@ -411,7 +411,7 @@ export default function MonthlyAccordion({
                       피해야 할 상황과 인물 유형
                     </div>
 
-                    <div className="flex items-center gap-2 font-semibold text-white">
+                    <div className="font-pretendard flex items-center gap-2 font-semibold text-white">
                       <span className="w-5 h-5 rounded-full shrink-0 flex items-center justify-center bg-[#FFD061] text-black">
                         <svg
                           width="12"

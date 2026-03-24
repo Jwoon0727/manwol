@@ -47,7 +47,7 @@ export default function PurchasePage() {
           <div className="relative z-10 px-6 pt-7 pb-8 max-w-[80%]">
             {/* Badge */}
             <div
-              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold rounded-full px-4 py-1 mb-4 border"
+              className="font-pretendard inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold rounded-full px-4 py-1 mb-4 border"
               style={{
                 background: "rgba(201,168,76,0.12)",
                 borderColor: "rgba(201,168,76,0.35)",
@@ -59,19 +59,21 @@ export default function PurchasePage() {
             </div>
 
             {/* Title */}
-            <h1 className="font-black text-white leading-tight mb-2 tracking-[-0.17em]">
-              <span className="block text-[28px] md:text-[30px]">만월성</span>
-              <span className="block text-[28px] md:text-[30px]">
+            <h1 className="font-pretendard font-black text-white leading-tight mb-2 tracking-[-0.17em]">
+              <span className="font-pretendard block text-[28px] md:text-[30px]">
+                만월성
+              </span>
+              <span className="font-pretendard block text-[28px] md:text-[30px]">
                 2026 신년운세
               </span>
-              <span className="block text-[28px] md:text-[30px]">
+              <span className="font-pretendard block text-[28px] md:text-[30px]">
                 프리미엄 사주풀이
               </span>
             </h1>
 
             {/* Subtitle */}
             <p
-              className="text-[14px] leading-relaxed"
+              className="font-pretendard text-[14px] leading-relaxed"
               style={{ color: "rgba(255,255,255,0.55)" }}
             >
               6인의 역술가 감수 · 현대적 해석
@@ -127,7 +129,7 @@ export default function PurchasePage() {
                     />
                   </span>
                   <span
-                    className="text-[12.5px] font-medium"
+                    className="font-pretendard text-[12.5px] font-medium"
                     style={{ color: "#2a1f0e" }}
                   >
                     {row.right}
@@ -152,7 +154,7 @@ export default function PurchasePage() {
               {/* Original price */}
               <div className="flex justify-end mb-1">
                 <span
-                  className="text-[17px] line-through"
+                  className="font-pretendard text-[17px] line-through"
                   style={{ color: "rgba(255,255,255,0.3)", fontWeight: 700 }}
                 >
                   30,000원
@@ -162,7 +164,7 @@ export default function PurchasePage() {
               {/* Label + discount + final price */}
               <div className="flex items-center justify-between">
                 <span
-                  className="text-[17px]"
+                  className="font-pretendard text-[17px]"
                   style={{
                     fontFamily: "'Pretendard Variable', Pretendard, sans-serif",
                     color: "rgba(255,255,255,0.45)",
@@ -173,7 +175,7 @@ export default function PurchasePage() {
                 </span>
                 <div className="flex items-center gap-2.5">
                   <span
-                    className="text-[15px] px-2 py-0.5 rounded"
+                    className="font-pretendard text-[15px] px-2 py-0.5 rounded"
                     style={{
                       fontFamily:
                         "'Pretendard Variable', Pretendard, sans-serif",
@@ -195,7 +197,7 @@ export default function PurchasePage() {
                   >
                     25,000
                     <span
-                      className="ml-0.5"
+                      className="font-pretendard ml-0.5"
                       style={{
                         fontFamily:
                           "'Pretendard Variable', Pretendard, sans-serif",
@@ -212,7 +214,7 @@ export default function PurchasePage() {
 
             {/* Savings bar */}
             <div
-              className="mx-3 mb-5 rounded-xl py-2.5 text-center"
+              className="font-pretendard mx-3 mb-5 rounded-xl py-2.5 text-center"
               style={{
                 background: "#2c2519",
                 color: "rgba(255,255,255,0.7)",
@@ -223,7 +225,7 @@ export default function PurchasePage() {
             >
               지금 결제하면{" "}
               <strong
-                className="text-[#FFD061]"
+                className="font-pretendard text-[#FFD061]"
                 style={{ fontWeight: 900, fontSize: "17px" }}
               >
                 14,000원 절약!
@@ -236,7 +238,7 @@ export default function PurchasePage() {
         <div className="px-4 pb-2" style={{ background: "#FFFCF5" }}>
           <Link
             href="/saju-detail"
-            className="w-full rounded-2xl py-3 flex items-center justify-center gap-2 text-sm font-bold transition-opacity hover:opacity-90 active:opacity-80 block"
+            className="font-pretendard w-full rounded-2xl py-3 flex items-center justify-center gap-2 text-sm font-bold transition-opacity hover:opacity-90 active:opacity-80 block"
             style={{ background: "#1a1610", color: "#fff" }}
           >
             치킨 한 마리 값으로 사주풀이 확인하기
@@ -255,10 +257,13 @@ export default function PurchasePage() {
 
         {/* ─── FOOTER NOTE ─── */}
         <div
-          className="text-center pb-10 pt-1"
+          className="font-pretendard text-center pb-10 pt-1"
           style={{ background: "#FFFCF5" }}
         >
-          <p className="text-[14px]" style={{ color: "rgba(42,31,14,0.45)" }}>
+          <p
+            className="font-pretendard text-[14px]"
+            style={{ color: "rgba(42,31,14,0.45)" }}
+          >
             결제 완료 즉시 사주풀이를 확인할 수 있어요!
           </p>
         </div>

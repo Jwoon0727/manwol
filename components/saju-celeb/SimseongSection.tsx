@@ -38,22 +38,25 @@ export default function SimseongSection() {
     <section className="w-full py-14" style={{ background: "#0E0E0E" }}>
       <div className="max-w-4xl mx-auto px-6">
         <p
-          className="text-xs tracking-widest mb-1"
+          className="font-pretendard text-xs tracking-widest mb-1"
           style={{ color: "#FFD594" }}
         >
           십성 & 신살
         </p>
         <h2
-          className="text-3xl font-bold  mb-2 text-balance"
+          className="font-pretendard text-3xl font-bold  mb-2 text-balance"
           style={{ color: "#f5f0e8" }}
         >
           십성 & 신살:
         </h2>
-        <h2 className="text-3xl font-bold mb-3" style={{ color: "#FFD594" }}>
+        <h2
+          className="font-pretendard text-3xl font-bold mb-3"
+          style={{ color: "#FFD594" }}
+        >
           숨은 무기와 변수
         </h2>
         <p
-          className="text-sm leading-relaxed mb-8"
+          className="font-pretendard text-sm leading-relaxed mb-8"
           style={{ color: "#ffffff" }}
         >
           신미 일간 + 도화·역마·천을 조합이 ‘비주얼·글로벌 활동’을, <br />
@@ -71,13 +74,13 @@ export default function SimseongSection() {
               }}
             >
               <h3
-                className="text-sm font-bold mb-1"
+                className="font-pretendard text-sm font-bold mb-1"
                 style={{ color: "#FFD594" }}
               >
                 {card.title}
               </h3>
               <p
-                className="text-xs leading-relaxed"
+                className="font-pretendard text-xs leading-relaxed"
                 style={{ color: "#ffffff" }}
               >
                 {card.desc}

@@ -46,13 +46,13 @@ export default function DecisiveMoments() {
       <div className="max-w-4xl mx-auto px-6">
         {/* Header */}
         <p
-          className="text-xs tracking-widest mb-4 font-medium"
+          className="font-pretendard text-xs tracking-widest mb-4 font-medium"
           style={{ color: "#FFD594" }}
         >
           갑자기 찾아온 순간
         </p>
         <h2
-          className="text-3xl font-bold mb-1 text-balance"
+          className="font-pretendard text-3xl font-bold mb-1 text-balance"
           style={{ color: "#f5f0e8" }}
         >
           인생의 <span style={{ color: "#FFD594" }}>결정적</span>{" "}
@@ -60,13 +60,13 @@ export default function DecisiveMoments() {
         </h2>
 
         <h2
-          className="text-3xl font-bold mb-5"
+          className="font-pretendard text-3xl font-bold mb-5"
           style={{ color: "#FFD594" }} // 💡 이 줄은 "순간들"뿐이므로 h2 전체 색상을 변경!
         >
           순간들
         </h2>
         <div
-          className="text-sm leading-relaxed mb-12"
+          className="font-pretendard text-sm leading-relaxed mb-12"
           style={{ color: "#ffffff" }}
         >
           <p>차은우 사주는 &quot;준비할 때 누적하고,</p>
@@ -86,10 +86,16 @@ export default function DecisiveMoments() {
                 className="flex items-baseline gap-3 px-8 py-6 border-b"
                 style={{ borderColor: "#333" }}
               >
-                <h3 className="text-lg font-bold" style={{ color: "#FFD594" }}>
+                <h3
+                  className="font-pretendard text-lg font-bold"
+                  style={{ color: "#FFD594" }}
+                >
                   {period.title}
                 </h3>
-                <span className="text-xs" style={{ color: "#666" }}>
+                <span
+                  className="font-pretendard text-xs"
+                  style={{ color: "#666" }}
+                >
                   {period.period} {period.periodChar}
                 </span>
               </div>
@@ -102,13 +108,13 @@ export default function DecisiveMoments() {
                   style={{ borderColor: "#333" }}
                 >
                   <p
-                    className="text-sm font-bold mb-1"
+                    className="font-pretendard text-sm font-bold mb-1"
                     style={{ color: "#ffffff" }}
                   >
                     {period.saju.label}
                   </p>
                   <p
-                    className="text-sm leading-relaxed"
+                    className="font-pretendard text-sm leading-relaxed"
                     style={{ color: "#ffffff", lineHeight: "1.85" }}
                   >
                     {period.saju.text}
@@ -118,13 +124,13 @@ export default function DecisiveMoments() {
                 {/* 흐름 해설 */}
                 <div className="px-7 py-6">
                   <p
-                    className="text-sm font-bold mb-1"
+                    className="font-pretendard text-sm font-bold mb-1"
                     style={{ color: "#ffffff" }}
                   >
                     {period.flow.label}
                   </p>
                   <p
-                    className="text-sm leading-relaxed"
+                    className="font-pretendard text-sm leading-relaxed"
                     style={{ color: "#ffffff", lineHeight: "1.85" }}
                   >
                     {period.flow.text}

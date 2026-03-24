@@ -55,7 +55,7 @@ export default function RecentYearsSection() {
       <div className="max-w-4xl mx-auto px-6">
         {/* Label */}
         <p
-          className="text-xs tracking-widest font-medium mb-4"
+          className="font-pretendard text-xs tracking-widest font-medium mb-4"
           style={{ color: "#CE8600" }}
         >
           인물의 변화 포인트
@@ -63,13 +63,13 @@ export default function RecentYearsSection() {
 
         {/* Heading */}
         <h2
-          className="text-3xl font-bold mb-1"
+          className="font-pretendard text-3xl font-bold mb-1"
           style={{ color: "#CE8600", fontFamily: "inherit" }}
         >
           최근 3년 흐름
         </h2>
         <h2
-          className="text-3xl font-bold mb-6"
+          className="font-pretendard text-3xl font-bold mb-6"
           style={{ color: "#1a1a1a", fontFamily: "inherit" }}
         >
           년도별 풀이
@@ -77,7 +77,7 @@ export default function RecentYearsSection() {
 
         {/* Description */}
         <div
-          className="text-sm leading-relaxed mb-15"
+          className="font-pretendard text-sm leading-relaxed mb-15"
           style={{ color: "#888" }}
         >
           <p>2025년(을사)부터 2027년(정미)까지,</p>
@@ -99,11 +99,14 @@ export default function RecentYearsSection() {
                 boxShadow: "6px 6px 12px rgba(0, 0, 0, 0.04)",
               }}
             >
-              <p className="text-sm font-semibold" style={{ color: "#1a1a1a" }}>
+              <p
+                className="font-pretendard text-sm font-semibold"
+                style={{ color: "#1a1a1a" }}
+              >
                 {year.year}
               </p>
               <p
-                className="text-lg font-bold mb-4"
+                className="font-pretendard text-lg font-bold mb-4"
                 style={{ color: HIGHLIGHT_COLORS[year.highlight] }}
               >
                 {year.tag}
@@ -112,7 +115,7 @@ export default function RecentYearsSection() {
                 {year.bullets.map((b, j) => (
                   <li
                     key={j}
-                    className="flex gap-2 text-sm leading-relaxed"
+                    className="font-pretendard flex gap-2 text-sm leading-relaxed"
                     style={{ color: "#555" }}
                   >
                     <span>{b}</span>
@@ -131,10 +134,16 @@ export default function RecentYearsSection() {
             border: "1px solid #CE8600",
           }}
         >
-          <h3 className="text-lg font-bold mb-3" style={{ color: "#1a1a1a" }}>
+          <h3
+            className="font-pretendard text-lg font-bold mb-3"
+            style={{ color: "#1a1a1a" }}
+          >
             최근 3년 흐름 심화 해석
           </h3>
-          <p className="text-sm leading-relaxed" style={{ color: "#555" }}>
+          <p
+            className="font-pretendard text-sm leading-relaxed"
+            style={{ color: "#555" }}
+          >
             최근 3년은 차은우의 커리어·관계·컨디션이 동시에 작동하는 구간입니다.
             기회가 들어오는 타이밍과 휴식 타이밍을 함께 설계하면, 반짝 상승이
             아니라 지속 가능한 상승 흐름으로 연결할 수 있습니다.

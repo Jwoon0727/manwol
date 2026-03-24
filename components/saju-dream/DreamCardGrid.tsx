@@ -269,7 +269,7 @@ function DarkRow({ card }: { card: DreamCard }) {
         style={{ minWidth: "220px", width: "240px", flexShrink: 0 }}
       >
         <h3
-          className="font-bold text-lg leading-snug"
+          className="font-pretendard font-bold text-lg leading-snug"
           style={{ color: "#FFD594" }}
         >
           {card.title}
@@ -279,7 +279,7 @@ function DarkRow({ card }: { card: DreamCard }) {
             tags.map((t, i) => (
               <span
                 key={t}
-                className="text-sm font-bold"
+                className="font-pretendard text-sm font-bold"
                 style={{ color: i === 0 ? primaryColor : "#ffffff" }}
               >
                 {i > 0 ? "· " : ""}
@@ -288,7 +288,7 @@ function DarkRow({ card }: { card: DreamCard }) {
             ))
           ) : (
             <span
-              className="text-xs font-medium"
+              className="font-pretendard text-xs font-medium"
               style={{ color: primaryColor }}
             >
               {card.tag}
@@ -301,7 +301,10 @@ function DarkRow({ card }: { card: DreamCard }) {
 
       {/* 오른쪽 박스 */}
       <div className="flex items-center py-4 px-5 flex-1">
-        <p className="text-sm leading-relaxed" style={{ color: "#ffffff" }}>
+        <p
+          className="font-pretendard text-sm leading-relaxed"
+          style={{ color: "#ffffff" }}
+        >
           {card.desc}
         </p>
       </div>
@@ -324,10 +327,16 @@ export default function DreamCardGrid({
   return (
     <section className="w-full py-12" style={{ background: sectionBg }}>
       <div className="mx-auto px-6 max-w-3xl">
-        <p className="text-xs font-semibold mb-2" style={{ color: labelColor }}>
+        <p
+          className="font-pretendard text-xs font-semibold mb-2"
+          style={{ color: labelColor }}
+        >
           {sectionLabel}
         </p>
-        <h2 className="font-bold text-2xl mb-8" style={{ color: headingColor }}>
+        <h2
+          className="font-pretendard font-bold text-2xl mb-8"
+          style={{ color: headingColor }}
+        >
           {heading}
         </h2>
 

@@ -64,14 +64,18 @@ function PillarCard({ p }: { p: (typeof PILLARS)[0] }) {
       </div>
       <div>
         <p
-          className="text-[10px] font-semibold tracking-widest"
+          className="font-pretendard text-[10px] font-semibold tracking-widest"
           style={{ color: p.subtitleColor }}
         >
           {p.subtitle}
         </p>
-        <h3 className="text-[15px] font-bold text-white mt-0.5">{p.title}</h3>
+        <h3 className="font-pretendard text-[15px] font-bold text-white mt-0.5">
+          {p.title}
+        </h3>
       </div>
-      <p className="text-white text-[13px] leading-relaxed">{p.desc}</p>
+      <p className="font-pretendard text-white text-[13px] leading-relaxed">
+        {p.desc}
+      </p>
     </div>
   );
 }
@@ -87,12 +91,12 @@ export default function FivePillars({ previewMode = false }: FivePillarsProps) {
         {/* Header */}
         <div className="mt-10 mb-6">
           <p
-            className="text-xs font-semibold tracking-widest mb-2"
+            className="font-pretendard text-xs font-semibold tracking-widest mb-2"
             style={{ color: "#FFD594" }}
           >
             5대 영역 운영 가이드
           </p>
-          <h2 className="text-2xl md:text-3xl font-black leading-tight text-white">
+          <h2 className="font-pretendard text-2xl md:text-3xl font-black leading-tight text-white">
             삶의 다섯 축,
             <br />
             <span>
@@ -100,7 +104,7 @@ export default function FivePillars({ previewMode = false }: FivePillarsProps) {
               <span style={{ color: "#ffffff" }}>이 있습니다.</span>
             </span>
           </h2>
-          <p className="text-white text-sm mt-2">
+          <p className="font-pretendard text-white text-sm mt-2">
             재물부터 관계, 건강, 커리어, 학습까지.
             <br />
             2026년 당신의 에너지가 각 영역에서 어떻게 작동하는지 파악해보세요.
@@ -131,7 +135,7 @@ export default function FivePillars({ previewMode = false }: FivePillarsProps) {
             >
               <button
                 type="button"
-                className="absolute mt-100 flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-base transition-colors hover:opacity-90"
+                className="font-pretendard absolute mt-100 flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-base transition-colors hover:opacity-90"
                 style={{
                   background: "#1A1A1A",
                   color: "#FFD061",

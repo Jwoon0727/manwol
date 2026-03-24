@@ -35,7 +35,7 @@ function Logo() {
   return (
     <Link href="/" className="flex items-center">
       <Image
-        src="/main/mainlogo.png"
+        src="/main/mainLogo.png"
         alt="만월성 로고"
         width={87}
         height={34}
@@ -78,7 +78,7 @@ export default function Navbar({ headerClassName = "" }: NavbarProps) {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="text-base font-semibold text-foreground/80 hover:text-[var(--gold)] transition-colors"
+                  className="font-pretendard text-base font-semibold text-foreground/80 hover:text-[var(--gold)] transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -187,7 +187,7 @@ export default function Navbar({ headerClassName = "" }: NavbarProps) {
           <a
             href="/order-confirm"
             onClick={() => setDrawerOpen(false)}
-            className="w-full mb-8 flex items-center justify-center gap-2 text-[oklch(0.1_0_0)] font-bold text-[14px] md:text-[15px] py-4 rounded-md transition-opacity hover:opacity-90"
+            className="font-pretendard w-full mb-8 flex items-center justify-center gap-2 text-[oklch(0.1_0_0)] font-bold text-[14px] md:text-[15px] py-4 rounded-md transition-opacity hover:opacity-90"
             style={{
               background: "linear-gradient(to right, #FECF61, #FFBE27)",
             }}
@@ -195,7 +195,7 @@ export default function Navbar({ headerClassName = "" }: NavbarProps) {
             사주 결과 조회하기
             <span aria-hidden="true">{">"}</span>
           </a>
-          <p className="text-center pt-12 pb-4 border-t border-border text-[10px] md:text-xs text-muted-foreground">
+          <p className="font-pretendard text-center pt-12 pb-4 border-t border-border text-[10px] md:text-xs text-muted-foreground">
             © 2026 만월성(Manwolseong). All rights reserved.
           </p>
         </div>

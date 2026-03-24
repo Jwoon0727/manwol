@@ -26,23 +26,26 @@ export default function DreamAccordion60() {
           textAlign: "center",
         }}
       >
-        <p className="text-xs font-semibold mb-4" style={{ color: "#CE8600" }}>
+        <p
+          className="font-pretendard text-xs font-semibold mb-4"
+          style={{ color: "#CE8600" }}
+        >
           Best 상황별 해설
         </p>
         <h2
-          className="font-bold leading-tight mb-1"
+          className="font-pretendard font-bold leading-tight mb-1"
           style={{ fontSize: "2rem", color: "#1a1a1a" }}
         >
           가족·친척 꿈,
         </h2>
         <h2
-          className="font-bold leading-tight mb-6"
+          className="font-pretendard font-bold leading-tight mb-6"
           style={{ fontSize: "2rem", color: "#1a1a1a" }}
         >
           상황별 <span style={{ color: "#CE8600" }}>상세 해몽 60선</span>
         </h2>
         <div
-          className="text-sm leading-relaxed mx-auto"
+          className="font-pretendard text-sm leading-relaxed mx-auto"
           style={{ color: "#333333", maxWidth: "560px" }}
         >
           <p>
