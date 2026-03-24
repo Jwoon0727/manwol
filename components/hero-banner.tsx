@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 const slides = [
@@ -18,7 +18,7 @@ const slides = [
     tagline: "2025년 나의 운명은?",
     title: "만월공자",
     title2: "신년운세",
-    buttonText: "지금 보러가기",
+    buttonText: "지금 보러가기 >",
     image: "/main/2banner.png",
   },
   {
@@ -26,8 +26,16 @@ const slides = [
     tagline: "2025년 나의 운명은?",
     title: "만월공자",
     title2: "신년운세",
-    buttonText: "지금 보러가기",
+    buttonText: "지금 보러가기 >",
     image: "/main/3banner.png",
+  },
+  {
+    id: 4,
+    tagline: "2025년 나의 운명은?",
+    title: "만월공자",
+    title2: "신년운세",
+    buttonText: "지금 보러가기 >",
+    image: "/main/4banner.png",
   },
 ];
 
@@ -52,6 +60,24 @@ export default function HeroBanner() {
       behavior: "smooth",
     });
   };
+
+  const AUTO_SLIDE_MS = 5000;
+
+  useEffect(() => {
+    const id = window.setInterval(() => {
+      if (document.hidden) return;
+      const el = scrollRef.current;
+      if (!el || el.offsetWidth <= 0) return;
+      const w = el.offsetWidth;
+      const idx = Math.min(
+        Math.max(0, Math.round(el.scrollLeft / w)),
+        slides.length - 1,
+      );
+      const next = (idx + 1) % slides.length;
+      el.scrollTo({ left: next * w, behavior: "smooth" });
+    }, AUTO_SLIDE_MS);
+    return () => clearInterval(id);
+  }, []);
 
   return (
     <section className="relative w-full aspect-[21/9] md:aspect-[25/9] min-h-[280px] overflow-hidden">

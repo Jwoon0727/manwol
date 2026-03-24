@@ -33,15 +33,23 @@ const siteMenuSections = [
 
 function Logo() {
   return (
-    <Link href="/" className="flex items-center">
-      <Image
-        src="/main/mainLogo00.png"
-        alt="만월성 로고"
-        width={87}
-        height={34}
-        className="w-[60px] h-auto md:w-[87px]"
-        priority
-      />
+    <Link href="/" className="inline-flex items-center">
+      {/* SVG는 unoptimized + 별도 레이어로 backdrop-filter 합성 시 흐림 방지 */}
+      <span
+        className="inline-block [transform:translateZ(0)] [backface-visibility:hidden]"
+        style={{ WebkitBackfaceVisibility: "hidden" }}
+      >
+        <Image
+          src="/main/main000.svg"
+          alt="만월성 로고"
+          width={80}
+          height={30}
+          priority
+          draggable={false}
+          unoptimized
+          className="block h-auto w-[60px] md:w-[87px] select-none"
+        />
+      </span>
     </Link>
   );
 }
@@ -63,9 +71,7 @@ export default function Navbar({ headerClassName = "" }: NavbarProps) {
 
   return (
     <>
-      <header
-        className={`z-50 backdrop-blur-sm border-b border-border ${headerClassName}`}
-      >
+      <header className={`z-50 border-b border-border ${headerClassName}`}>
         <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-13 md:h-15">
           {/* Logo (Left) */}
           <Logo />

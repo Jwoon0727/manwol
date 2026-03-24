@@ -215,7 +215,7 @@ const CONTENT: Record<
     ],
   },
   "3": {
-    character: "/main/sajudetail/fortune-detail-4.png",
+    character: "/main/sajudetail/fortune-result-4-0.png",
     character2: "/main/sajudetail/fortune-detail-4-2.png",
     character3: "/main/saju-result/textbg.png",
     situationCharacter: "/main/sajudetail/fortune-detail-4.png",
