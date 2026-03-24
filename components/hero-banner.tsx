@@ -19,7 +19,7 @@ const slides = [
     title: "만월공자",
     title2: "신년운세",
     buttonText: "지금 보러가기",
-    image: "/main/banner01.png",
+    image: "/main/2banner.png",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const slides = [
     title: "만월공자",
     title2: "신년운세",
     buttonText: "지금 보러가기",
-    image: "/main/banner01.png",
+    image: "/main/3banner.png",
   },
 ];
 

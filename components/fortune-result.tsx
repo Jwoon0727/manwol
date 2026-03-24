@@ -35,7 +35,7 @@ const CONTENT: Record<
   string,
   {
     character: string;
-    character2: string;
+    character2?: string;
     character3: string;
     situationCharacter: string;
     situationCharacter1: string;
@@ -215,11 +215,92 @@ const CONTENT: Record<
     ],
   },
   "3": {
-    character: "/main/sajudetail/fortune-detail-3.png",
-    character2: "/main/sajudetail/fortune-detail-3-2.png",
-    character3: "/main/sajudetail/fortune-detail-3-3.png",
-    situationCharacter: "/images/fortune-detail-2.jpg",
-    situationCharacter1: "/main/saju-result/sub04.png",
+    character: "/main/sajudetail/fortune-detail-4.png",
+    character2: "/main/sajudetail/fortune-detail-4-2.png",
+    character3: "/main/saju-result/textbg.png",
+    situationCharacter: "/main/sajudetail/fortune-detail-4.png",
+    situationCharacter1: "/main/sajudetail/fortune-detail-4.png",
+    payCharacter: "/images/fortune-pay-char.jpg",
+    greeting:
+      "좋습니다. 풀어드리겠습니다.\n당신의 사주를 살펴보니\n꼭 알려드려야 할 말씀이 있습니다.",
+    introText:
+      "좋습니다. 풀어드리겠습니다.\n당신의 사주를 살펴보니\n꼭 알려드려야 할 말씀이 있습니다.",
+    chapters: [
+      {
+        icon: Star,
+        color: "#e8a245",
+        label: " 핵심 요약",
+        sub: "정리합니다.",
+      },
+      {
+        icon: Shuffle,
+        color: "#c9a96e",
+        label: "분석",
+        sub: "살펴봅니다.",
+      },
+      {
+        icon: CalendarDays,
+        color: "#6ab0e8",
+        label: "운세 리뷰",
+        sub: "1월",
+      },
+      {
+        icon: Heart,
+        color: "#e45c5c",
+        label: "시기",
+        sub: "운명",
+      },
+      {
+        icon: Briefcase,
+        color: "#c9a96e",
+        label: "현재 ",
+        sub: "투 ",
+      },
+      {
+        icon: BookOpen,
+        color: "#8fbc6e",
+        label: "운",
+        sub: " 살펴봅니다.",
+      },
+      {
+        icon: Shuffle,
+        color: "#a07cde",
+        label: "카드",
+        sub: "읽어봅니다.",
+      },
+      {
+        icon: Star,
+        color: "#e8a245",
+        label: "운",
+        sub: "봅니다.",
+      },
+      {
+        icon: Home,
+        color: "#8fbc6e",
+        label: "운",
+        sub: "정리합니다.",
+      },
+    ],
+    midBubble: "만월이 직접\n사주를 풀어드립니다.\n결제 후 바로 확인하세요!",
+    endBubble1: "당신의 사주에는\n특별한 기운이\n담겨 있습니다!",
+    endBubble2: "지금 바로\n확인해보시겠어요?",
+    payTitle: "만월공자 사주풀이\n프리미엄 풀버전",
+    paySubtitle: "풀버전 · 사주 심층 분석 포함",
+    features: [
+      "풍부하고 세밀한 사주 풀이",
+      "직관적인 핵심 요약",
+      "월별 운세 상세 안내",
+      "사랑/재물/건강 분야별 분석",
+      "평생 대운 흐름 제공",
+      "맞춤형 조언 포함",
+    ],
+  },
+  "4": {
+    character: "/main/saju-result/fortune-detail-030.png",
+
+    character3: "/main/saju-result/textbg.png",
+    situationCharacter: "/main/saju-result/fortune-detail-030.png",
+    situationCharacter1: "/main/saju-result/fortune-detail-030.png",
     payCharacter: "/images/fortune-pay-char.jpg",
     greeting:
       "좋습니다. 살펴보겠습니다.\n당신의 재물운을 읽어보니\n중요한 내용을 전해드릴게요.",
@@ -296,87 +377,6 @@ const CONTENT: Record<
       "맞춤형 조언 포함",
     ],
   },
-  "4": {
-    character: "/main/sajudetail/fortune-detail-4.png",
-    character2: "/main/sajudetail/fortune-detail-4-2.png",
-    character3: "/main/sajudetail/fortune-detail-4-3.png",
-    situationCharacter: "/images/fortune-detail-2.jpg",
-    situationCharacter1: "/main/saju-result/sub05.png",
-    payCharacter: "/images/fortune-pay-char.jpg",
-    greeting:
-      "좋습니다. 풀어드리겠습니다.\n당신의 사주를 살펴보니\n꼭 알려드려야 할 말씀이 있습니다.",
-    introText:
-      "좋습니다. 풀어드리겠습니다.\n당신의 사주를 살펴보니\n꼭 알려드려야 할 말씀이 있습니다.",
-    chapters: [
-      {
-        icon: Star,
-        color: "#e8a245",
-        label: " 핵심 요약",
-        sub: "정리합니다.",
-      },
-      {
-        icon: Shuffle,
-        color: "#c9a96e",
-        label: "분석",
-        sub: "살펴봅니다.",
-      },
-      {
-        icon: CalendarDays,
-        color: "#6ab0e8",
-        label: "운세 리뷰",
-        sub: "1월",
-      },
-      {
-        icon: Heart,
-        color: "#e45c5c",
-        label: "시기",
-        sub: "운명",
-      },
-      {
-        icon: Briefcase,
-        color: "#c9a96e",
-        label: "현재 ",
-        sub: "투 ",
-      },
-      {
-        icon: BookOpen,
-        color: "#8fbc6e",
-        label: "운",
-        sub: " 살펴봅니다.",
-      },
-      {
-        icon: Shuffle,
-        color: "#a07cde",
-        label: "카드",
-        sub: "읽어봅니다.",
-      },
-      {
-        icon: Star,
-        color: "#e8a245",
-        label: "운",
-        sub: "봅니다.",
-      },
-      {
-        icon: Home,
-        color: "#8fbc6e",
-        label: "운",
-        sub: "정리합니다.",
-      },
-    ],
-    midBubble: "만월이 직접\n사주를 풀어드립니다.\n결제 후 바로 확인하세요!",
-    endBubble1: "당신의 사주에는\n특별한 기운이\n담겨 있습니다!",
-    endBubble2: "지금 바로\n확인해보시겠어요?",
-    payTitle: "만월공자 사주풀이\n프리미엄 풀버전",
-    paySubtitle: "풀버전 · 사주 심층 분석 포함",
-    features: [
-      "풍부하고 세밀한 사주 풀이",
-      "직관적인 핵심 요약",
-      "월별 운세 상세 안내",
-      "사랑/재물/건강 분야별 분석",
-      "평생 대운 흐름 제공",
-      "맞춤형 조언 포함",
-    ],
-  },
 };
 
 // ── Main component ────────────────────────────────────────────────────────────
@@ -384,7 +384,6 @@ const CONTENT: Record<
 export default function FortuneResult({ id, title, name }: FortuneResultProps) {
   const content = CONTENT[id] ?? CONTENT["1"];
   const character = content.character;
-  const character2 = content.character2;
   const character3 = content.character3;
   const situationCharacter = content.situationCharacter;
   const payCharacter = content.payCharacter ?? "/images/fortune-pay-char.jpg";
@@ -430,17 +429,19 @@ export default function FortuneResult({ id, title, name }: FortuneResultProps) {
             />
             <div className="absolute inset-0 bg-black/20" aria-hidden="true" />
 
-            {/* 2. character2 = 사람이미지 (person) — 상단 중앙, 부모 넘어 확장 */}
-            <div className="absolute left-1/2 top-[15%] z-10 w-[125%] min-w-[500px] -translate-x-1/2">
-              <div className="relative aspect-[3/4] w-full">
-                <Image
-                  src={character2}
-                  alt={title}
-                  fill
-                  className="object-contain object-bottom"
-                />
+            {/* 2. character2 = 사람이미지 (person, 선택) — 상단 중앙, 부모 넘어 확장 */}
+            {content.character2 ? (
+              <div className="absolute left-1/2 top-[15%] z-10 w-[125%] min-w-[500px] -translate-x-1/2">
+                <div className="relative aspect-[3/4] w-full">
+                  <Image
+                    src={content.character2}
+                    alt={title}
+                    fill
+                    className="object-contain object-bottom"
+                  />
+                </div>
               </div>
-            </div>
+            ) : null}
             <div
               className="absolute inset-0 z-[15] pointer-events-none"
               style={{

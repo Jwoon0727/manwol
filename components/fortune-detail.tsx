@@ -52,31 +52,29 @@ const fortuneData: Record<
     situationPlaceholder: "지금 나의 연애는..",
   },
   "3": {
-    title: "명천도령 재물보감",
-    character: "/main/sajudetail/fortune-detail-3.png",
-    character2: "/main/sajudetail/fortune-detail-3-2.png",
-    character3: "/main/sajudetail/fortune-detail-3-3.png",
-    greeting:
-      "어서 오세요.\n재물운을 살펴드릴 명천입니다.\n성함과 생년월일을 말씀해주세요.",
-    inputPlaceholder: "내 이름은..",
-    situationCharacter: "/images/fortune-detail-2.jpg",
-    situationCharacter2: "/main/sajudetail/fortune-detail-2-2.png",
-    situationGreeting:
-      "음.. 좋습니다.\n더 자세한 확인을 위해\n현재 당신의 상황을 알려주시겠어요?",
-    situationPlaceholder: "지금 나의 상황은..",
-  },
-  "4": {
     title: "만월공자 사주풀이",
     character: "/main/sajudetail/fortune-detail-4.png",
-    character2: "/main/sajudetail/fortune-detail-4-2.png",
-    character3: "/main/sajudetail/fortune-detail-4-3.png",
+    character3: "/main/sajudetail/fortune-detail-1-3.png",
     greeting:
       "어서 오세요.\n사주를 풀어드릴 만월입니다.\n성함과 생년월일을 말씀해주세요.",
     inputPlaceholder: "내 이름은..",
-    situationCharacter: "/images/fortune-detail-2.jpg",
-    situationCharacter2: "/main/sajudetail/fortune-detail-2-2.png",
+    situationCharacter: "/main/sajudetail/fortune-detail-4-1.png",
+    situationCharacter2: "/main/sajudetail/fortune-detail-1-3.png",
     situationGreeting:
-      "음.. 좋습니다.\n더 자세한 확인을 위해\n현재 당신의 상황을 알려주시겠어요?",
+      "감사합니다.\n당신의 사주를 더 자세히 보기 위해\n어떤 사람인지 알려주시겠어요?",
+    situationPlaceholder: "지금 나의 상황은..",
+  },
+  "4": {
+    title: "명천도령 재물보감",
+    character: "/main/sajudetail/fortune-detail-3.png",
+    character3: "/main/sajudetail/fortune-detail-1-3.png",
+    greeting:
+      "어서 오세요.\n재물운을 살펴드릴 명천입니다.\n성함과 생년월일을 말씀해주세요.",
+    inputPlaceholder: "내 이름은..",
+    situationCharacter: "/main/sajudetail/fortune-detail-03.png",
+    situationCharacter2: "/main/sajudetail/fortune-detail-1-3.png",
+    situationGreeting:
+      "감사합니다.\n그분과의 인연을 더 자세히 보기 위해\n어떤 관계인지 알려주시겠어요?",
     situationPlaceholder: "지금 나의 상황은..",
   },
 };
