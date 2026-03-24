@@ -35,7 +35,7 @@ function Logo() {
   return (
     <Link href="/" className="flex items-center">
       <Image
-        src="/main/mainLogo.png"
+        src="/main/mainLogo00.png"
         alt="만월성 로고"
         width={87}
         height={34}
