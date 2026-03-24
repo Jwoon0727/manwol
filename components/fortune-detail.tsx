@@ -160,7 +160,6 @@ export default function FortuneDetail({ id }: Props) {
             priority
             unoptimized
           />
-          <div className="absolute inset-0 bg-black/20" aria-hidden="true" />
 
           {/* 2. character2 = 사람이미지 (person) — 상단 중앙, 부모 넘어 확장 (선택) */}
           {data.character2 && (
