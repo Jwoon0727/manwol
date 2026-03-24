@@ -158,6 +158,7 @@ export default function FortuneDetail({ id }: Props) {
             fill
             className="object-cover object-top"
             priority
+            unoptimized
           />
           <div className="absolute inset-0 bg-black/20" aria-hidden="true" />
 
@@ -170,6 +171,7 @@ export default function FortuneDetail({ id }: Props) {
                   alt={data.title}
                   fill
                   className="object-contain object-bottom"
+                  unoptimized
                 />
               </div>
             </div>
@@ -194,6 +196,7 @@ export default function FortuneDetail({ id }: Props) {
                 width={360}
                 height={140}
                 className="w-full h-auto object-contain"
+                unoptimized
               />
               <div className="absolute inset-0 flex items-center justify-center px-10 py-6">
                 <p className="font-jejumyeongjo text-[16px] mb-2 text-[oklch(0.25_0.02_50)] leading-relaxed whitespace-pre-line text-center">
@@ -306,6 +309,7 @@ function SituationStep({ data, onBack, onNext }: SituationStepProps) {
               fill
               className="object-cover object-top"
               priority
+              unoptimized
             />
             {/* Dark gradient overlay */}
             <div
@@ -405,6 +409,7 @@ function SituationStep({ data, onBack, onNext }: SituationStepProps) {
             fill
             className="object-cover object-top"
             priority
+            unoptimized
           />
 
           {/* 그라데이션: 위 투명 → 아래 어두움 */}
@@ -425,6 +430,7 @@ function SituationStep({ data, onBack, onNext }: SituationStepProps) {
                 width={400}
                 height={120}
                 className="w-full h-auto object-contain"
+                unoptimized
               />
               <div className="absolute inset-0 flex items-center justify-center px-8 py-5">
                 <p className="font-jejumyeongjo text-[16px] mb-2 text-[oklch(0.25_0.02_50)] leading-relaxed whitespace-pre-line text-center">

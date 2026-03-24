@@ -60,6 +60,7 @@ export default function FortuneCards() {
                 alt={card.title}
                 fill
                 className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+                unoptimized
               />
               {card.badge && (
                 <span
@@ -77,6 +78,7 @@ export default function FortuneCards() {
                       alt=""
                       fill
                       className="object-contain"
+                      unoptimized
                     />
                     <div className="absolute inset-[16%_12%] flex items-center justify-center text-center"></div>
                   </div>

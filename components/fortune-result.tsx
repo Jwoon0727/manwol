@@ -426,6 +426,7 @@ export default function FortuneResult({ id, title, name }: FortuneResultProps) {
               fill
               className="object-cover object-top"
               priority
+              unoptimized
             />
             <div className="absolute inset-0 bg-black/20" aria-hidden="true" />
 
@@ -438,6 +439,7 @@ export default function FortuneResult({ id, title, name }: FortuneResultProps) {
                     alt={title}
                     fill
                     className="object-contain object-bottom"
+                    unoptimized
                   />
                 </div>
               </div>
@@ -460,6 +462,7 @@ export default function FortuneResult({ id, title, name }: FortuneResultProps) {
                   width={360}
                   height={140}
                   className="w-full h-auto object-contain"
+                  unoptimized
                 />
                 <div className="absolute inset-0 flex items-center justify-center px-10 py-6">
                   <p
@@ -511,6 +514,7 @@ export default function FortuneResult({ id, title, name }: FortuneResultProps) {
               alt="만월"
               fill
               className="object-cover object-top"
+              unoptimized
             />
 
             {/* 말풍선 + 텍스트 2열 (midBubble을 줄 단위로 반으로 나눔, 별도 필드 없음) */}
@@ -551,6 +555,7 @@ export default function FortuneResult({ id, title, name }: FortuneResultProps) {
               alt="만월"
               fill
               className="object-cover object-top  shadow-md"
+              unoptimized
             />
 
             {/* 말풍선 + 텍스트 2열 — 중앙보다 왼쪽에 배치 */}
